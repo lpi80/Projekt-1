@@ -1,0 +1,70 @@
+$guideHeaderFontFamily: 'Roboto', sans-serif;
+
+.guide {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: space-between;
+    padding: 5px 5px;
+    
+    &--flex {
+        flex: 0 1 auto;    
+        font-family: $guideHeaderFontFamily;
+        font-size: 11px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+     &__header {
+        border: 1px solid #000;
+        background: lightgrey;
+        font-family: $guideHeaderFontFamily;
+        font-size: 11px;
+        font-weight: 300;
+        text-transform: uppercase;
+        padding: 5px 0 5px 0;
+        margin: 0;
+    }
+
+    &__colors {
+        color: #fff;
+        height: 150px;
+    }
+    &-colors--1 {background: $color_333;}
+    &-colors--2 {background: $color_979797;}
+    &-colors--3 {background: $color_9C9C9C;}
+    &-colors--4 {background: $color_E3E3E3;}
+    &-colors--5 {background: $color_F5F5F2;}
+    &-colors--6 {background: $color_F58220;}
+    &-colors--7 {background: $color_FFA200;}
+    &-colors--8 {background: $color_04AE00;}
+    &-colors--9 {background: $color_74B67A;}
+    &-colors--10 {background: $color_96CC9B;}
+    &-colors--11 {background: $color_DE5252;}
+    &-colors--12 {background: $color_EC7171;}
+    &-colors--13 {background: $color_56819F;}
+    &-colors--14 {background: $color_Ff0000;}
+
+    &__buttons {
+        height: 50px;
+    }
+
+    &__links {
+        height: 150px;
+    }
+
+    &__texts {
+        height: 150px;
+    }
+
+    &__checkboxs-list {
+        height: 50px;
+    }
+
+    &__color-tabs {
+        margin: 0 auto; 
+    }
+   
+}

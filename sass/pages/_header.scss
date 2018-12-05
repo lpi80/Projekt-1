@@ -1,0 +1,92 @@
+.ball::after {
+    content: '';
+    display: inline-block;
+    background: orange;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+
+.menu-main {
+    background: $color_FFF;
+    min-height: 50px;
+}
+
+.menu-left {
+    background: $color_333;
+    &__background-transparent {
+        background: transparent;
+    }
+    height: 100vh;
+}
+
+.menu-drop-wallet {
+    background: $color_FFF;
+
+    &__header {
+        min-height: 50px;
+        z-index: 2;
+    }
+    &__padding {
+        padding: 0 20px 0 10px;
+   }
+    &__switch {
+        display: none;
+    }
+
+    &__switch:checked ~ & &__unchecked,
+    &__switch:not(:checked) ~ & &__checked {
+            display: none;
+    }
+    &__switch:checked ~ & .page__header {
+        color: $pageHeaderDescValueColor;
+    }
+
+
+    &__switch:checked ~ & { 
+        background: $topMenuBtnBackgroundHover;
+    }
+    
+    &__border {
+        box-shadow: 2px 2px 2px lightgray;
+        border-left: 1px solid $pageHeaderDescColor;
+    }
+}
+
+
+
+.menu-drop-notification {
+    background: $color_FFF;
+    &__header {
+        min-height: 50px;
+        z-index: 2;
+    }
+    &__padding {
+        padding: 0 20px 0 10px;
+   }
+    &__switch {
+        display: none;
+    }
+
+    &__switch:checked ~ & &__unchecked,
+    &__switch:not(:checked) ~ & &__checked {
+            display: none;
+    }
+    &__switch:checked ~ & .page__header {
+        color: $pageHeaderDescValueColor;
+    }
+
+
+    &__switch:checked ~ & { 
+        background: $topMenuBtnBackgroundHover;
+    }
+    
+    &__border {
+        box-shadow: 2px 2px 2px lightgray;
+        border-left: 1px solid $pageHeaderDescColor;
+    }
+
+    &__switch:not(:checked) ~ & &__border-button {
+        border-right: 1px solid $pageHeaderDescColor
+    }
+}

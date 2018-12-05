@@ -1,0 +1,27 @@
+
+.row-table {
+    min-height: 20px;
+    padding: 10px 0;
+    @include myFlexRow(space-between, center, center, row, 50px, 1);
+	&__element-default { 
+		@include myFlexElement();
+    }
+    &__border {
+        border-top: 1px solid $color_9C9C9C;
+    }
+ 
+
+    &__display-none {
+        visibility: hidden;
+    }
+	&:hover {
+        background: $rowTableBackground;
+    }
+    &:hover &__display-none {
+        visibility: visible;
+    }
+}
+
+.row-table__border:nth-last-child(1) {
+    border-bottom: 3px solid $color_9C9C9C;
+}

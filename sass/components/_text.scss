@@ -1,0 +1,20 @@
+.text {
+    &__page-header {
+        font-family: $pageHeaderFontFamily;
+        font-size: $pageHeaderFontSize;
+        font-weight: $pageHeaderFontWeight; 
+        text-transform: uppercase;
+    }
+    &__section-header {
+        font-family: $sectionHeaderFontFamily;
+        font-size: $sectionHeaderFontSize;
+        font-weight: $sectionHeaderFontWeight; 
+    }
+
+    &__text {
+        font-family: $textFontFamily;
+        font-size: $textFontSize;
+        font-weight: $textFontWeight; 
+    }
+
+}

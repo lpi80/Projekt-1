@@ -1,0 +1,124 @@
+
+$hover: 'not all and (hover: none)';
+$column: 24;
+$margin: 0;
+
+$rwdColName: (
+	('lg', 'minLarge', 'maxLarge'),
+	('m', 'minMedium', 'maxMedium'),
+	('s', 'minSmall', 'maxSmall')
+);
+
+$breakpoints: (
+	'minSmall':  ( min-width:  0 ),
+	'maxSmall':  ( max-width:  767px ),
+	'minMedium': ( min-width:  768px ),
+	'maxMedium': ( max-width:  1199px ),
+	'minLarge':  ( min-width: 1200px ),
+	'maxLarge':  ( max-width: 9999px )
+);
+
+/// Mixin to manage responsive breakpoints
+@mixin respond-to($breakpoint, $secondBreakpoint: 'minSmall') {
+	/// If the key exists in the map
+	@if map-has-key($breakpoints, $breakpoint) and map-has-key($breakpoints, $secondBreakpoint){
+    /// Prints a media query based on the value
+    	@media #{inspect(map-get($breakpoints, $breakpoint))} and #{inspect(map-get($breakpoints, $secondBreakpoint))} {
+    	@content;
+    	}
+    }
+  /// If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+	}
+}
+
+
+/// Mixin to manage responsive breakpoints
+@mixin respond-to($breakpoint, $secondBreakpoint: 'minSmall') {
+	/// If the key exists in the map
+	@if map-has-key($breakpoints, $breakpoint) and map-has-key($breakpoints, $secondBreakpoint){
+    /// Prints a media query based on the value
+    	@media #{inspect(map-get($breakpoints, $breakpoint))} and #{inspect(map-get($breakpoints, $secondBreakpoint))} {
+    	@content;
+    	}
+    }
+  /// If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+	}
+}
+
+@each $a, $b, $c in $rwdColName {
+	@include respond-to($b,$c) {
+		@for $i from 0 through $column {
+			@if $i < $column {
+        		.col-#{$a}-#{$i + 1} {
+		        	width: ((100% - ($margin * $column)) / $column ) * ($i + 1);
+					min-height: 1px;
+        		}
+    		}
+    		.col-#{$a}-offset-#{$i} {
+        		margin-left: (100% / $column ) * $i;
+    		}
+    	}
+	}
+}
+
+@mixin myFlexRow ($justify-content, $align-items, $align-content, $direction, $minHeight: 50px, $zIndex: 0) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    align-content: $align-content;
+    flex-direction: $direction;
+    flex-wrap: wrap;
+	min-height: $minHeight;
+    z-index: $zIndex;
+}
+
+@mixin myFlexElement ($order: 0, $flex: 0 1 auto, $alignSelf: auto) {
+	order: $order;
+	flex: $flex;
+	align-self: $alignSelf;
+}
+
+
+
+.row {
+    @include myFlexRow(flex-end, flex-start, flex-start, row);
+	&__element-default {
+		@include myFlexElement();
+	}
+
+}
+
+.row-center {
+    @include myFlexRow(center, center, center, row, 30px);
+	&__element-default {
+		@include myFlexElement();
+	}
+}
+
+.row-space-between {
+    @include myFlexRow(space-between, center, center, row);
+	&__element-default {
+		@include myFlexElement();
+	}
+}
+
+.left {
+	text-align: left;
+	padding-left: 5px;
+	margin-left: 0;
+}
+.right {
+	text-align: right;
+	padding-right: 5px;
+	margin-right: 0;
+}
+
+.center {
+    text-align: center;
+}

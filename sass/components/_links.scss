@@ -1,0 +1,19 @@
+.link {
+    text-decoration: none;
+    color: $linkColor;
+    font-family: $linkFontFamily;
+    &--large {
+        font-size: $linkLargeFontSize;
+        font-weight: $linkLargeFontWeight;
+    }
+
+    &--small {
+        font-size: $linkSmallFontSize;
+        font-weight: $linkSmallFontWeight;
+    }
+
+    &:hover {
+        cursor: $cursorHover; 
+        color: $linkHoverColor;
+    }
+}

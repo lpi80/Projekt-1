@@ -1,0 +1,49 @@
+.tab {
+    display: inline-flex;
+    background: $tabBackground;
+    justify-content: start-flex;
+    align-items: center;
+    align-content: center;
+ 
+    &__input:checked ~ &__label > &__choice {
+      background: red;
+    }
+    
+    &__choice {
+      flex: 0 1 auto;    
+      display: inline-block;
+      background: blue;
+      border-radius: 50%;
+      height: 15px;
+      width: 15px;
+      margin-left: 15px;    
+      &:hover {
+        cursor: $cursorHover;
+        background: $tabBackgroundHover 
+      }
+    }
+    
+    &__input {
+      flex: 0 1 auto;    
+      display: none;
+    }
+    
+    &__label {
+      display: flex;
+      flex: 0 1 auto;    
+      justify-content: start-flex;
+      align-items: center;
+      align-content: center;
+    }
+    
+    &__desc {
+      flex: 0 1 auto;    
+      padding: 5px 10px;  
+    }
+
+    &__contents &__content-desc {
+        display: none;
+    }
+}
+  
+    

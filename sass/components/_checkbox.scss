@@ -1,0 +1,79 @@
+.check-box {
+    padding: 5px 5px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: space-between;
+    
+    &__check {
+        flex: 0 1 auto;    
+        display: inline-block;
+        height: 25px;
+        width: 25px;
+        margin-bottom: -6px;
+        margin-right: 5px;
+        border: 1px solid $checkboxEmptyBorderColor;
+        position: relative;
+        background: $checkboxBackground;
+        &:hover {
+            cursor: $cursorHover; 
+        }
+    }
+
+    &__label {
+        flex: 0 1 auto;    
+        &:hover {
+            cursor: $cursorHover; 
+        }
+    }
+
+    &__input:checked ~ &__label > &__check {
+        background: $checkboxMarkedBackground;
+
+            &:before  {
+            font-family: 'FontAwesome';
+            content: '\f00c';
+            position: absolute;
+            color: $checkboxColor;
+            background: $checkboxMarkedBackground;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+    }
+    &__input{
+        flex: 0 1 auto;    
+        &:hover {
+            cursor: $cursorHover; 
+        }
+    }
+
+    &__desc {
+        flex: 0 1 auto;    
+        font-family: $checkBoxFontFamily;
+        font-size: $checkBoxFontSize;
+        font-weight: $checkBoxFontWeight;
+        padding-left: 5px;
+        margin-top: 5px;
+        &:hover {
+            background: $checkboxFieldBackgroundHover;
+            cursor: $cursorHover; 
+        }
+    }
+
+    &__icon {
+        flex: 0 1 auto;
+        align-self: self-end;    
+        margin-top: 5px;
+        &:hover {
+            background: $checkboxFieldBackgroundHover;
+            cursor: $cursorHover; 
+        }
+    }
+
+    &:hover {
+        background: $checkboxFieldBackgroundHover;
+        cursor: $cursorHover; 
+    }
+
+}

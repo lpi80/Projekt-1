@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500,700');
+
+$cursorHover: url("../images/hand_cursor.png"), pointer;
+$cursorDisabled: not-allowed;   
+
+       
+$pageHeaderFontFamily: 'Roboto', sans-serif;
+$pageHeaderFontSize: 20px;
+$pageHeaderFontWeight: 500;
+$pageHeaderDescColor: #9C9C9C;
+$pageHeaderDescValueColor: #333;
+
+$sectionHeaderFontFamily: 'Roboto', sans-serif;
+$sectionHeaderFontSize: 16px;
+$sectionHeaderFontWeight: 700;
+
+$textFontFamily: 'Roboto', sans-serif;
+$textFontSize: 14px;
+$textFontWeight: 300;
+$textBlue: #56819F;
+
+$rowTableBackground: #E3E3E3;
+$color_333: #333;
+$color_979797: #979797;
+$color_9C9C9C: #9C9C9C;
+$color_E3E3E3: #E3E3E3;
+$color_F5F5F2: #F5F5F2;
+$color_F58220: #F58220;
+$color_FFA200: #FFA200;
+$color_04AE00: #04AE00;
+$color_74B67A: #74B67A;
+$color_96CC9B: #96CC9B;
+$color_DE5252: #DE5252;
+$color_EC7171: #EC7171;
+$color_56819F: #56819F;
+$color_Ff0000: #Ff0000;
+$color_FFF: #FFF;
+
+$btnGrey: #979797;
+$btnGreyHover: #bababa;
+$btnOrange: #f58220;
+$btnOrangeHover: #ffa200;
+$btnDisable: #e3e3e3;
+$btnColor: #fff;
+$btnFontFamily: 'Roboto', sans-serif;
+$btnFontWeight: 300;
+$btnFontSize: 18px;
+
+$linkColor: #56819F;
+$linkHoverColor: #FFA200;
+$linkFontFamily: 'Roboto', sans-serif;
+$linkLargeFontWeight: 300;
+$linkLargeFontSize: 16px;
+$linkSmallFontWeight: 300;
+$linkSmallFontSize: 13px;
+
+$inputTextBorderEmptyColor: #e3e3e3;
+$inputTextBorderHoverColor: #b1b1b1;
+$inputTextBorderDataColor:   #e3e3e3;
+$inputTextBackground: #fff;
+
+$inputPlaceholderBorderEmptyColor: #e3e3e3;
+$inputPlaceholderBorderHoverColor: #b1b1b1;
+$inputPlaceholderBorderDataColor:   #e3e3e3;
+$inputPlaceholderBackground: #fff;
+
+$inputPasswordBorderEmptyColor: #e3e3e3;
+$inputPasswordBorderHoverColor: #b1b1b1;
+$inputPasswordBorderDataColor:   #e3e3e3;
+$inputPasswordBorderWrongColor: #ff0000;
+$inputPasswordBackground: #fff;
+
+$checkboxEmptyBorderColor: #e3e3e3;
+$checkboxMarkedBackground: #04ae00;
+$checkboxBackground: #fff;
+$checkboxFieldBackgroundHover: #f2f2f2;
+$checkboxLabelColor: #000;
+$checkboxColor: #fff;
+$checkBoxFontFamily: 'Roboto', sans-serif;
+$checkBoxFontWeight: 300;
+$checkBoxFontSize: 13px;
+
+$notificationPositiveBackground: #96cc9b;
+$notificationPositiveBackgroundHover: #74b67a;
+$notificationNegativeBackground: #ec7171;
+$notificationNegativeBackgroundHover: #de5252;
+$notificationPositiveColor: #fff;
+$notificationNegativeColor: #fff;
+
+$datePeriodBorderColor: #e3e3e3;
+$datePeriodBorderColorHover: #9c9c9c;
+$datePeriodBorderBackground: #fff;
+$datePeriodColor: #000;
+
+$messangerManagerMessageBackground: #f3f3f1;
+$messangerVisitorMessageBackground: #bababa;
+$messangerManagerMessageColor: #000;
+$messangerVisitorMessageColor: #fff;
+$messangerStatusOnlineBackground: #04ae00;
+$messangerStatusOfflineBackground: #e3e3e3;
+$messangerStatusOnlineColor: #fff;
+$messangerStatusOfflineColor: #fff;
+$messangerNameColor: #000;
+
+$topMenuBtnBackground: #fff;
+$topMenuBtnBackgroundHover: #f5f5f2;
+
+$sliderEmptyColor: #e3e3e3;
+$sliderValueColor: #f58220;
+$sliderValueDescColor: #000;
+$sliderDescColor: #e3e3e3;
+
+$paginationBackground: #fff;
+$paginationBackgroundActive: #f1f3f3;
+$paginationColor: #a7bac9;
+$paginationActiveColor: #a6a6a6;
+$paginationHoverColor: #f58220;
+$paginationNextPreviuosColor: #b0b0b0;
+
+$tabBackground: #fff;
+$tabBackgroundHover:#E3E3E3;
+$tabBackgroundActive:#E3E3E3;
+$tabColor: #979797;
+$tabFontFamily: 'Roboto', sans-serif;
+$tabFontWeight: 300;
+$tabFontSize: 16px;
+

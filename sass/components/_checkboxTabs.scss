@@ -1,0 +1,41 @@
+.check-box-tabs {
+    &__ball {
+        &--color-blue::after {
+            content: '';
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background: $color_56819F;
+        }
+ 
+       
+        &--color-orange::after {
+            content: '';
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background: $color_FFA200;
+        }
+ 
+        
+        &--color-green::after {
+            content: '';
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background: $color_04AE00;
+        }
+    }
+
+    &__input:checked + & {
+        background: $tabBackgroundHover;
+    }
+
+    &:hover {
+        background: $tabBackgroundHover;
+        cursor: $cursorHover; 
+    }
+}

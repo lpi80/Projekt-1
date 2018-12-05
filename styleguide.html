@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Projekt-1</title>
+    <link rel="stylesheet" type="text/css" href="vendor/glyphter/css/glyphter.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="guide col-lg-24">
+        <div class="guide guide__texts col-lg-2">
+            <h2 class="guide--flex guide__header col-lg-24">Texts</h2>
+            <h2 class="guide--flex text__page-header col-lg-24">PAGE HEADER</h2>
+            <p class="guide--flex text__section-header col-lg-24">Section header</p>
+            <div class="guide--flex text__text col-lg-24">Text</div>
+        </div>
+        <div class="guide guide__links col-lg-2">
+            <h2 class="guide--flex guide__header col-lg-24">Links</h2>
+            <a class="guide--flex col-lg-24 link link--large" href="#">large link</a>
+            <a class="guide--flex col-lg-24 link link--small" href="#">small link</a>
+            <a class="guide--flex col-lg-24 icon-show link link-small" href="#"></a>
+        </div>
+        <div class="guide guide__colors col-lg-4">
+            <h2 class="guide--flex guide__header col-lg-24">Colors</h2>
+            <div class="guide--flex guide-colors--1 col-lg-8">#333333</div>
+            <div class="guide--flex guide-colors--2 col-lg-8">#F58220</div>
+            <div class="guide--flex guide-colors--3 col-lg-6">#DE5252</div>
+            <div class="guide--flex guide-colors--4 col-lg-8">#979797</div>
+            <div class="guide--flex guide-colors--5 col-lg-8">#FFA200</div>
+            <div class="guide--flex guide-colors--6 col-lg-6">#EC7171</div>
+            <div class="guide--flex guide-colors--7 col-lg-8">#C7C7C7</div>
+            <div class="guide--flex guide-colors--8 col-lg-8">#04AE00</div>
+            <div class="guide--flex guide-colors--9 col-lg-6">#56819F</div>
+            <div class="guide--flex guide-colors--10 col-lg-8">#E3E3E3</div>
+            <div class="guide--flex guide-colors--11 col-lg-8">#74B67A</div>
+            <div class="guide--flex guide-colors--24 col-lg-6">#FF0000</div>
+            <div class="guide--flex guide-colors--13 col-lg-8">#F5F5F2</div>
+            <div class="guide--flex guide-colors--14 col-lg-8">#96CC9B</div>
+            <div class="guide--flex  col-lg-6"></div>
+        </div>
+        <div class="guide guide__buttons col-lg-4">
+            <h2 class="guide--flex guide__header col-lg-24">Buttons</h2>
+            <button class="guide--flex btn btn--grey col-lg-10">button</button>
+            <button class="guide--flex btn btn--orange col-lg-10">button</button>
+            <button class="guide--flex btn btn--grey btn--disabled icon-links col-lg-24">button</button>
+        </div>
+        <div class="guide guide__checkboxs-list col-lg-2">
+            <h2 class="guide--flex guide__header col-lg-24">Check box</h2>
+            <div class="check-box col-lg-24">
+                <input class="check-box__input" type="checkbox" name="checkBoxNormal" id="checkBoxNormal" value="true"
+                    hidden>
+                <label class="check-box__label col-lg-4" for="checkBoxNormal">
+                    <span class="check-box__check"></span>
+                </label>
+                <p class="check-box__desc col-lg-16">Check box</p>
+                <div class="check-box__icon icon-show link link-small col-lg-4"></div>
+            </div>
+
+        </div>
+
+        <div class="guide guide__checkboxs-list col-lg-2">
+            <h2 class="guide--flex guide__header col-lg-24">tabs</h2>
+            <input class="check-box-tabs__input" type="checkbox" name="checkBoxTabs" id="checkBoxTabs" value="true"
+                hidden>
+            <div class="row-center col-lg-24 check-box-tabs">
+                <div class="col-lg-6 check-box-tabs__ball--color-blue"></div>
+                <label class="check-box-tabs__label col-lg-10" for="checkBoxTabs">
+                    <span>Tabs</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="guide guide__color-tabs col-lg-6">
+            <h2 class="guide--flex guide__header col-lg-24">Color tabs</h2>
+            <div class="tab">
+                <input class="tab__input" id="tab-1" type="radio" name="tabs" checked>
+                <label class="tab__label" for="tab-1">
+                    <span class="tab__choice"></span>
+                    <p class="tab__desc">Signyps</p>
+                </label>
+
+                <div class="tab">
+                    <input class="tab__input" id="tab-2" type="radio" name="tabs" checked>
+                    <label class="tab__label" for="tab-2">
+                        <span class="tab__choice"></span>
+                        <p class="tab__desc">Signyps</p>
+                    </label>
+                </div>
+                <div class="tab">
+                    <input class="tab__input" id="tab-3" type="radio" name="tabs" checked>
+                    <label class="tab__label" for="tab-3">
+                        <span class="tab__choice"></span>
+                        <p class="tab__desc">Signyps</p>
+                    </label>
+                </div>
+            </div>
+
+            <div class="tab__contents col-lg-24">
+                <div id=content-1>
+                    <p class="tab__content-desc">To jest opis 1. To jest opis 1. To jest opis 1. To jest opis 1. To
+                        jest opis 1. To jest opis 1. To jest opis 1. To jest opis 1</p>
+                </div>
+                <div id=content-2>
+                    <p class="tab__content-desc">To jest opis 2. To jest opis 2. To jest opis 2. To jest opis 2.</p>
+                </div>
+                <div id=content-3>
+                    <p class="tab__content-desc"> class="tab__desc--content">To jest opis 3. To jest opis 3. To jest
+                        opis 3. To jest opis 3</p>
+                </div>
+            </div>
+            <div class="guide guide__inputs"></div>
+            <div class="guide guide__date-period"></div>
+            <div class="guide guide__table-with-link"></div>
+            <div class="guide guide__list-with-digit"></div>
+            <div class="guide guide__slider"></div>
+            <div class="guide guide__date-period"></div>
+            <div class="guide guide__messanger"></div>
+            <div class="guide guide__notifications"></div>
+            <div class="guide guide__large-table-with-sorting"></div>
+            <div class="guide guide__pagination"></div>
+            <div class="guide guide__top-menu-buttons">
+            </div>
+        </div>
+</body>
+
+</html>

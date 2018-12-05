@@ -1,0 +1,29 @@
+.calendar {
+    border: none;
+    &__container {
+        border: 1px solid $pageHeaderDescColor;
+        border-radius: 5px;
+        padding:10px;
+        &:hover {
+            border: 1px solid $pageHeaderDescValueColor;
+            & > .hover {
+              color: $pageHeaderDescValueColor;
+            }
+        }
+    }
+    &__input {
+        border: none;
+        text-align: center;
+        font-family: $textFontFamily;
+        font-size: $textFontSize;
+        font-weight: $textFontWeight;
+    }
+    &--color-light {
+        color: $pageHeaderDescColor;
+    }
+
+    &--color-dark {
+        color: $pageHeaderDescValueColor;
+    }
+
+}
