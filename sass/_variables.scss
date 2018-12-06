@@ -1,4 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,500,700');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+
+$leftMenuHeaderFontFamily: 'Satisfy', cursive;
+$leftMenuHeaderFontSize: 24px;
+$leftMenuHeaderFontWeight: 400;
+$leftMenuFontFamily: 'Roboto', sans-serif;
+$leftMenuFontSize: 14px;
+$leftMenuFontWeight: 300;
+$leftMenuSectionFontFamily: 'Roboto', sans-serif;
+$leftMenuSectionFontSize: 16px;
+$leftMenuSectionFontWeight: 500;
+$leftMenuColor: #fff;
+$leftMenuBackground: #000;
+$leftMenuColorDefault:#979797;
+$leftMenuColorName: #56819F;
+$leftMenuColorOnline: #04AE00;
+$leftMenuColorOffline:#F58220;
+$leftMenuColorHover: #fff;
+$leftMenuBackgroundHover: #333;
 
 $cursorHover: url("../images/hand_cursor.png"), pointer;
 $cursorDisabled: not-allowed;   

@@ -1,0 +1,132 @@
+.menu-left {
+    &__background {
+        background: $leftMenuBackground;
+        height: 100vh;
+    } 
+ 
+    &__text {
+        font-family: $leftMenuFontFamily;
+        font-size: $leftMenuFontSize;
+        font-weight: $leftMenuFontWeight;
+        color: $leftMenuColorDefault;
+        &--menager-name {
+            color: $leftMenuColorName;
+            margin-top: 75px;
+            padding-left: 5px;
+        }    
+    }    
+
+    &__header {
+        font-family: $leftMenuHeaderFontFamily;
+        font-size: $leftMenuHeaderFontSize;
+        font-weight: $leftMenuHeaderFontWeight;
+        color: $leftMenuColor;
+        &--padding {
+            padding-left: 10px;
+        }
+    }
+  
+    &__section {
+        font-family: $leftMenuSectionFontFamily;
+        font-size: $leftMenuSectionFontSize;
+        font-weight: $leftMenuSectionFontWeight;
+        color: $leftMenuColorDefault;
+    }
+
+    &__img {
+        height: 75px;
+        width: 75px;
+        display: block;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-top: 75px;
+        padding-left: 3px;  
+    }
+
+    &__ball {
+        &--online {
+            &:after {
+                content: '';
+                display: block;
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                z-index: 100;
+                position: relative;
+                top: -70px;
+                left: 70px;
+                background: $leftMenuColorOnline;
+            }
+        }    
+
+        &--offline {
+            &:after {
+                content: '';
+                display: block;
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                z-index: 100;
+                position: relative;
+                top: -70px;
+                left: 70px;
+                background: $leftMenuColorOffline;
+            }
+        }
+    }    
+
+    &__row--hover:hover &--hover::before {
+        visibility: visible;
+    }
+    
+    &--hover::before {
+        content: '';
+        display: block;
+        visibility: hidden;
+        height: 50px;
+        width: 5px;
+        z-index: 100;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        background: $leftMenuColorOffline;
+    }
+    
+    
+    &__icon {
+        display: inline-block;
+        padding:0 10px;
+        line-height: 1;
+    }
+
+    &__row {
+        @include myFlexRow(flex-start, center, center, row, 0, 0);
+        ///padding: 10px 0 10px 10px;
+        height: 50px;
+        &--hover:hover {
+            color: $leftMenuColorHover;
+            background: $leftMenuBackgroundHover
+        }
+    }
+
+    &__column {
+        @include myFlexRow(flex-start, flex-start, flex-start, column, 0, 0);
+    }
+
+    &__switch:checked ~ & {
+        min-width: 100px;
+        max-width: 100px;
+        width: 100px;
+        & > .menu-left__column { 
+            & .full {
+                display: none;
+            }
+
+            & .menu-left__row > .col-lg-1    {
+                padding-right: 25px;
+            }
+        
+        }
+    }
+
+}

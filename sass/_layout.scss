@@ -1,6 +1,6 @@
 
 $hover: 'not all and (hover: none)';
-$column: 24;
+$column: 12;
 $margin: 0;
 
 $rwdColName: (
@@ -56,9 +56,10 @@ $breakpoints: (
 		@for $i from 0 through $column {
 			@if $i < $column {
         		.col-#{$a}-#{$i + 1} {
-		        	width: ((100% - ($margin * $column)) / $column ) * ($i + 1);
-					min-height: 1px;
-        		}
+					$width: (100% / $column ) * ($i+1);
+					flex: 0 0 $width;
+					min-width: $width;  
+					max-width: $width;      		}
     		}
     		.col-#{$a}-offset-#{$i} {
         		margin-left: (100% / $column ) * $i;
@@ -78,34 +79,21 @@ $breakpoints: (
     z-index: $zIndex;
 }
 
-@mixin myFlexElement ($order: 0, $flex: 0 1 auto, $alignSelf: auto) {
-	order: $order;
-	flex: $flex;
-	align-self: $alignSelf;
+.row-page {
+    @include myFlexRow(space-between, flex-start, flex-start, row);
 }
-
 
 
 .row {
     @include myFlexRow(flex-end, flex-start, flex-start, row);
-	&__element-default {
-		@include myFlexElement();
-	}
-
 }
 
 .row-center {
     @include myFlexRow(center, center, center, row, 30px);
-	&__element-default {
-		@include myFlexElement();
-	}
 }
 
 .row-space-between {
     @include myFlexRow(space-between, center, center, row);
-	&__element-default {
-		@include myFlexElement();
-	}
 }
 
 .left {

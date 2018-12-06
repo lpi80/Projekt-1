@@ -13,7 +13,8 @@
 @import "components/tabs";
 @import "components/calendar";
 @import "components/menu";
-@import "components/checkboxTabs";
+@import "components/checkbox-tabs";
+@import "components/menu-left-side";
 @import "pages/links";
 @import "pages/header";
 @import "mixins"; 
@@ -132,36 +133,4 @@ body {
         font-size: $textFontSize;
         font-weight: $textFontWeight;
     }
-}
-
-
-.row-header {
-    @include myFlexRow(space-between, flex-start, flex-start, row, 0, 0);
-	&__element-default {
-		@include myFlexElement();
-	}
-    &--column {
-        flex-direction: column;
-    }
-}
-
-.klasa {
-    background: yellow;
-
-    &--wysokosc-100 {
-        height:10vh;
-    }
-
-    &:nth-child(1) {
-        background: red;
-    }
-    &:nth-child(2) {
-        background: red;
-    }
-}
-
-.naglowek {
-    position: absolute;
-    top:50px;
-    left: 50px;
 }

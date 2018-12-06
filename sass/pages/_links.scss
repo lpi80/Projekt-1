@@ -3,9 +3,7 @@
     min-height: 20px;
     padding: 10px 0;
     @include myFlexRow(space-between, center, center, row, 50px, 1);
-	&__element-default { 
-		@include myFlexElement();
-    }
+
     &__border {
         border-top: 1px solid $color_9C9C9C;
     }
