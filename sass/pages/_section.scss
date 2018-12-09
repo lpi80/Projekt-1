@@ -1,0 +1,68 @@
+
+.section {
+    &__header {
+        padding: 10px;
+        border-bottom: 1px solid $color_9C9C9C;
+        width: 100%;
+        display: block;
+        text-transform: uppercase;
+        font-family: $pageHeaderFontFamily;
+        font-size: $pageHeaderFontSize;
+        font-weight: $pageHeaderFontWeight;
+        color: $pageHeaderDescColor;
+    }
+
+    &__background {
+        z-index: -1;
+        margin-top: 100px;
+        box-shadow: 3px 2px 1px $color_9C9C9C;
+    }
+
+    &__text {
+      line-height: 50px;
+      font-family: $sectionHeaderFontFamily;
+      font-size: $sectionHeaderFontSize;
+      font-weight: $sectionHeaderFontWeight;
+      &--padding {
+          padding-left: 10px;
+        }
+    }
+
+    &__desc {
+    line-height: 50px;
+    font-family: $textFontFamily;
+    font-size: $textFontSize;
+    font-weight: $textFontWeight;
+    }
+    
+    &--top-padding {
+        padding-top: 30px;
+    }
+
+    &--bottom-padding {
+        padding-bottom: 30px;
+    }
+
+    &--bottom-border {
+        border-bottom: 1px solid $pageHeaderDescColor;
+    }
+
+    &--background {
+        background:$color_F5F5F2        
+    }
+
+    &--bakcground-workshop {
+        background: $color_FFF;
+    }
+
+    &--color-light {
+        color: $pageHeaderDescColor;
+    }
+
+    &--color-dark {
+        color: $pageHeaderDescValueColor;
+    }
+    &--color-blue {
+        color: $textBlue;
+    }
+}

@@ -1,11 +1,9 @@
 
 $hover: 'not all and (hover: none)';
-$column: 12;
-$margin: 0;
 
 $rwdColName: (
 	('lg', 'minLarge', 'maxLarge'),
-	('m', 'minMedium', 'maxMedium'),
+	('md', 'minMedium', 'maxMedium'),
 	('s', 'minSmall', 'maxSmall')
 );
 
@@ -58,8 +56,8 @@ $breakpoints: (
         		.col-#{$a}-#{$i + 1} {
 					$width: (100% / $column ) * ($i+1);
 					flex: 0 0 $width;
-					min-width: $width;  
-					max-width: $width;      		}
+						min-width: $width;  
+						max-width: $width;      		}
     		}
     		.col-#{$a}-offset-#{$i} {
         		margin-left: (100% / $column ) * $i;
@@ -79,14 +77,6 @@ $breakpoints: (
     z-index: $zIndex;
 }
 
-.row-page {
-    @include myFlexRow(space-between, flex-start, flex-start, row);
-}
-
-
-.row {
-    @include myFlexRow(flex-end, flex-start, flex-start, row);
-}
 
 .row-center {
     @include myFlexRow(center, center, center, row, 30px);
@@ -110,3 +100,5 @@ $breakpoints: (
 .center {
     text-align: center;
 }
+
+

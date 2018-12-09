@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,500,700');
 @import url('https://fonts.googleapis.com/css?family=Satisfy');
+$column: 12;
+$margin: 0;
+
 
 $leftMenuHeaderFontFamily: 'Satisfy', cursive;
-$leftMenuHeaderFontSize: 24px;
+$leftMenuHeaderFontSize: 20px;
 $leftMenuHeaderFontWeight: 400;
 $leftMenuFontFamily: 'Roboto', sans-serif;
 $leftMenuFontSize: 14px;
@@ -14,10 +17,22 @@ $leftMenuColor: #fff;
 $leftMenuBackground: #000;
 $leftMenuColorDefault:#979797;
 $leftMenuColorName: #56819F;
-$leftMenuColorOnline: #04AE00;
+$leftMenuColorOnline: #04AE00;  
 $leftMenuColorOffline:#F58220;
 $leftMenuColorHover: #fff;
 $leftMenuBackgroundHover: #333;
+$leftMenuMinWidth: 105px;
+
+$menuTopHeight: 50px;
+$menuTopHeightLevel2:  30px;
+$menuTopBackground: #fff;
+$menuTopBackgroaundSavedLink: #74B67A;
+$menuTopColorSavedLink: #fff;   
+$menuTopBtnBackground: #fff;
+$menuTopBtnBackgroundHover: #f5f5f2;
+$menuTopBackgroaundChecked: #E3E3E3;
+$menuTopBackgroundChecked: #F5F5F2;
+$menuTopFontFamily: 'Roboto', sans-serif;
 
 $cursorHover: url("../images/hand_cursor.png"), pointer;
 $cursorDisabled: not-allowed;   
@@ -121,8 +136,7 @@ $messangerStatusOnlineColor: #fff;
 $messangerStatusOfflineColor: #fff;
 $messangerNameColor: #000;
 
-$topMenuBtnBackground: #fff;
-$topMenuBtnBackgroundHover: #f5f5f2;
+
 
 $sliderEmptyColor: #e3e3e3;
 $sliderValueColor: #f58220;

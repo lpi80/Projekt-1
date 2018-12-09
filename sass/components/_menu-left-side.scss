@@ -2,6 +2,8 @@
     &__background {
         background: $leftMenuBackground;
         height: 100vh;
+        //position: fixed;
+        z-index: 200;
     } 
  
     &__text {
@@ -114,9 +116,9 @@
     }
 
     &__switch:checked ~ & {
-        min-width: 100px;
-        max-width: 100px;
-        width: 100px;
+        min-width: $leftMenuMinWidth;
+        max-width: $leftMenuMinWidth;
+        width: $leftMenuMinWidth;
         & > .menu-left__column { 
             & .full {
                 display: none;
@@ -127,6 +129,37 @@
             }
         
         }
+    
     }
+
+
+    &__switch:checked ~ .menu-top--resize {
+        width: calc(100% - #{$leftMenuMinWidth});
+    }
+
+    &__switch:not(:checked) ~ .menu-top--resize {
+        width: calc((100% / #{$column}) * 10);
+        @media (max-width: 768px) {
+            width: calc(100% - #{$leftMenuMinWidth});
+        }
+    }
+
+    &__small {
+        @media (max-width: 768px) {
+            min-width: $leftMenuMinWidth;
+            max-width: $leftMenuMinWidth;
+            width: $leftMenuMinWidth;
+            & > .menu-left__column { 
+                & .full {
+                    display: none;
+                }
+    
+                & .menu-left__row > .col-lg-1    {
+                    padding-right: 25px;
+                }
+            
+            }
+        }
+     }
 
 }

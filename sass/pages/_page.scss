@@ -1,0 +1,68 @@
+
+.page {
+    &__container {
+        width: 100%;
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 15px;
+        
+        &-fluid {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    &__header {
+        font-family: $pageHeaderFontFamily;
+        font-size: $pageHeaderFontSize;
+        font-weight: $pageHeaderFontWeight;
+        &--color-light {
+            color: $pageHeaderDescColor;
+        }
+        &--color-dark {
+            color: $pageHeaderDescValueColor;
+        }
+        &--color-blue {
+            color: $textBlue;
+        }
+    }
+
+    &__section {
+        font-family: $sectionHeaderFontFamily;
+        font-size: $sectionHeaderFontSize;
+        font-weight: $sectionHeaderFontWeight;
+        &--color-light {
+            color: $pageHeaderDescColor;
+        }
+        &--color-dark {
+            color: $pageHeaderDescValueColor;
+        }
+        &--color-blue {
+            color: $textBlue;
+        }
+    }    
+
+    &__text {
+        font-family: $textFontFamily;
+        font-size: $textFontSize;
+        font-weight: $textFontWeight;
+        &--color-light {
+            color: $pageHeaderDescColor;
+        }
+        &--color-dark {
+            color: $pageHeaderDescValueColor;
+        }
+        &--color-blue {
+            color: $textBlue;
+        }
+    }
+
+    &__row {
+		@include myFlexRow(flex-start, flex-start, flex-start, row);
+	}
+
+	&__column {
+		@include myFlexRow(flex-start, flex-start, flex-start, column);
+	}
+}
