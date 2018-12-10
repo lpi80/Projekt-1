@@ -12,64 +12,77 @@
         color: $pageHeaderDescColor;
     }
 
+    &__text {
+        line-height: 50px;
+        font-family: $sectionHeaderFontFamily;
+        font-size: $sectionHeaderFontSize;
+        font-weight: $sectionHeaderFontWeight;
+        
+        &--padding {
+            padding-left: 10px;
+        }
+        
+        &--align {
+            @media (max-width: 768px) {
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+    }
+
+    &__desc {
+        line-height: 50px;
+        font-family: $textFontFamily;
+        font-size: $textFontSize;
+        font-weight: $textFontWeight;
+    }
+ 
     &__background {
         z-index: -1;
         margin-top: 100px;
         box-shadow: 3px 2px 1px $color_9C9C9C;
     }
 
-    &__text {
-      line-height: 50px;
-      font-family: $sectionHeaderFontFamily;
-      font-size: $sectionHeaderFontSize;
-      font-weight: $sectionHeaderFontWeight;
-      &--padding {
-          padding-left: 10px;
+    &--top {
+        &-padding {
+            padding-top: 30px;
+        }
+
+        &-border {
+            border-bottom: 1px solid $pageHeaderDescColor;
         }
     }
 
-    &__desc {
-    line-height: 50px;
-    font-family: $textFontFamily;
-    font-size: $textFontSize;
-    font-weight: $textFontWeight;
-    }
-    
-    &--top-padding {
-        padding-top: 30px;
-    }
-
-    &--bottom-padding {
-        padding-bottom: 30px;
-    }
-
-    &--bottom-border {
-        border-bottom: 1px solid $pageHeaderDescColor;
+    &--bottom {
+        &-padding { 
+            padding-bottom: 30px;
+        }
+        
+        &-border {
+            border-bottom: 1px solid $pageHeaderDescColor;
+        }
     }
 
     &--background {
-        background:$color_F5F5F2        
-    }
-
-    &--bakcground-workshop {
-        background: $color_FFF;
-    }
-
-    &--color-light {
-        color: $pageHeaderDescColor;
-    }
-
-    &--color-dark {
-        color: $pageHeaderDescValueColor;
-    }
-    &--color-blue {
-        color: $textBlue;
-    }
-
-    &__text--align {
-        @media (max-width: 768px) {
-            margin: 0 auto;
-            text-align: center;
+        background:$color_F5F5F2;        
+    
+        &-workshop {
+           background: $color_FFF;
         }
     }
+
+    &--color {
+        &-light {
+            color: $pageHeaderDescColor;
+        }
+
+        &-dark {
+            color: $pageHeaderDescValueColor;
+        }
+        
+        &-blue {
+            color: $textBlue;
+        }
+    }
+ 
 }

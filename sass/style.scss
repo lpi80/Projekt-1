@@ -5,7 +5,6 @@ ul {list-style: none;   }
 
 @import "variables";
 @import "layout";
-///@import "guide";
 @import "pages/page";
 @import "pages/section";
 @import "components/buttons";
@@ -17,6 +16,7 @@ ul {list-style: none;   }
 @import "components/checkbox-tabs";
 @import "components/menu-left-side";
 @import "components/menu-top";
+@import "components/general";
 @import "pages/links";
 @import "pages/header";
 @import "mixins"; 

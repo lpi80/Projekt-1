@@ -11,19 +11,38 @@
             }
         }
     }
+
     &__input {
         border: none;
         text-align: center;
-        font-family: $textFontFamily;
-        font-size: $textFontSize;
-        font-weight: $textFontWeight;
+        font-family: $sectionHeaderFontFamily;
+        font-size: $sectionHeaderFontSize;
+        font-weight: $sectionHeaderFontWeight;
+        background: transparent;
     }
-    &--color-light {
+    &--color {
+        &-light {
         color: $pageHeaderDescColor;
+        }
+
+        &-dark {
+            color: $pageHeaderDescValueColor;
+        }
     }
 
-    &--color-dark {
-        color: $pageHeaderDescValueColor;
+    &__row {
+        @include myFlexRow(center, center, center, row, 30, 0);
+    }
+
+    &__border-inside {
+        height: 30px;
+        border-left: 1px solid gray;
+        @media (max-width: $maxSmall) {
+            height: 0px;
+            margin: 10px 0;
+            border-left: none;
+            border-bottom: 1px solid gray;
+        }
     }
 
 }

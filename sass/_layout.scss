@@ -1,5 +1,10 @@
 
 $hover: 'not all and (hover: none)';
+$maxSmall: 767px;
+$minMedium: 768px;
+$maxMedium: 1199px;
+$minLarge: 1200px;
+
 
 $rwdColName: (
 	('lg', 'minLarge', 'maxLarge'),
@@ -78,12 +83,25 @@ $breakpoints: (
 }
 
 
-.row-center {
-    @include myFlexRow(center, center, center, row, 30px);
-}
+.row {
+	&-center {
+	@include myFlexRow(center, center, center, row, 30px);
+	}
 
-.row-space-between {
-    @include myFlexRow(space-between, center, center, row);
+	&-space-around {
+		@include myFlexRow(space-around, center, center, row, 30px);
+
+	//	@media (max-width: $maxMedium) {
+	//		@include myFlexRow(center, center, center, row, 30px);
+	//	}
+	}
+
+	&-space-between {
+		@include myFlexRow(space-between, center, center, row, 30px);
+	//	@media (max-width: $maxMedium) {
+	//		@include myFlexRow(center, center, center, row, 30px);
+	//	}
+	}
 }
 
 .left {
@@ -98,7 +116,10 @@ $breakpoints: (
 }
 
 .center {
-    text-align: center;
+	text-align: center;
+	&--small {
+		@media (max-width: $maxSmall) {
+			text-align: center;
+		}
+	}
 }
-
-

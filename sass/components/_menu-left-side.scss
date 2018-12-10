@@ -77,6 +77,20 @@
         }
     }    
 
+    &__link {
+        text-decoration: none;
+        color: $leftMenuColor;
+        &:visited {
+            color: gray;
+        }
+        &:hover,
+        &:active {
+            color: $leftMenuColorHover;
+            cursor: pointer; 
+        }
+
+    }
+
     &__row--hover:hover &--hover::before {
         visibility: visible;
     }
@@ -107,7 +121,11 @@
         height: 50px;
         &--hover:hover {
             color: $leftMenuColorHover;
-            background: $leftMenuBackgroundHover
+            background: $leftMenuBackgroundHover;
+
+            & .menu-left__link {
+                color: $leftMenuColorHover;
+            } 
         }
     }
 

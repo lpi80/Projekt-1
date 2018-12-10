@@ -1,0 +1,8 @@
+.general-stat {
+    &__img {
+        @media (max-width: $maxSmall) {
+            transform: rotate(90deg);
+            margin-top: 100px;
+        }
+    }
+}
