@@ -2,8 +2,11 @@
 .row-table {
     min-height: 20px;
     padding: 10px 0;
-    @include myFlexRow(space-between, center, center, row, 50px, 1);
-
+    @include myFlexRow(center, flex-start, flex-start, row, 50px, 1);
+    
+    @media (min-width: 769px) {
+        @include myFlexRow(space-between, center, center, row, 50px, 1);
+    }
     &__border {
         border-top: 1px solid $color_9C9C9C;
     }
@@ -12,10 +15,10 @@
     &__display-none {
         visibility: hidden;
     }
-	&:hover {
+	&--hover:hover {
         background: $rowTableBackground;
     }
-    &:hover &__display-none {
+    &--hover:hover &__display-none {
         visibility: visible;
     }
 }

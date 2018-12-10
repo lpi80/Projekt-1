@@ -910,9 +910,15 @@ ul {
   color: #56819F;
 }
 
+@media (max-width: 768px) {
+  .section__text--align {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
 .btn {
   height: 40px;
-  max-width: 300px;
   min-width: 93px;
   border-radius: 3px;
   border: none;
@@ -1611,18 +1617,37 @@ ul {
   padding: 10px 0;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
   -ms-flex-direction: row;
       flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   min-height: 50px;
   z-index: 1;
+}
+
+@media (min-width: 769px) {
+  .row-table {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    min-height: 50px;
+    z-index: 1;
+  }
 }
 
 .row-table__border {
@@ -1633,11 +1658,11 @@ ul {
   visibility: hidden;
 }
 
-.row-table:hover {
+.row-table--hover:hover {
   background: #E3E3E3;
 }
 
-.row-table:hover .row-table__display-none {
+.row-table--hover:hover .row-table__display-none {
   visibility: visible;
 }
 

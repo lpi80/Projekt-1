@@ -81,7 +81,7 @@
     &--border-right {
         border-right: 1px solid gray;
     }
-    
+
     &__row {
         @include myFlexRow(flex-start, flex-start, flex-start, row, $menuTopHeight, 5);
 

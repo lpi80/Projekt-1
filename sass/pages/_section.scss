@@ -65,4 +65,11 @@
     &--color-blue {
         color: $textBlue;
     }
+
+    &__text--align {
+        @media (max-width: 768px) {
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
 }
