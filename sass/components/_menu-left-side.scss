@@ -80,11 +80,11 @@
     &__link {
         text-decoration: none;
         color: $leftMenuColor;
+        &:active,
         &:visited {
             color: gray;
         }
-        &:hover,
-        &:active {
+        &:hover {
             color: $leftMenuColorHover;
             cursor: pointer; 
         }

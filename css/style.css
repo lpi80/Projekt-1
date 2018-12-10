@@ -1365,11 +1365,11 @@ ul {
   color: #fff;
 }
 
-.menu-left__link:visited {
+.menu-left__link:active, .menu-left__link:visited {
   color: gray;
 }
 
-.menu-left__link:hover, .menu-left__link:active {
+.menu-left__link:hover {
   color: #fff;
   cursor: pointer;
 }
