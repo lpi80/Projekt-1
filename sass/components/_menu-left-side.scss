@@ -81,6 +81,7 @@
         text-decoration: none;
         color: $leftMenuColor;
         &:active,
+        &:link,
         &:visited {
             color: gray;
         }

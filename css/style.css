@@ -1365,7 +1365,7 @@ ul {
   color: #fff;
 }
 
-.menu-left__link:active, .menu-left__link:visited {
+.menu-left__link:active, .menu-left__link:link, .menu-left__link:visited {
   color: gray;
 }
 
