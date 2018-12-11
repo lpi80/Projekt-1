@@ -888,7 +888,7 @@ ul {
   padding-left: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .section__text--align {
     margin: 0 auto;
     text-align: center;
@@ -1250,6 +1250,55 @@ ul {
   }
 }
 
+.personal__row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 50px;
+  z-index: 5;
+}
+
+.personal__column {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 50px;
+  z-index: 10;
+}
+
+.personal__border {
+  border-bottom: 1px solid gray;
+  padding: 20px 0;
+}
+
+.personal__input {
+  padding: 5px;
+  border: 1 solid #9C9C9C;
+  border-radius: 5px;
+}
+
+.personal__input:focus .personal__input:active .personal__input:hover {
+  border: 1 solid #333;
+}
+
 .check-box-tabs__ball--color-blue::after {
   content: '';
   display: inline-block;
@@ -1463,13 +1512,13 @@ ul {
   width: calc((100% / 12) * 10);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .menu-left__switch:not(:checked) ~ .menu-top--resize {
     width: calc(100% - 105px);
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .menu-left__small {
     min-width: 105px;
     max-width: 105px;
@@ -1487,7 +1536,7 @@ ul {
   width: 250px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .menu-top__wallet-s {
     width: 100%;
   }
@@ -1497,7 +1546,7 @@ ul {
   width: 300px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .menu-top__notification-s {
     width: 100%;
   }
@@ -1725,7 +1774,7 @@ ul {
   z-index: 1;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .row-table {
     display: -ms-flexbox;
     display: flex;

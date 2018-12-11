@@ -4,7 +4,7 @@
     padding: 10px 0;
     @include myFlexRow(center, flex-start, flex-start, row, 50px, 1);
     
-    @media (min-width: 769px) {
+    @media (min-width: $minMedium) {
         @include myFlexRow(space-between, center, center, row, 50px, 1);
     }
     &__border {

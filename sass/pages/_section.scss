@@ -23,7 +23,7 @@
         }
         
         &--align {
-            @media (max-width: 768px) {
+            @media (max-width: $maxSmall) {
                 margin: 0 auto;
                 text-align: center;
             }

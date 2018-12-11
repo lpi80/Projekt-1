@@ -2,7 +2,6 @@
     &__background {
         background: $leftMenuBackground;
         height: 100vh;
-        //position: fixed;
         z-index: 200;
     } 
  
@@ -118,7 +117,6 @@
 
     &__row {
         @include myFlexRow(flex-start, center, center, row, 0, 0);
-        ///padding: 10px 0 10px 10px;
         height: 50px;
         &--hover:hover {
             color: $leftMenuColorHover;
@@ -158,13 +156,13 @@
 
     &__switch:not(:checked) ~ .menu-top--resize {
         width: calc((100% / #{$column}) * 10);
-        @media (max-width: 768px) {
+        @media (max-width: $maxSmall) {
             width: calc(100% - #{$leftMenuMinWidth});
         }
     }
 
     &__small {
-        @media (max-width: 768px) {
+        @media (max-width: $maxSmall) {
             min-width: $leftMenuMinWidth;
             max-width: $leftMenuMinWidth;
             width: $leftMenuMinWidth;

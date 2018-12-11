@@ -14,11 +14,11 @@ $rwdColName: (
 
 $breakpoints: (
 	'minSmall':  ( min-width:  0 ),
-	'maxSmall':  ( max-width:  767px ),
-	'minMedium': ( min-width:  768px ),
-	'maxMedium': ( max-width:  1199px ),
-	'minLarge':  ( min-width: 1200px ),
-	'maxLarge':  ( max-width: 9999px )
+	'maxSmall':  ( max-width:  $maxSmall ),
+	'minMedium': ( min-width:  $minMedium ),
+	'maxMedium': ( max-width:  $maxMedium ),
+	'minLarge':  ( min-width:  $minLarge ),
+	'maxLarge':  ( max-width:  9999px )
 );
 
 /// Mixin to manage responsive breakpoints
