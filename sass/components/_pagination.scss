@@ -1,0 +1,9 @@
+.pagination {
+    &__row {
+        @include myFlexRow(center, center, center, row, 30px);
+    }
+
+    &__border {
+        padding: 10px 10px;
+    }
+}

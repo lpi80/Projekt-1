@@ -15,13 +15,18 @@
     }
 
     &__input {
+        outline: none;
         padding: 5px;
         border: 1 solid $color_9C9C9C;
         border-radius: 5px;
-        &:focus
-        &:active
+        
+        &:focus,
+        &:active,
         &:hover {
-            border: 1 solid $color_333;
+             border: 2px solid $color_333;
         }
+
     }
+
+  
 }
