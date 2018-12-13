@@ -10,11 +10,10 @@
     font-style: normal;
 }
 [class*='icon-']:before{
-    display: inline-block;
+	display: inline-block;
    font-family: 'Glyphter';
    font-style: normal;
    font-weight: normal;
-   padding:0 10px;
    line-height: 1;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale

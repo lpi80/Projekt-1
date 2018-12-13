@@ -84,6 +84,16 @@ $breakpoints: (
 
 
 .row {
+
+	&--main {
+		@include myFlexRow(flex-end, flex-start, flex-start, row, $menuTopHeight, 5);
+		width: 100%;
+		background: $menuTopBackground;
+		box-shadow: 2px 2px 2px gray;
+	}
+
+
+	
 	&-center {
 	@include myFlexRow(center, center, center, row, 30px);
 	}

@@ -1,9 +1,12 @@
 .calendar {
+    $height: 30px;
+    $padding: 10px;
+
     border: none;
     &__container {
         border: 1px solid $pageHeaderDescColor;
         border-radius: 5px;
-        padding:10px;
+        padding:$padding;
         &:hover {
             border: 1px solid $pageHeaderDescValueColor;
             & > .hover {
@@ -13,6 +16,7 @@
     }
 
     &__input {
+        outline: none;
         border: none;
         text-align: center;
         font-family: $sectionHeaderFontFamily;
@@ -31,11 +35,11 @@
     }
 
     &__row {
-        @include myFlexRow(center, center, center, row, 30, 0);
+        @include myFlexRow(center, center, center, row, $height, 0);
     }
 
     &__border-inside {
-        height: 30px;
+        height: $height;
         border-left: 1px solid gray;
         @media (max-width: $maxSmall) {
             height: 0px;
@@ -45,4 +49,7 @@
         }
     }
 
+    &--height {
+        height: $height + $padding * 2;
+    }
 }

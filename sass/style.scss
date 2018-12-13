@@ -1,14 +1,14 @@
 @import "normalize";
  
-*, *:before, *:after {margin: 0; padding: 0; box-sizing:border-box}
+*, *:before, *:after {margin: 0; padding: 0; box-sizing: border-box;}
 ul {list-style: none;   }  
 
 @import "variables";
+@import "components/text";
 @import "layout";
 @import "pages/page";
 @import "pages/section";
 @import "components/buttons";
-@import "components/text";
 @import "components/links";
 @import "components/checkbox";
 @import "components/tabs";
