@@ -186,16 +186,8 @@
                 border-radius: 50%;
             }
         }
-        
-
     }
     
-    &__row {
-        @include myFlexRow(flex-start, flex-start, flex-start, row, $menuTopHeight, 5);
-        flex: 0 0 100%;
-        width: 100%;
-    } 
-     
     &__exit {
         border-left: 1px solid gray;
         height: $menuTopHeight;

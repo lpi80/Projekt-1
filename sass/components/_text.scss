@@ -20,6 +20,14 @@
     text-transform: none;
 }
 
+@mixin menu-left-header() {
+    font-family: $leftMenuHeaderFontFamily;
+    font-size: $leftMenuHeaderFontSize;
+    font-weight: $leftMenuHeaderFontWeight;
+    text-transform: none;
+}
+
+
 .text {
     &__page-header {
         font-family: $pageHeaderFontFamily;
