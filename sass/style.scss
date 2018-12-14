@@ -1,7 +1,7 @@
-@import "normalize";
- 
-*, *:before, *:after {margin: 0; padding: 0; box-sizing: border-box;}
-ul {list-style: none;   }  
+@import "reset";
+* {box-sizing: border-box;}
+//*, *:before, *:after {margin: 0; padding: 0; }
+//ul {list-style: none;   }  
 
 @import "variables";
 @import "components/text";

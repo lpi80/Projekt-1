@@ -164,14 +164,12 @@
 
                     <div class="section__header">general statistic</div>
 
-                    <div class="row-center calendar section--top-padding section--bottom-padding section--bottom-border col-lg-12 col-md-12 col-s-12">
-                        <div class="row-space-around calendar__container col-lg-5 col-md-8 col-s-12">
-                            <input class="col-lg-5 col-md-5 col-s-12 calendar__input calendar--color-light" type="date"
-                                name="calendarStart" id="calendarStart">
-                            <div class=" calendar--color-light">|</div>
-                            <input class="col-lg-5 col-md-5 col-s-12 calendar__input  calendar--color-light" type="date"
-                                name="calendarEnd" id="calendarEnd">
-                            <div class="col-lg-1 col-md-1 col-s-12 center icon-calendar calendar--color-light hover"></div>
+                    <div class="calendar">
+                        <div class="calendar__input col-lg-5 col-md-10 col-s-10">
+                            <input class="calendar__input-field" type="date" name="calendarStart" id="calendarStart" >
+                            <div class="calendar__separator"></div>
+                            <input class="calendar__input-field" type="date" name="calendarEnd" id="calendarEnd">
+                            <div class="icon-calendar calendar__icon"></div>
                         </div>
                         <button class="btn btn--orange icon-refresh calendar--height"></button>
                     </div>
