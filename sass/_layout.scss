@@ -97,26 +97,5 @@ $breakpoints: (
 		box-shadow: 2px 2px 2px gray;
 	}
 
-
-
-	&-center {
-	@include myFlexRow(center, center, center, row, 30px);
-	}
-
-	&-space-around {
-		@include myFlexRow(space-around, center, center, row, 30px);
-	}
-
-	&-space-between {
-		@include myFlexRow(space-between, center, center, row, 30px);
-	}
-}
-
-.center {
-	text-align: center;
-	&--small {
-		@media (max-width: $maxSmall) {
-			text-align: center;
-		}
-	}
+	
 }

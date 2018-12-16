@@ -1,19 +1,77 @@
 .link {
+    $height: 50px;
+
     text-decoration: none;
-    color: $linkColor;
-    font-family: $linkFontFamily;
-    &--large {
-        font-size: $linkLargeFontSize;
-        font-weight: $linkLargeFontWeight;
-    }
-
-    &--small {
-        font-size: $linkSmallFontSize;
-        font-weight: $linkSmallFontWeight;
-    }
-
+    padding-top: 15px;
+    color: $linkColorName;
+  
     &:hover {
         cursor: $cursorHover; 
         color: $linkHoverColor;
+    }
+
+    &:link {
+        color: $linkColorName;
+    }
+  
+    &:visited,
+    &:active {
+        color: $linkColor;
+    }
+
+    &:hover{
+        color: $linkHoverColor;
+        cursor: $cursorHover; 
+    }
+
+    &__name {
+        padding-top: 15px;
+        @include section-header;
+        color: $linkColorName;
+    }
+    
+    &__icon {
+        padding-top: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: $linkColorName;
+
+        &:hover {
+            cursor: $cursorHover; 
+            color: $linkHoverColor;
+        }
+    }
+
+    &__row {
+        @include myFlexRow(flex-start, center, center, row);
+        flex: 0 0 auto;
+        border-bottom: 1px solid gray;
+
+        @media (max-width: $maxMedium) {
+            @include myFlexRow(space-around, center, center, column, $height, 5);
+        }
+
+        &:nth-child(1) {
+            border-top: 1px solid gray;
+        }
+        
+        &:hover {
+            cursor: $cursorHover; 
+            color: $linkHoverColor;
+            background: $linkBackgroundHover;
+        }
+
+        &--icon {
+            @include myFlexRow(space-between, center, center, row, $height, 5);
+            flex: 0 0 auto;
+        }
+    
+    }
+    
+    &__column {
+        @include myFlexRow(center, center, center, column, $height, 5);
+        flex: 0 0 auto;
+        width: 100%;
+        padding: 30px 0;
     }
 }

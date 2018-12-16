@@ -1,0 +1,83 @@
+.table {
+    $heightHead: 100px;
+    $heightBody: 80px;
+    $column: 4;
+
+    overflow:hidden;
+    max-width:1000px; 
+    width:100%;
+    margin:0 auto;
+    position:relative;
+    text-align: left;
+    
+    &__main {
+        display: block;
+        flex: 0 0 auto;
+        width: 80%;
+    }
+
+    &__head {
+        @include section-header;
+        color: $pageHeaderDescColor;
+    }
+
+    &__body {
+        @include section-header;
+        color: $pageHeaderDescValueColor;
+    }
+
+    &__ceil {
+        height: $heightBody;
+        width: 100% / $column;
+        vertical-align: middle;
+        border-top: 1px solid gray;
+        &--head {
+            height: $heightHead;
+            vertical-align: middle;
+        }
+    }
+
+    &__row--hidden {
+        display: none;
+    }
+} 
+
+
+
+@media (max-width: 1000px) {
+    .table {
+        &__ceil {
+            height: 40px;
+            border: none;
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding-left: 45%;
+            position: relative;
+        
+            &::before {
+                color: $pageHeaderDescColor;
+                position:absolute;
+                @include section-header;     
+                width:40%;
+                left:10px;
+                //top:0;
+                text-align: left; 
+            }
+    
+            &:nth-child(1):before { content:"Date";}
+            &:nth-child(2):before { content:"Amount ($)";}
+            &:nth-child(3):before { content:"Deal";}
+            &:nth-child(4):before { content:"Account";}
+            
+            &:nth-last-child(1) {
+            border-bottom: 2px solid gray;
+            }
+        }
+
+        & &__row:nth-child(1) {
+            display: none;
+        }   
+    }
+}
+

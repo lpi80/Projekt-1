@@ -1,5 +1,6 @@
 
 .section {
+    background: $color_FFF;
     &__header {
         padding: 10px;
         border-bottom: 1px solid $color_9C9C9C;
@@ -10,79 +11,18 @@
         font-size: $pageHeaderFontSize;
         font-weight: $pageHeaderFontWeight;
         color: $pageHeaderDescColor;
+        background: $color_FFF;
     }
 
-    &__text {
-        line-height: 50px;
-        font-family: $sectionHeaderFontFamily;
-        font-size: $sectionHeaderFontSize;
-        font-weight: $sectionHeaderFontWeight;
-        
-        &--padding {
-            padding-left: 10px;
-        }
-        
-        &--align {
-            @media (max-width: $maxSmall) {
-                margin: 0 auto;
-                text-align: center;
-            }
-        }
+    &__workshop {
+        background: $color_FFF;
+        @include myFlexRow(center, center, center, column);
+        width: 100%;
+        flex: 0 0 auto;
+        padding: 30px 0;
     }
 
-    &__desc {
-        line-height: 50px;
-        font-family: $textFontFamily;
-        font-size: $textFontSize;
-        font-weight: $textFontWeight;
-    }
- 
-    &__background {
-        z-index: -1;
-        margin-top: 100px;
-        box-shadow: 3px 2px 1px $color_9C9C9C;
-    }
+    &__main {
 
-    &--top {
-        &-padding {
-            padding-top: 30px;
-        }
-
-        &-border {
-            border-bottom: 1px solid $pageHeaderDescColor;
-        }
     }
-
-    &--bottom {
-        &-padding { 
-            padding-bottom: 30px;
-        }
-        
-        &-border {
-            border-bottom: 1px solid $pageHeaderDescColor;
-        }
-    }
-
-    &--background {
-        background:$color_F5F5F2;        
-    
-        &-workshop {
-           background: $color_FFF;
-        }
-    }
-
-    &--color {
-        &-light {
-            color: $pageHeaderDescColor;
-        }
-
-        &-dark {
-            color: $pageHeaderDescValueColor;
-        }
-        
-        &-blue {
-            color: $textBlue;
-        }
-    }
- 
 }
