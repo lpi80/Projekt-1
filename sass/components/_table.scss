@@ -1,8 +1,7 @@
 .table {
     $heightHead: 60px;
     $heightBody: 50px;
-    $column: 4;
-
+    
     overflow:auto;
     max-width:1000px; 
     width:100%;
@@ -34,7 +33,6 @@
     
     &__ceil {
         height: $heightBody;
-        width: 100% / $column;
         vertical-align: middle;
         border-top: 1px solid gray;
 
@@ -102,16 +100,10 @@
                 @include section-header;     
                 width:40%;
                 left:10px;
-                //top:0;
                 text-align: left; 
                 content: attr(data-th); 
             }
     
-            //&:nth-child(1):before { content:"Date";}
-            //&:nth-child(2):before { content:"Amount ($)";}
-            //&:nth-child(3):before { content:"Deal";}
-            //&:nth-child(4):before { content:"Account";}
-            
             &:nth-child(1) {
                 margin-top: 20px;
             }

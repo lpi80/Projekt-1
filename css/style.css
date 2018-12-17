@@ -1846,7 +1846,6 @@ table {
 
 .table__ceil {
   height: 50px;
-  width: 25%;
   vertical-align: middle;
   border-top: 1px solid gray;
 }

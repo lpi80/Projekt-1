@@ -1,6 +1,7 @@
 'use strict';
 
 var headerText = [];
+var columns = 4;
 var rows;
 var number = 1;
 var maxRows = 0;
@@ -11,7 +12,7 @@ var paginationNumber = 9;
 var step;
 
 
-var myTable = document.querySelector('#myTable');
+var myTable = document.querySelector('#payoutTable');
 var myRow = myTable.querySelectorAll('.table__row--single');
 var myHeaders = myTable.querySelectorAll(".table__ceil--header");
 
@@ -183,7 +184,7 @@ myPaginationIcon[1].addEventListener('click', buttonClickCallbackNext); //Next
 window.addEventListener('resize', paginationParametersCallBack);
 
 var i;
-for (i = 1; i <= myRow[0].children.length; i++) { //html is ready for 4 elements!!
+for (i = 1; i <= columns; i++) { //html is ready for 4 elements!!
     myTableChecked[i - 1].addEventListener('click', sortUpClickCallback(i));
     myTableUnchecked[i - 1].addEventListener('click', sortDownClickCallback(i));
 }
