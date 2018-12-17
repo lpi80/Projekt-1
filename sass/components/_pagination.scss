@@ -1,9 +1,31 @@
 .pagination {
+    background: $color_FFF;
+    margin-bottom: 10px;
+    @include text;
     &__row {
         @include myFlexRow(center, center, center, row, 30px);
+
     }
 
-    &__border {
-        padding: 10px 10px;
+    &__list {     
+        padding: 20px 20px;
+        &:hover {
+            cursor: $cursorHover; 
+            color: $linkHoverColor;
+        }
+
+        &--icon {
+            padding: 20px 20px;
+            &:hover {
+                cursor: $cursorHover; 
+                color: $linkHoverColor;  
+            }
+        }            
+
+        &--active {
+            color: $linkColor;
+            background: $rowTableBackground;
+        }
+        
     }
 }

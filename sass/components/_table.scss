@@ -1,0 +1,121 @@
+.table {
+    $heightHead: 60px;
+    $heightBody: 50px;
+    
+    overflow:auto;
+    max-width:1000px; 
+    width:100%;
+    margin:0 auto;
+    position:relative;
+    text-align: left;
+   
+
+    &__main {
+        display: block;
+        flex: 0 0 auto;
+        width: 80%;
+        
+    }
+
+    &__head {
+        @include section-header;
+        color: $pageHeaderDescColor;
+    }
+
+    &__body {
+        @include section-header;
+        color: $pageHeaderDescValueColor;
+    }
+
+    &__input {
+        display: none;
+    }
+    
+    &__ceil {
+        height: $heightBody;
+        vertical-align: middle;
+        border-top: 1px solid gray;
+
+        &--header {
+            height: $heightHead;
+            vertical-align: middle;
+
+            &:hover {
+                background: $rowTableBackground;
+                cursor: $cursorHover; 
+
+                & .table__input:checked + .table__ceil--name .table__checked {
+                    display: inline-block
+                }
+                
+                & .table__input:not(:checked) + .table__ceil--name .table__unchecked {
+                    display: inline-block
+                }
+            } 
+        }
+    }
+
+    &__checked,
+    &__unchecked {
+        padding-left: 10px;
+        display: none;
+        &:hover {
+            cursor: $cursorHover; 
+            color: $linkHoverColor;  
+        }
+    }
+
+    
+
+    &__row {
+        &--hidden {
+            display: none;
+        }
+
+        &--single {
+            &:hover {
+                background: $rowTableBackground;
+                cursor: $cursorHover; 
+            } 
+        }
+    }
+} 
+
+
+
+@media (max-width: 1000px) {
+    .table {
+        &__ceil {
+            height: 40px;
+            border: none;
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding-left: 45%;
+            position: relative;
+        
+            &::before {
+                color: $pageHeaderDescColor;
+                position:absolute;
+                @include section-header;     
+                width:40%;
+                left:10px;
+                text-align: left; 
+                content: attr(data-th); 
+            }
+    
+            &:nth-child(1) {
+                margin-top: 20px;
+            }
+
+            &:nth-last-child(1) {
+                border-bottom: 2px solid gray;
+            }
+        }
+
+        & &__row:nth-child(1) {
+            display: none;
+        }   
+    }
+}
+

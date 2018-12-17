@@ -2,219 +2,230 @@
 <html lang="pl-PL">
 
 <head>
-            <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <title>Projekt-1</title>
     <link rel="stylesheet" type="text/css" href="vendor/glyphter/css/glyphter.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css"></head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-    <div class="menu-top__row col-lg-12 col-md-12 col-s-12">
-        <input class="menu-left__switch" type="checkbox" name="leftMenu" id="leftMenu" value="true" hidden>
-        <div class="menu-left__text col-lg-2 col-md-2 col-s-2 menu-left__background menu-left menu-left__small">
-            <ul class="col-lg-12 col-md-12 col-s-12 menu-left__column ">
-                <li class="menu-left__row col-lg-12 col-md-12 col-s-12">
-                    <p class="menu-left__header menu-left__header--padding col-lg-8 col-md-8 full">Just do it</p> 
-                    <div class="menu-left--hover col-lg-1 col-s-1"></div>
-                    <label for="leftMenu">  
-                        <div class="menu-left__icon"><i class="fas fa-bars"></i></div>
-                    </label>    
-                </li>   
-                <li class="col-lg-12 col-md-12 col-s-12 menu-left__row menu-left__row--hover ">
-                        <div class="menu-left--hover col-lg-1 col-md-1 col-s-1"></div>
-                        <a class="menu-left__link icon-general col-lg-3 col-md-3 col-s-3" href="general_statistic.html"></a>
-                        <p class="col-lg-8 col-md-8 col-s-8 full"><a class="menu-left__link" href="general_statistic.html">General</a></p>
+    <div class="row--main">
+        <!--Menu left-->
+        <input class="menu-left__switch" type="checkbox" name="leftMenu" id="leftMenu" value="true">
+        <div class="menu-left">
+            <ul class="menu-left__column">
+                <li class="menu-left__header">
+                    <p class="menu-left__header-logo full">Just do it</p>
+                    <label for="leftMenu">
+                        <span class="menu-left__header-icon"><i class="fas fa-bars"></i></span>
+                    </label>
                 </li>
-                <li class="col-lg-12 col-md-12  col-s-12 menu-left__row menu-left__row--hover">
-                    <div class="menu-left--hover col-lg-1 col-s-1"></div>
-                    <a class="menu-left__link icon-details col-lg-3 col-md-3 col-s-3" href="details.html"></a>
-                    <p class="col-lg-8 col-md-8  col-s-8 full"><a class="menu-left__link" href="details.html">Details</a></p>
+                <li class="menu-left__one-row ">
+                    <div class="menu-left__one-row--bar">
+                        <a class="icon-general menu-left__one-row--icon" href="general_statistic.html"></a>
+                    </div>
+                    <a class="menu-left__one-row--link full" href="general_statistic.html">General</a>
                 </li>
-                <li class="col-lg-12 col-md-12  col-s-12 menu-left__row menu-left__row--hover">
-                    <div class="menu-left--hover col-lg-1 col-s-1 "></div>
-                    <a class="menu-left__link icon-links col-lg-3 col-md-3 col-s-3" href="links.html"></a>
-                    <p class="col-lg-8 col-md-8 col-s-3 full "><a class="menu-left__link" href="links.html">Links</a></p>
+                <li class="menu-left__one-row ">
+                    <div class="menu-left__one-row--bar">
+                        <a class="icon-details menu-left__one-row--icon" href="details.html"></a>
+                    </div>
+                    <a class="menu-left__one-row--link full" href="details.html">Details</a>
                 </li>
-                <li class="col-lg-12 col-md-12  col-s-12 menu-left__row menu-left__row--hover">
-                    <div class="menu-left--hover col-lg-1 col-s-1"></div>
-                    <a class="menu-left__link icon-banners col-lg-3 col-md-3 col-s-3" href="banners.html"></a>
-                    <p class="col-lg-8 col-md-8  col-s-8 full"><a class="menu-left__link" href="banners.html">Banners</a></p>
+                <li class="menu-left__one-row ">
+                    <div class="menu-left__one-row--bar">
+                        <a class="icon-links menu-left__one-row--icon" href="links.html"></a>
+                    </div>
+                    <a class="menu-left__one-row--link full" href="links.html">Links</a>
                 </li>
-                <li class="col-lg-12 col-md-12 col-s-12 menu-left__row menu-left__row--hover">
-                    <div class="menu-left--hover col-lg-1 col-s-1"></div>
-                    <a class="menu-left__link icon-personaldata col-lg-3 col-md-3 col-s-3" href="personal_data.html"></a>
-                    <p class="col-lg-8 col-md-8  col-s-8 full"><a class="menu-left__link" href="personal_data.html">Personal data</a></p>
+                <li class="menu-left__one-row ">
+                    <div class="menu-left__one-row--bar">
+                        <a class="icon-banners menu-left__one-row--icon" href="banners.html"></a>
+                    </div>
+                    <a class="menu-left__one-row--link full" href="banners.html">Banners</a>
                 </li>
-                <li class="col-lg-12 col-md-12  col-s-12 menu-left__row menu-left__row--hover">
-                    <div class="menu-left--hover col-lg-1 col-s-1"></div>
-                    <a class="menu-left__link icon-payout col-lg-3 col-md-3 col-s-3" href="payout.html"></a>
-                    <p class="col-lg-8 col-md-8  col-s-8 full"><a class="menu-left__link" href="payout.html">Payout</a></p>
+                <li class="menu-left__one-row ">
+                    <div class="menu-left__one-row--bar">
+                        <a class="icon-personaldata menu-left__one-row--icon" href="personal_data.html"></a>
+                    </div>
+                    <a class="menu-left__one-row--link full" href="personal_data.html">Personal data</a>
                 </li>
-                <li class="col-lg-12 col-md-12 col-s-12 menu-left__row menu-left__row--hover">
-                    <div class="menu-left--hover col-lg-1 col-s-1"></div>
-                    <a class="menu-left__link icon-postback col-lg-3 col-md-3 col-s-3" href="postback.html"></a>
-                    <p class="col-lg-8 col-md-8 col-s-8 full "><a class="menu-left__link" href="postback.html">Postback</a></p>
+                <li class="menu-left__one-row ">
+                    <div class="menu-left__one-row--bar">
+                        <a class="icon-payout menu-left__one-row--icon" href="payout.html"></a>
+                    </div>
+                    <a class="menu-left__one-row--link full" href="payout.html">Payout</a>
                 </li>
-                <li class="col-lg-12 col-md-12 col-s-12 menu-left__row">
+                <li class="menu-left__one-row menu-left__row--border-bottom">
+                    <div class="menu-left__one-row--bar">
+                        <a class="icon-postback menu-left__one-row--icon" href="postback.html"></a>
+                    </div>
+                    <a class="menu-left__one-row--link full" href="postback.html">Postback</a>
                 </li>
-                <li class="col-lg-12 col-md-12 col-s-12 menu-left__row full">
-                    <p class="menu-left__section col-lg-offset-1 col-md-offset-1 col-lg-10 col-md-10 col-s-10">Your menager</p>   
+
+                <li class="menu-left__row  menu-left__row--border-top full">
+                    <p class="menu-left__manager--header">Your manager</p>
                 </li>
-                <li class="col-lg-12 col-md-12 col-s-12 menu-left__row menu-left__section">
-                    <div class="col-lg-6 col-md-6 col-s-6 menu-left__ball--online">
-                        <img class="menu-left__ball--online menu-left__img" src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ad57f7ca5832f3f72ee2c1c243c72f5c&auto=format&fit=crop&w=1350&q=80" alt="">
-                    </div> 
-                    <p class="menu-left__text menu-left__text--menager-name col-lg-6 col-md-6 col-s-6 full">Micheal E.</p>
+                <li class="menu-left__row">
+                    <div class="menu-left__connection--online">
+                        <img class=" menu-left__img" src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ad57f7ca5832f3f72ee2c1c243c72f5c&auto=format&fit=crop&w=1350&q=80"
+                            alt="">
+                    </div>
+                    <p class="menu-left__manager--name full">Micheal E.</p>
                 </li>
             </ul>
         </div>
-        
-        <div class="menu-top--resize">
-            <ul class="col-lg-12 col-md-12 col-s-12 menu-top__column ">
-                <li class="col-lg-12 col-md-12 col-s-12">
-                    <ul class="col-lg-12 col-md-12 col-s-12 menu-top--background-main menu-top__row--main">
-                        <input class="menu-top__switch-wallet" type="checkbox" name="walletSwitch" id="walletSwitch" value="true" hidden>
-                        <li class="menu-top menu-top__wallet-lg menu-top__wallet-md menu-top__wallet-s menu-top__wallet-md menu-top__wallet-s">
-                            <ul class="menu-top__row col-lg-12 col-md-12 col-s-12 menu-top--border "> 
-                                <li class="col-lg-1 col-md-1 col-s-1 menu-top--center icon-wallet menu-top--color" ></li>
-                                <li class="col-lg-9 col-md-9 col-s-9 menu-top--center page__header menu-top--color"><span>$</span>1,500.00</li>
-                                <label for="walletSwitch" >
-                                    <li class="col-lg-2 col-md-2 col-s-2 icon-arrow-up-small menu-top__unchecked menu-top--center page__text menu-top--color"></li>
-                                    <li class="col-lg-2 col-md-2 col-s-2 icon-arrow-down-small menu-top__checked menu-top--center page__text menu-top--color"></li>
-                                </label>
-                            </ul>
-                            <ul class="menu-top__column menu-top__unchecked menu-top--block menu-top--border">
-                                <li class="menu-top__wallet-lg menu-top__wallet-md menu-top__wallet-s page__section"> 
-                                    <ul class="col-lg-12 col-md-12 col-s-12 menu-top__row--level2">
-                                        <li class="col-lg-9 menu-top--align page__section--color-light">CPA</li>
-                                        <li class="col-lg-3 col-md-3 col-s-3 menu-top--align menu-top__text--color-dark"><span>$</span>1000</li>
-                                    </ul>
-                                    <ul class="col-lg-12 col-md-12 col-s-12 menu-top__row--level2">
-                                        <li class="col-lg-9 col-md-9 col-s-9 menu-top--align page__section--color-light">CPL</li>
-                                        <li class="col-lg-3 col-md-3 col-s-3 menu-top--align"><span>$</span>1100</li>
-                                    </ul>
-                                    <ul class="col-lg-12 col-md-12  col-s-12 menu-top__row--level2">
-                                        <li class="col-lg-9 col-md-9  col-s-9 menu-top--align page__section--color-light">Turnover</li>
-                                        <li class="col-lg-3 col-md-3 col-s-3 menu-top--align"><span>$</span>1030</li>
-                                    </ul>
-                                    <ul class="col-lg-12 col-md-12  col-s-12 menu-top__row--level2">
-                                        <li class="col-lg-9 col-md-9  col-s-9 menu-top--align page__section--color-light">Net deposit</li>
-                                        <li class="col-lg-3 col-md-3 col-s-3 menu-top--align"><span>$</span>1050</li>
-                                    </ul>
-                                </li> 
-                            </ul>
-                        </li>    
-                        <input class="menu-top__switch-notification" type="checkbox" name="notificationSwitch" id="notificationSwitch" value="true" hidden>
-                        <li class="menu-top menu-top__notification-lg menu-top__notification-md menu-top__notification-s">
-                            <ul class="menu-top__row col-lg-12 col-md-12  col-s-12 menu-top--border page__text page__text--color-light"> 
-                                <label for="notificationSwitch" class="col-lg-3 col-md-3 col-s-12 menu-top__checked menu-top--border-right">
-                                    <li class="col-lg-12 col-md-12 col-s-12 icon-notification menu-top--center menu-top--color menu-top__ball-notification "></li>
-                                </label>
-                                <li class="col-lg-3 col-md-3 col-s-12 icon-notification menu-top--center menu-top__unchecked menu-top--color"></li>
-                                <li class="col-lg-7 col-md-7 col-s-10 icon-profile menu-top--center page__text page__text--color-blue ">Leonardo Dicaprio</li>
-                                <label for="notificationSwitch">
-                                    <li class="col-lg-2 col-md-2 col-s-2 icon-close menu-top--center menu-top__unchecked menu-top--color"></li>
-                                </label>
-                            </ul>
-                            <ul class="menu-top__column menu-top__unchecked menu-top--block menu-top--border ">
-                                <li class="menu-top__notification-lg menu-top__notification-md menu-top__notification-s page__section page__section--color-blue">
-                                    <ul class="col-lg-12 col-md-12 col-s-12 menu-top__row--level2">
-                                        <li class="col-lg-10 col-md-10 col-s-10">you,ve got <span>100</span> signups</li>
-                                        <li class="col-lg-1 col-md-1 col-s-1 menu-top__ball"></li>
-                                    </ul>
-                                    <ul class="col-lg-12 col-md-12 col-s-12 menu-top__row--level2">
-                                        <li class="col-lg-10 col-md-10 col-s-10">Banner <span>03</span> don't work</li>
-                                        <li class="col-lg-1 col-md-1 col-s-1 menu-top__ball"></li>
-                                    </ul>
-                                </li>  
-                            </ul>
-                        </li>    
-                        <li class="col-lg-1 col-md-1 col-s-12  menu-top__exit icon-quit"></li>
-                    </ul>
-                </li>
-                <input class="menu-top__switch-link-saved" type="checkbox" name="topMenuSavedClose" id="topMenuSavedClose" value="true" hidden>
-                <li class="menu-top col-lg-12 col-md-12 col-s-12 menu-top__row menu-top--background-saved menu-top__visible">
-                    <p class="icon-positive col-lg-11 col-md-11 col-s-9 menu-top--center">Link saved</p>
-                    <label class="col-lg-1 col-md-1 col-s-3" for="topMenuSavedClose">
-                        <p class="icon-close menu-top--right"></p>
-                    </label>
-                </li>
-                     
-                
-                <!--section-->
-                <li class="page__container-fluid ">
-                <!--section workshop-->
-                    <div class="col-lg-12 col-md-12 col-s-12 section--background-workshop row-table">
-                    
-                        <div class="section__header">general statistic</div>
 
-                        <div class="row-center calendar section--top-padding section--bottom-padding section--bottom-border col-lg-12 col-md-12 col-s-12">
-                            <div class="row-space-around calendar__container col-lg-5 col-md-8 col-s-12">
-                                <input class="col-lg-5 col-md-5 col-s-12 calendar__input calendar--color-light" type="date" name="calendarStart" id="calendarStart" >
-                                <div class=" calendar--color-light">|</div>
-                                <input class="col-lg-5 col-md-5 col-s-12 calendar__input  calendar--color-light" type="date" name="calendarEnd" id="calendarEnd">
-                                <div class="col-lg-1 col-md-1 col-s-12 center icon-calendar calendar--color-light hover"></div>
-                            </div>
-                            <button class="btn btn--orange icon-refresh "></button>
+        <div class="menu-top--resize">
+            <!--Width - calculate-->
+            <div class="row--section">
+                <!--Menu top-->
+                <input class="menu-top__wallet-switch" type="checkbox" name="walletSwitch" id="walletSwitch" value="true"
+                    hidden>
+                <div class="menu-top__wallet">
+                    <span class="icon-trash"></span>
+                    <span>$1,500.00</span>
+                    <label for="walletSwitch">
+                        <span class="icon-arrow-up-small menu-top__wallet--unchecked"></span>
+                        <span class="icon-arrow-down-small menu-top__wallet--checked"></span>
+                    </label>
+                    <!--second level --drilled -->
+                    <div class="menu-top__wallet-block menu-top__wallet--unchecked">
+                        <div class="menu-top__wallet-level-2">
+                            <div class="menu-top__wallet-level-2--desc">CPA</div>
+                            <div class="menu-top__wallet-level-2--value">$1000</div>
                         </div>
-            
-                        <div class=" col-lg-12  col-md-12 col-s-8 row-center section--top-padding section--bottom-padding">
-                            <div class="col-lg-5 col-md-7 col-s-12 row-space-around section--bottom-border center--small">
-                                <p class="col-lg-8 col-md-6 col-s-12 section__text section--color-light section__text--padding">Visit signupst</p>
-                                <p class="col-lg-4 col-md-6 col-s-12 section__text section--color-dark">134</p>
-                            </div>
-                            <div class="col-lg-5 col-md-7 col-s-12 row-space-around section--bottom-border center--small">
-                                <p class="col-lg-8 col-md-6 col-s-12 section__text section--color-light section__text--padding">Net deposit</p>
-                                <p class="col-lg-4 col-md-6 col-s-12 section__text section--color-dark">134</p>
-                            </div>
-                            <div class="col-lg-5 col-md-7 col-s-12 row-space-around section--bottom-border center--small">
-                                <p class="col-lg-8 col-md-6 col-s-12 section__text section--color-light section__text--padding">FTD</p>
-                                <p class="col-lg-4 col-md-6 col-s-12 section__text section--color-dark">134</p>
-                            </div>
-                            <div class="col-lg-5 col-md-7 col-s-12 row-space-around section--bottom-border center--small">
-                                <p class="col-lg-8 col-md-6 col-s-12 section__text section--color-light section__text--padding">Turn over</p>
-                                <p class="col-lg-4 col-md-6 col-s-12 section__text section--color-dark">1234</p>
-                            </div>
-            
-                            <p class="col-lg-10 col-md-10 col-s-10 section__text section--color-light section--top-padding ">Earning
-                                Chart</p>
-            
-                            <div class="row-space-around col-lg-8 col-md-8 col-s-12 section--top-padding section--bottom-padding">
-                                <input class="check-box-tabs__input" type="checkbox" name="checkBoxTabsBlue" id="checkBoxTabsBlue"
-                                    value="true" hidden>
-                                <div class="row-center col-lg-2 col-md-3 col-s-8 check-box-tabs">
-                                    <div class="col-lg-3 col-md-3 col-s-2 check-box-tabs__ball--color-blue"></div>
-                                    <label class="check-box-tabs__label col-lg-5 col-md-5 col-s-3" for="checkBoxTabsBlue">
-                                        <span>Tabs</span>
-                                    </label>
-                                </div>
-            
-                                <input class="check-box-tabs__input" type="checkbox" name="checkBoxTabsOrange" id="checkBoxTabsOrange"
-                                    value="true" hidden>
-                                <div class="row-center col-lg-2 col-md-3 col-s-8 check-box-tabs">
-                                    <div class="col-lg-3 col-md-3 col-s-2 check-box-tabs__ball--color-orange"></div>
-                                    <label class="check-box-tabs__label col-lg-5 col-md-5 col-s-3" for="checkBoxTabsOrange">
-                                        <span>Tabs</span>
-                                    </label>
-                                </div>
-            
-                                <input class="check-box-tabs__input" type="checkbox" name="checkBoxTabsGreen" id="checkBoxTabsGreen"
-                                    value="true" hidden>
-                                <div class="row-center col-lg-2 col-md-3 col-s-8 check-box-tabs">
-                                    <div class="col-lg-3 col-md-3 col-s-2 check-box-tabs__ball--color-green"></div>
-                                    <label class="check-box-tabs__label col-lg-5 col-md-5 col-s-3" for="checkBoxTabsGreen">
-                                        <span>Tabs</span>
-                                    </label>
-                                </div>
-            
-                                <img class="col-lg-12 col-md-12 col-s-12 section--top-padding general-stat__img" src="images/graph.png" alt="">
-                            </div>
+                        <div class="menu-top__wallet-level-2">
+                            <div class="menu-top__wallet-level-2--desc">CPL</div>
+                            <div class="menu-top__wallet-level-2--value">$1100</div>
+                        </div>
+                        <div class="menu-top__wallet-level-2">
+                            <div class="menu-top__wallet-level-2--desc">Turnover</div>
+                            <div class="menu-top__wallet-level-2--value">$1030</div>
+                        </div>
+                        <div class="menu-top__wallet-level-2">
+                            <div class="menu-top__wallet-level-2--desc">Net deposit</div>
+                            <div class="menu-top__wallet-level-2--value">$1050</div>
                         </div>
                     </div>
-                </li>
-            </ul>
+                </div>
+
+                <input class="menu-top__notification-switch" type="checkbox" name="notificationSwitch" id="notificationSwitch"
+                    value="true" hidden>
+                <div class="menu-top__notification">
+                    <div class="menu-top__notification--checked">
+                        <label for="notificationSwitch">
+                            <span class="icon-notification "></span>
+                        </label>
+                    </div>
+                    <span class="icon-notification menu-top__notification--unchecked"></span>
+                    <div class="menu-top__notification--name">
+                        <span class="icon-profile"></span>
+                        <span class="menu-top__notification--name-padding">Leonardo Dicaprio</span>
+                    </div>
+                    <label for="notificationSwitch" class="menu-top__notification--hidden">
+                        <span class="icon-close"></span>
+                    </label>
+                    
+                    <div class="menu-top__notification-block menu-top__notification--unchecked">
+                        <div class="menu-top__notification-level-2">
+                            <div class="menu-top__notification-level-2--desc">you,ve got 100 signups</div>
+                            <div class="menu-top__notification-ball"></div>
+                        </div>
+                        <div class="menu-top__notification-level-2">
+                            <div class="menu-top__notification-level-2--desc">Banner 03 don't work</div>
+                            <div class="menu-top__notification-ball"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="menu-top__exit icon-quit"></div>
+            </div>
+            
+            <!--Infoarmation link-->
+            <input class="menu-top__saved--switch-link" type="checkbox" name="topMenuSavedClose" id="topMenuSavedClose"
+                value="true" hidden>
+            <div class="menu-top__saved">
+                <div class="menu-top__saved--center-row">
+                    <span class="icon-positive"></span>
+                    <span class="menu-top__saved--padding">Link saved</span>
+                </div>
+                <label class="" for="topMenuSavedClose">
+                    <span class="icon-close"></span>
+                </label>
+            </div>
+
+
+            <!--section-->
+            <div class="page__container-fluid ">
+                <!--section workshop-->
+                <div class="section__header">Detail history</div>
+                <div class="section__workshop">
+                    <!--Calendar-->
+                    <div class="calendar">
+                        <div class="calendar__input col-lg-5 col-md-10 col-s-10">
+                            <input class="calendar__input-field" type="date" name="calendarStart" id="calendarStart">
+                            <div class="calendar__separator"></div>
+                            <input class="calendar__input-field" type="date" name="calendarEnd" id="calendarEnd">
+                            <div class="icon-calendar calendar__icon"></div>
+                        </div>
+                        <button class="btn btn--orange icon-refresh calendar--height"></button>
+                    </div>
+
+            
+                    <div class="general-stat">
+                        <div class="col-lg-5 col-md-7 col-s-12 general-stat__section">
+                            <p class="col-lg-8 col-md-6 col-s-12 ">Visit signupst</p>
+                            <p class="col-lg-4 col-md-6 col-s-12 general-stat__section--value">134</p>
+                        </div>
+                        <div class="col-lg-5 col-md-7 col-s-12 general-stat__section">
+                            <p class="col-lg-8 col-md-6 col-s-12 ">Net deposit</p>
+                            <p class="col-lg-4 col-md-6 col-s-12 general-stat__section--value">134</p>
+                        </div>
+                        <div class="col-lg-5 col-md-7 col-s-12 general-stat__section">
+                            <p class="col-lg-8 col-md-6 col-s-12 ">FTD</p>
+                            <p class="col-lg-4 col-md-6 col-s-12 general-stat__section--value">134</p>
+                        </div>
+                        <div class="col-lg-5 col-md-7 col-s-12 general-stat__section">
+                            <p class="col-lg-8 col-md-6 col-s-12 ">Turn over</p>
+                            <p class="col-lg-4 col-md-6 col-s-12 general-stat__section--value">134</p>
+                        </div>
+                    
+                        <div class="col-lg-11 col-md-7 col-s-12 general-stat__section--earning general-stat__section">
+                            <p>Earning Chart</p>
+                        </div>
+        
+                        <div class="general-stat__tab">
+                            <input class="check-box-tabs__input" type="checkbox" name="checkBoxTabsBlue" id="checkBoxTabsBlue"
+                                value="true" hidden>
+                            <div class="general-stat__row col-s-8 check-box-tabs">
+                                <div class="col-lg-3 col-md-3 col-s-2 check-box-tabs__ball--color-blue check-box-tabs"></div>
+                                <label class="check-box-tabs__label col-lg-5 col-md-5 col-s-3 check-box-tabs" for="checkBoxTabsBlue">Tabs</label>
+                            </div>
+        
+                            <input class="check-box-tabs__input" type="checkbox" name="checkBoxTabsOrange" id="checkBoxTabsOrange"
+                                value="true" hidden>
+                            <div class="general-stat__row col-s-8 check-box-tabs">
+                                <div class="col-lg-3 col-md-3 col-s-2 check-box-tabs__ball--color-orange check-box-tabs"></div>
+                                <label class="check-box-tabs__label col-lg-5 col-md-5 col-s-3 check-box-tabs" for="checkBoxTabsOrange">Tabs</label>
+                            </div>
+        
+                            <input class="check-box-tabs__input" type="checkbox" name="checkBoxTabsGreen" id="checkBoxTabsGreen"
+                                value="true" hidden>
+                            <div class="general-stat__row col-s-8 check-box-tabs">
+                                <div class="col-lg-3 col-md-3 col-s-2 check-box-tabs__ball--color-green check-box-tabs"></div>
+                                <label class="check-box-tabs__label col-lg-5 col-md-5 col-s-3 check-box-tabs" for="checkBoxTabsGreen">Tabs</label>
+                            </div>
+                         </div>
+
+                        <img class="general-stat__img" src="images/graph.png" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="js/script.js"></script>

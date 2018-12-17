@@ -6,166 +6,464 @@
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <title>Projekt-1</title>
     <link rel="stylesheet" type="text/css" href="vendor/glyphter/css/glyphter.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css"></head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-    <div class="menu-top__row col-lg-12 col-md-12 col-s-12">
-        <input class="menu-left__switch" type="checkbox" name="leftMenu" id="leftMenu" value="true" hidden>
-        <div class="menu-left__text col-lg-2 col-md-2 col-s-2 menu-left__background menu-left menu-left__small">
-            <ul class="col-lg-12 col-md-12 col-s-12 menu-left__column ">
-                <li class="menu-left__row col-lg-12 col-md-12 col-s-12">
-                    <p class="menu-left__header menu-left__header--padding col-lg-8 col-md-8 full">Just do it</p> 
-                    <div class="menu-left--hover col-lg-1 col-s-1"></div>
-                    <label for="leftMenu">  
-                        <div class="menu-left__icon"><i class="fas fa-bars"></i></div>
-                    </label>    
-                </li>   
-                <li class="col-lg-12 col-md-12 col-s-12 menu-left__row menu-left__row--hover ">
-                        <div class="menu-left--hover col-lg-1 col-md-1 col-s-1"></div>
-                        <a class="menu-left__link icon-general col-lg-3 col-md-3 col-s-3" href="general_statistic.html"></a>
-                        <p class="col-lg-8 col-md-8 col-s-8 full"><a class="menu-left__link" href="general_statistic.html">General</a></p>
-                </li>
-                <li class="col-lg-12 col-md-12  col-s-12 menu-left__row menu-left__row--hover">
-                    <div class="menu-left--hover col-lg-1 col-s-1"></div>
-                    <a class="menu-left__link icon-details col-lg-3 col-md-3 col-s-3" href="details.html"></a>
-                    <p class="col-lg-8 col-md-8  col-s-8 full"><a class="menu-left__link" href="details.html">Details</a></p>
-                </li>
-                <li class="col-lg-12 col-md-12  col-s-12 menu-left__row menu-left__row--hover">
-                    <div class="menu-left--hover col-lg-1 col-s-1 "></div>
-                    <a class="menu-left__link icon-links col-lg-3 col-md-3 col-s-3" href="links.html"></a>
-                    <p class="col-lg-8 col-md-8 col-s-3 full "><a class="menu-left__link" href="links.html">Links</a></p>
-                </li>
-                <li class="col-lg-12 col-md-12  col-s-12 menu-left__row menu-left__row--hover">
-                    <div class="menu-left--hover col-lg-1 col-s-1"></div>
-                    <a class="menu-left__link icon-banners col-lg-3 col-md-3 col-s-3" href="banners.html"></a>
-                    <p class="col-lg-8 col-md-8  col-s-8 full"><a class="menu-left__link" href="banners.html">Banners</a></p>
-                </li>
-                <li class="col-lg-12 col-md-12 col-s-12 menu-left__row menu-left__row--hover">
-                    <div class="menu-left--hover col-lg-1 col-s-1"></div>
-                    <a class="menu-left__link icon-personaldata col-lg-3 col-md-3 col-s-3" href="personal_data.html"></a>
-                    <p class="col-lg-8 col-md-8  col-s-8 full"><a class="menu-left__link" href="personal_data.html">Personal data</a></p>
-                </li>
-                <li class="col-lg-12 col-md-12  col-s-12 menu-left__row menu-left__row--hover">
-                    <div class="menu-left--hover col-lg-1 col-s-1"></div>
-                    <a class="menu-left__link icon-payout col-lg-3 col-md-3 col-s-3" href="payout.html"></a>
-                    <p class="col-lg-8 col-md-8  col-s-8 full"><a class="menu-left__link" href="payout.html">Payout</a></p>
-                </li>
-                <li class="col-lg-12 col-md-12 col-s-12 menu-left__row menu-left__row--hover">
-                    <div class="menu-left--hover col-lg-1 col-s-1"></div>
-                    <a class="menu-left__link icon-postback col-lg-3 col-md-3 col-s-3" href="postback.html"></a>
-                    <p class="col-lg-8 col-md-8 col-s-8 full "><a class="menu-left__link" href="postback.html">Postback</a></p>
-                </li>
-                <li class="col-lg-12 col-md-12 col-s-12 menu-left__row">
-                </li>
-                <li class="col-lg-12 col-md-12 col-s-12 menu-left__row full">
-                    <p class="menu-left__section col-lg-offset-1 col-md-offset-1 col-lg-10 col-md-10 col-s-10">Your menager</p>   
-                </li>
-                <li class="col-lg-12 col-md-12 col-s-12 menu-left__row menu-left__section">
-                    <div class="col-lg-6 col-md-6 col-s-6 menu-left__ball--online">
-                        <img class="menu-left__ball--online menu-left__img" src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ad57f7ca5832f3f72ee2c1c243c72f5c&auto=format&fit=crop&w=1350&q=80" alt="">
-                    </div> 
-                    <p class="menu-left__text menu-left__text--menager-name col-lg-6 col-md-6 col-s-6 full">Micheal E.</p>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="menu-top--resize">
-            <ul class="col-lg-12 col-md-12 col-s-12 menu-top__column ">
-                <li class="col-lg-12 col-md-12 col-s-12">
-                    <ul class="col-lg-12 col-md-12 col-s-12 menu-top--background-main menu-top__row--main">
-                        <input class="menu-top__switch-wallet" type="checkbox" name="walletSwitch" id="walletSwitch" value="true" hidden>
-                        <li class="menu-top menu-top__wallet-lg menu-top__wallet-md menu-top__wallet-s menu-top__wallet-md menu-top__wallet-s">
-                            <ul class="menu-top__row col-lg-12 col-md-12 col-s-12 menu-top--border "> 
-                                <li class="col-lg-1 col-md-1 col-s-1 menu-top--center icon-wallet menu-top--color" ></li>
-                                <li class="col-lg-9 col-md-9 col-s-9 menu-top--center page__header menu-top--color"><span>$</span>1,500.00</li>
-                                <label for="walletSwitch" >
-                                    <li class="col-lg-2 col-md-2 col-s-2 icon-arrow-up-small menu-top__unchecked menu-top--center page__text menu-top--color"></li>
-                                    <li class="col-lg-2 col-md-2 col-s-2 icon-arrow-down-small menu-top__checked menu-top--center page__text menu-top--color"></li>
-                                </label>
-                            </ul>
-                            <ul class="menu-top__column menu-top__unchecked menu-top--block menu-top--border">
-                                <li class="menu-top__wallet-lg menu-top__wallet-md menu-top__wallet-s page__section"> 
-                                    <ul class="col-lg-12 col-md-12 col-s-12 menu-top__row--level2">
-                                        <li class="col-lg-9 menu-top--align page__section--color-light">CPA</li>
-                                        <li class="col-lg-3 col-md-3 col-s-3 menu-top--align menu-top__text--color-dark"><span>$</span>1000</li>
-                                    </ul>
-                                    <ul class="col-lg-12 col-md-12 col-s-12 menu-top__row--level2">
-                                        <li class="col-lg-9 col-md-9 col-s-9 menu-top--align page__section--color-light">CPL</li>
-                                        <li class="col-lg-3 col-md-3 col-s-3 menu-top--align"><span>$</span>1100</li>
-                                    </ul>
-                                    <ul class="col-lg-12 col-md-12  col-s-12 menu-top__row--level2">
-                                        <li class="col-lg-9 col-md-9  col-s-9 menu-top--align page__section--color-light">Turnover</li>
-                                        <li class="col-lg-3 col-md-3 col-s-3 menu-top--align"><span>$</span>1030</li>
-                                    </ul>
-                                    <ul class="col-lg-12 col-md-12  col-s-12 menu-top__row--level2">
-                                        <li class="col-lg-9 col-md-9  col-s-9 menu-top--align page__section--color-light">Net deposit</li>
-                                        <li class="col-lg-3 col-md-3 col-s-3 menu-top--align"><span>$</span>1050</li>
-                                    </ul>
-                                </li> 
-                            </ul>
-                        </li>    
-                        <input class="menu-top__switch-notification" type="checkbox" name="notificationSwitch" id="notificationSwitch" value="true" hidden>
-                        <li class="menu-top menu-top__notification-lg menu-top__notification-md menu-top__notification-s">
-                            <ul class="menu-top__row col-lg-12 col-md-12  col-s-12 menu-top--border page__text page__text--color-light"> 
-                                <label for="notificationSwitch" class="col-lg-3 col-md-3 col-s-12 menu-top__checked menu-top--border-right">
-                                    <li class="col-lg-12 col-md-12 col-s-12 icon-notification menu-top--center menu-top--color menu-top__ball-notification "></li>
-                                </label>
-                                <li class="col-lg-3 col-md-3 col-s-12 icon-notification menu-top--center menu-top__unchecked menu-top--color"></li>
-                                <li class="col-lg-7 col-md-7 col-s-10 icon-profile menu-top--center page__text page__text--color-blue ">Leonardo Dicaprio</li>
-                                <label for="notificationSwitch">
-                                    <li class="col-lg-2 col-md-2 col-s-2 icon-close menu-top--center menu-top__unchecked menu-top--color"></li>
-                                </label>
-                            </ul>
-                            <ul class="menu-top__column menu-top__unchecked menu-top--block menu-top--border ">
-                                <li class="menu-top__notification-lg menu-top__notification-md menu-top__notification-s page__section page__section--color-blue">
-                                    <ul class="col-lg-12 col-md-12 col-s-12 menu-top__row--level2">
-                                        <li class="col-lg-10 col-md-10 col-s-10">you,ve got <span>100</span> signups</li>
-                                        <li class="col-lg-1 col-md-1 col-s-1 menu-top__ball"></li>
-                                    </ul>
-                                    <ul class="col-lg-12 col-md-12 col-s-12 menu-top__row--level2">
-                                        <li class="col-lg-10 col-md-10 col-s-10">Banner <span>03</span> don't work</li>
-                                        <li class="col-lg-1 col-md-1 col-s-1 menu-top__ball"></li>
-                                    </ul>
-                                </li>  
-                            </ul>
-                        </li>    
-                        <li class="col-lg-1 col-md-1 col-s-12  menu-top__exit icon-quit"></li>
-                    </ul>
-                </li>
-                <input class="menu-top__switch-link-saved" type="checkbox" name="topMenuSavedClose" id="topMenuSavedClose" value="true" hidden>
-                <li class="menu-top col-lg-12 col-md-12 col-s-12 menu-top__row menu-top--background-saved menu-top__visible">
-                    <p class="icon-positive col-lg-11 col-md-11 col-s-9 menu-top--center">Link saved</p>
-                    <label class="col-lg-1 col-md-1 col-s-3" for="topMenuSavedClose">
-                        <p class="icon-close menu-top--right"></p>
+    <div class="row--main">
+        <!--Menu left-->
+        <input class="menu-left__switch" type="checkbox" name="leftMenu" id="leftMenu" value="true">
+        <div class="menu-left">
+            <ul class="menu-left__column">
+                <li class="menu-left__header">
+                    <p class="menu-left__header-logo full">Just do it</p>
+                    <label for="leftMenu">
+                        <span class="menu-left__header-icon"><i class="fas fa-bars"></i></span>
                     </label>
                 </li>
-                     
-                
-                <!--section-->
-                <li class="page__container-fluid ">
-                <!--section workshop-->
-                    <div class="col-lg-12 col-md-12 col-s-12 section--background-workshop row-table">
-                    
-                        <div class="section__header">payout history</div>
-
-                        <div class="row-center calendar section--top-padding section--bottom-padding section--bottom-border col-lg-12 col-md-12 col-s-12">
-                            <div class="row-space-around calendar__container col-lg-5 col-md-8 col-s-12">
-                                <input class="col-lg-5 col-md-5 col-s-12 calendar__input calendar--color-light" type="date" name="calendarStart" id="calendarStart" >
-                                <div class=" calendar--color-light calendar__border-inside col-lg-1 col-md-1 col-s-12"></div>
-                                <input class="col-lg-5 col-md-5 col-s-12 calendar__input  calendar--color-light" type="date" name="calendarEnd" id="calendarEnd">
-                                <div class="col-lg-1 col-md-1 col-s-12 center icon-calendar calendar--color-light hover"></div>
-                            </div>
-                            <button class="btn btn--orange icon-refresh "></button>
-                        </div>
-            
+                <li class="menu-left__one-row ">
+                    <div class="menu-left__one-row--bar">
+                        <a class="icon-general menu-left__one-row--icon" href="general_statistic.html"></a>
                     </div>
+                    <a class="menu-left__one-row--link full" href="general_statistic.html">General</a>
+                </li>
+                <li class="menu-left__one-row ">
+                    <div class="menu-left__one-row--bar">
+                        <a class="icon-details menu-left__one-row--icon" href="details.html"></a>
+                    </div>
+                    <a class="menu-left__one-row--link full" href="details.html">Details</a>
+                </li>
+                <li class="menu-left__one-row ">
+                    <div class="menu-left__one-row--bar">
+                        <a class="icon-links menu-left__one-row--icon" href="links.html"></a>
+                    </div>
+                    <a class="menu-left__one-row--link full" href="links.html">Links</a>
+                </li>
+                <li class="menu-left__one-row ">
+                    <div class="menu-left__one-row--bar">
+                        <a class="icon-banners menu-left__one-row--icon" href="banners.html"></a>
+                    </div>
+                    <a class="menu-left__one-row--link full" href="banners.html">Banners</a>
+                </li>
+                <li class="menu-left__one-row ">
+                    <div class="menu-left__one-row--bar">
+                        <a class="icon-personaldata menu-left__one-row--icon" href="personal_data.html"></a>
+                    </div>
+                    <a class="menu-left__one-row--link full" href="personal_data.html">Personal data</a>
+                </li>
+                <li class="menu-left__one-row ">
+                    <div class="menu-left__one-row--bar">
+                        <a class="icon-payout menu-left__one-row--icon" href="payout.html"></a>
+                    </div>
+                    <a class="menu-left__one-row--link full" href="payout.html">Payout</a>
+                </li>
+                <li class="menu-left__one-row menu-left__row--border-bottom">
+                    <div class="menu-left__one-row--bar">
+                        <a class="icon-postback menu-left__one-row--icon" href="postback.html"></a>
+                    </div>
+                    <a class="menu-left__one-row--link full" href="postback.html">Postback</a>
+                </li>
+
+                <li class="menu-left__row  menu-left__row--border-top full">
+                    <p class="menu-left__manager--header">Your manager</p>
+                </li>
+                <li class="menu-left__row">
+                    <div class="menu-left__connection--online">
+                        <img class=" menu-left__img" src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ad57f7ca5832f3f72ee2c1c243c72f5c&auto=format&fit=crop&w=1350&q=80"
+                            alt="">
+                    </div>
+                    <p class="menu-left__manager--name full">Micheal E.</p>
                 </li>
             </ul>
         </div>
+
+        <div class="menu-top--resize">
+            <!--Width - calculate-->
+            <div class="row--section">
+                <!--Menu top-->
+                <input class="menu-top__wallet-switch" type="checkbox" name="walletSwitch" id="walletSwitch" value="true"
+                    hidden>
+                <div class="menu-top__wallet">
+                    <span class="icon-trash"></span>
+                    <span>$1,500.00</span>
+                    <label for="walletSwitch">
+                        <span class="icon-arrow-up-small menu-top__wallet--unchecked"></span>
+                        <span class="icon-arrow-down-small menu-top__wallet--checked"></span>
+                    </label>
+                    <!--second level --drilled -->
+                    <div class="menu-top__wallet-block menu-top__wallet--unchecked">
+                        <div class="menu-top__wallet-level-2">
+                            <div class="menu-top__wallet-level-2--desc">CPA</div>
+                            <div class="menu-top__wallet-level-2--value">$1000</div>
+                        </div>
+                        <div class="menu-top__wallet-level-2">
+                            <div class="menu-top__wallet-level-2--desc">CPL</div>
+                            <div class="menu-top__wallet-level-2--value">$1100</div>
+                        </div>
+                        <div class="menu-top__wallet-level-2">
+                            <div class="menu-top__wallet-level-2--desc">Turnover</div>
+                            <div class="menu-top__wallet-level-2--value">$1030</div>
+                        </div>
+                        <div class="menu-top__wallet-level-2">
+                            <div class="menu-top__wallet-level-2--desc">Net deposit</div>
+                            <div class="menu-top__wallet-level-2--value">$1050</div>
+                        </div>
+                    </div>
+                </div>
+
+                <input class="menu-top__notification-switch" type="checkbox" name="notificationSwitch" id="notificationSwitch"
+                    value="true" hidden>
+                <div class="menu-top__notification">
+                    <div class="menu-top__notification--checked">
+                        <label for="notificationSwitch">
+                            <span class="icon-notification "></span>
+                        </label>
+                    </div>
+                    <span class="icon-notification menu-top__notification--unchecked"></span>
+                    <div class="menu-top__notification--name">
+                        <span class="icon-profile"></span>
+                        <span class="menu-top__notification--name-padding">Leonardo Dicaprio</span>
+                    </div>
+                    <label for="notificationSwitch" class="menu-top__notification--hidden">
+                        <span class="icon-close"></span>
+                    </label>
+                    
+                    <div class="menu-top__notification-block menu-top__notification--unchecked">
+                        <div class="menu-top__notification-level-2">
+                            <div class="menu-top__notification-level-2--desc">you,ve got 100 signups</div>
+                            <div class="menu-top__notification-ball"></div>
+                        </div>
+                        <div class="menu-top__notification-level-2">
+                            <div class="menu-top__notification-level-2--desc">Banner 03 don't work</div>
+                            <div class="menu-top__notification-ball"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="menu-top__exit icon-quit"></div>
+            </div>
+            
+            <!--Infoarmation link-->
+            <input class="menu-top__saved--switch-link" type="checkbox" name="topMenuSavedClose" id="topMenuSavedClose"
+                value="true" hidden>
+            <div class="menu-top__saved">
+                <div class="menu-top__saved--center-row">
+                    <span class="icon-positive"></span>
+                    <span class="menu-top__saved--padding">Link saved</span>
+                </div>
+                <label class="" for="topMenuSavedClose">
+                    <span class="icon-close"></span>
+                </label>
+            </div>
+
+
+            <!--section-->
+            <div class="page__container-fluid ">
+                <!--section workshop-->
+                <div class="section__header">Payout history</div>
+                <div class="section__workshop">
+                    <!--Calendar-->
+                    <div class="calendar">
+                        <div class="calendar__input col-lg-5 col-md-10 col-s-10">
+                            <input class="calendar__input-field" type="date" name="calendarStart" id="calendarStart">
+                            <div class="calendar__separator"></div>
+                            <input class="calendar__input-field" type="date" name="calendarEnd" id="calendarEnd">
+                            <div class="icon-calendar calendar__icon"></div>
+                        </div>
+                        <button class="btn btn--orange icon-refresh calendar--height"></button>
+                    </div>
+                    <!--Table-->
+                    <div class="table__main">
+                        <table class="table" id="myTable">
+                            <thead class="table__head">
+                                <tr class="table__row">
+                                    <th class="table__ceil--header">
+                                        <input class="table__input" type="checkbox" name="payoutDate" id="payoutDate">
+                                        <span class="table__ceil--name">
+                                            <label for="payoutDate">Date</label>
+                                            <label for="payoutDate" class="icon-arrow-up-small table__checked"></label>
+                                            <label for="payoutDate" class="icon-arrow-down-small table__unchecked"></label>
+                                        </span>
+                                    </th>
+                                    <th class="table__ceil--header">
+                                        <input class="table__input" type="checkbox" name="payoutAmount" id="payoutAmount">
+                                        <span class="table__ceil--name">
+                                            <label for="payoutAmount">Amount ($)</label>
+                                            <label for="payoutAmount" class="icon-arrow-up-small table__checked"></label>
+                                            <label for="payoutAmount" class="icon-arrow-down-small table__unchecked"></label>
+                                        </span>
+                                    </th>
+                                    <th class="table__ceil--header">
+                                        <input class="table__input" type="checkbox" name="payoutDeal" id="payoutDeal">
+                                        <span class="table__ceil--name">
+                                            <label for="payoutDeal">Deal</label>
+                                            <label for="payoutDeal" class="icon-arrow-up-small table__checked"></label>
+                                            <label for="payoutDeal" class="icon-arrow-down-small table__unchecked"></label>
+                                        </span>
+                                    </th>
+                                    <th class="table__ceil--header">
+                                        <input class="table__input" type="checkbox" name="payoutAccount" id="payoutAccount">
+                                        <span class="table__ceil--name">
+                                            <label for="payoutAccount">Account</label>
+                                            <label for="payoutAccount" class="icon-arrow-up-small table__checked"></label>
+                                            <label for="payoutAccount" class="icon-arrow-down-small table__unchecked"></label>
+                                       </span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="table__body">
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:01)</td>
+                                    <td class="table__ceil">34,425.01</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td  class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:02)</td>
+                                    <td class="table__ceil">34,425.02</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:03)</td>
+                                    <td class="table__ceil">34,425.02</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:04)</td>
+                                    <td class="table__ceil">34,425.03</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:05)</td>
+                                    <td class="table__ceil">34,425.03</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:06)</td>
+                                    <td class="table__ceil">34,425.04</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:07)</td>
+                                    <td class="table__ceil">34,425.04</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:08)</td>
+                                    <td class="table__ceil">34,425.05</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:09)</td>
+                                    <td class="table__ceil">34,425.05</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                    <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:10)</td>
+                                    <td class="table__ceil">34,425.06</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td  class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:11)</td>
+                                    <td class="table__ceil">34,425.06</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:12)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:13)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:14)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:15)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:16)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:17)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:18)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:19)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td  class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:20)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:21)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:22)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:23)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:24)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:25)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:26)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:27)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                    <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:28)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td  class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:29)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:30)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:31)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:32)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:33)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:34)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:35)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:36)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                                <tr class="table__row--single">
+                                    <td class="table__ceil">17/08/02(12:37)</td>
+                                    <td class="table__ceil">34,425.00</td>
+                                    <td class="table__ceil">cpl(200)</td>
+                                    <td class="table__ceil">bank</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!--Pagination-->
+                <div class="pagination" id="payuotPagination">
+                    <ul class="pagination__row">
+                        <li class="icon-arrow-left pagination__list--icon"></li>
+                        <li class="pagination__list"></li>
+                        <li class="pagination__list"></li>
+                        <li class="pagination__list"></li>
+                        <li class="pagination__list"></li>
+                        <li class="pagination__list"></li>
+                        <li class="pagination__list"></li>
+                        <li class="pagination__list"></li>
+                        <li class="pagination__list"></li>
+                        <li class="pagination__list"></li>
+                        <li class="pagination__list"></li>
+                        <li class="icon-arrow-right pagination__list--icon"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/table.js"></script>
 </body>
 
 </html>

@@ -84,42 +84,18 @@ $breakpoints: (
 
 
 .row {
-	&-center {
-	@include myFlexRow(center, center, center, row, 30px);
+	&--main {
+		@include myFlexRow(flex-end, flex-start, flex-start, row, $menuTopHeight, 5);
+    	flex: 0 0 100%;
+    	width: 100%;
+    } 
+     
+	&--section {
+		@include myFlexRow(flex-end, flex-start, flex-start, row, $menuTopHeight, 5);
+		width: 100%;
+		background: $menuTopBackground;
+		box-shadow: 2px 2px 2px gray;
 	}
 
-	&-space-around {
-		@include myFlexRow(space-around, center, center, row, 30px);
-
-	//	@media (max-width: $maxMedium) {
-	//		@include myFlexRow(center, center, center, row, 30px);
-	//	}
-	}
-
-	&-space-between {
-		@include myFlexRow(space-between, center, center, row, 30px);
-	//	@media (max-width: $maxMedium) {
-	//		@include myFlexRow(center, center, center, row, 30px);
-	//	}
-	}
-}
-
-.left {
-	text-align: left;
-	padding-left: 5px;
-	margin-left: 0;
-}
-.right {
-	text-align: right;
-	padding-right: 5px;
-	margin-right: 0;
-}
-
-.center {
-	text-align: center;
-	&--small {
-		@media (max-width: $maxSmall) {
-			text-align: center;
-		}
-	}
+	
 }

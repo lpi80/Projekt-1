@@ -1,38 +1,102 @@
 .menu-left {
-    &__background {
-        background: $leftMenuBackground;
-        height: 100vh;
-        z-index: 200;
-    } 
- 
-    &__text {
-        font-family: $leftMenuFontFamily;
-        font-size: $leftMenuFontSize;
-        font-weight: $leftMenuFontWeight;
-        color: $leftMenuColorDefault;
-        &--menager-name {
-            color: $leftMenuColorName;
-            margin-top: 75px;
-            padding-left: 5px;
-        }    
-    }    
+    $leftMenuWidth: 200px;
+    $leftMenuHeight: 50px;
+    $leftMenuPaddingLeft: 10px;
 
-    &__header {
-        font-family: $leftMenuHeaderFontFamily;
-        font-size: $leftMenuHeaderFontSize;
-        font-weight: $leftMenuHeaderFontWeight;
-        color: $leftMenuColor;
-        &--padding {
-            padding-left: 10px;
+    width: $leftMenuWidth;
+    height: 100vh;  
+    position: fixed;
+    background: black;
+    top: 0;
+    left: 0;
+    @media (max-width: $maxSmall) {
+        width: $leftMenuMinWidth;
+        & > .menu-left__column { 
+            & .full {
+                display: none;
+            }
         }
     }
   
-    &__section {
-        font-family: $leftMenuSectionFontFamily;
-        font-size: $leftMenuSectionFontSize;
-        font-weight: $leftMenuSectionFontWeight;
+    &__header {
+        flex: 0 0 auto;
+        @include myFlexRow(space-around, center, center, row, $leftMenuHeight);
+        @include menu-left-header;
+        width: inherit;
         color: $leftMenuColorDefault;
+        &-logo {
+            color: $leftMenuColorHover;
+        }
+
+        &-icon {
+            &:hover {
+                color: $leftMenuColorHover;
+                cursor: pointer; 
+            }
+        }
     }
+
+    &__one-row {
+        flex: 0 0 auto;
+        @include myFlexRow(flex-start, center, center, row, $leftMenuHeight);
+        @include text;
+        position: relative;
+        width: inherit;
+        color: $leftMenuColorDefault;
+        padding-left: 25px;  
+        @media (max-width: $maxSmall) {
+            padding-left: 0;  
+            justify-content: center;
+        }
+        &--bar {
+            &::before {
+                 content: '';
+                 display: block;
+                 visibility: hidden;
+                 height: 50px;
+                 width: 5px;
+                 z-index: 100;
+                 position: absolute;
+                 top: 0px;
+                 left: 0px;
+                 background: $leftMenuColorOffline;
+             }
+         }
+ 
+        &:hover {
+            color: $leftMenuColorHover;
+            background: $leftMenuBackgroundHover;
+            
+            & .menu-left__one-row--bar::before {
+                visibility: visible;
+            }
+
+            & .menu-left__one-row--icon,
+            & .menu-left__one-row--link {
+                color: $leftMenuColorHover;
+                cursor: pointer;  
+            }
+        }
+
+
+        &--icon {
+            @include page-header;
+            color: $leftMenuColorDefault;
+        }
+        
+       
+        &--link {
+            padding-left: $leftMenuPaddingLeft;
+            text-decoration: none;
+            color: $leftMenuColorDefault;
+            &:active,
+            &:link,
+            &:visited {
+                color: $leftMenuColorDefault;
+            }
+        }
+    }
+
 
     &__img {
         height: 75px;
@@ -40,11 +104,24 @@
         display: block;
         object-fit: cover;
         border-radius: 50%;
-        margin-top: 75px;
-        padding-left: 3px;  
+        margin-left: $leftMenuPaddingLeft;  
+        margin-top: $leftMenuPaddingLeft;
     }
 
-    &__ball {
+    &__manager {
+        &--header {
+            padding-left: $leftMenuPaddingLeft;
+            color: $leftMenuColorDefault;
+            @include section-header;
+            text-transform: uppercase;
+        }
+        &--name {
+            color: $textBlue;
+            padding-left: $leftMenuPaddingLeft;
+        }
+    }
+
+    &__connection {
         &--online {
             &:after {
                 content: '';
@@ -76,77 +153,35 @@
         }
     }    
 
-    &__link {
-        text-decoration: none;
-        color: $leftMenuColor;
-        &:active,
-        &:link,
-        &:visited {
-            color: gray;
-        }
-        &:hover {
-            color: $leftMenuColorHover;
-            cursor: pointer; 
-        }
-
-    }
-
-    &__row--hover:hover &--hover::before {
-        visibility: visible;
-    }
-    
-    &--hover::before {
-        content: '';
-        display: block;
-        visibility: hidden;
-        height: 50px;
-        width: 5px;
-        z-index: 100;
-        position: relative;
-        top: 0px;
-        left: 0px;
-        background: $leftMenuColorOffline;
-    }
-    
-    
-    &__icon {
-        display: inline-block;
-        padding:0 10px;
-        line-height: 1;
-    }
+        
 
     &__row {
-        @include myFlexRow(flex-start, center, center, row, 0, 0);
-        height: 50px;
-        &--hover:hover {
-            color: $leftMenuColorHover;
-            background: $leftMenuBackgroundHover;
-
-            & .menu-left__link {
-                color: $leftMenuColorHover;
-            } 
+        @include myFlexRow(flex-start, center, center, row, $leftMenuHeight);
+        width: inherit;
+ 
+        &--border-bottom {
+            border-bottom: 1px solid gray;
+            padding-bottom: $leftMenuPaddingLeft; 
         }
     }
 
     &__column {
-        @include myFlexRow(flex-start, flex-start, flex-start, column, 0, 0);
+        @include myFlexRow(flex-start, flex-start, flex-start, column);
+        flex: 0 0 auto;
+        width: inherit;
     }
 
     &__switch:checked ~ & {
-        min-width: $leftMenuMinWidth;
-        max-width: $leftMenuMinWidth;
         width: $leftMenuMinWidth;
         & > .menu-left__column { 
             & .full {
                 display: none;
             }
-
-            & .menu-left__row > .col-lg-1    {
-                padding-right: 25px;
-            }
-        
         }
-    
+        & .menu-left__one-row {
+            padding-left: 0;  
+            justify-content: center;
+        }
     }
 
 
@@ -155,28 +190,9 @@
     }
 
     &__switch:not(:checked) ~ .menu-top--resize {
-        width: calc((100% / #{$column}) * 10);
+        width: calc(100% - #{$leftMenuWidth});
         @media (max-width: $maxSmall) {
             width: calc(100% - #{$leftMenuMinWidth});
         }
     }
-
-    &__small {
-        @media (max-width: $maxSmall) {
-            min-width: $leftMenuMinWidth;
-            max-width: $leftMenuMinWidth;
-            width: $leftMenuMinWidth;
-            & > .menu-left__column { 
-                & .full {
-                    display: none;
-                }
-    
-                & .menu-left__row > .col-lg-1    {
-                    padding-right: 25px;
-                }
-            
-            }
-        }
-     }
-
 }

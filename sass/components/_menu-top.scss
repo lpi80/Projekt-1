@@ -1,183 +1,203 @@
 
 .menu-top {
-   
-    &__wallet {
-        &-md,
-        &-lg {
-            width: 250px;
-        }
-        &-s {
-            @media (max-width: $maxSmall) {
-                width: 100%;
-            }
-            
-        }
-    }
-
-    &__notification {
-        &-md,
-        &-lg {
-            width: 300px;
-        }
-        &-s {
-            @media (max-width: $maxSmall) {
-                width: 100%;
-            }
-            
-        }
-    }
-    
-    &__ball {
-        &::after {
-            content: '';
-            display: inline-block;
-            background: orange;
-            height: 10px;
-            width: 10px;
-            border-radius: 50%;
-        }
-        
-        &-notification::after {
-            content: '';
-            display: inline-block;
-            background: orange;
-            position: relative;
-            height: 10px;
-            width: 10px;
-            left: -15px;
-            top: -10px;
-            border-radius: 50%;
-        }
-    }
+    $subMenuHeight: 30px;
  
-    &--background {
-        &-main {
-            background: $menuTopBackground;
-            border: 1px solid gray;
-        }
-
-        &-saved {
-            background: $menuTopBackgroaundSavedLink;
-        }
-    }
-
-    &--center {
-        text-align: center;
-        line-height: $menuTopHeight;
-    } 
-
-    &--right {
-        text-align: right;
-        padding-right: 10px;
-        line-height: $menuTopHeight;
-    }
-
-    &--left {
-        text-align: left;
-        padding-left: 10px;
-        line-height: $menuTopHeight;
-    }
-
-    &--align {
-        padding-top: 5px;
-        padding-bottom: 5px;
-    } 
-
-    &--block {
-        @media (min-width: $minMedium) {
-            position: absolute; 
-            top: $menuTopHeight;
-        }
-    } 
-
-    &--border-right {
-        border-right: 1px solid gray;
-    }
-
-    &__row {
-        @include myFlexRow(flex-start, flex-start, flex-start, row, $menuTopHeight, 5);
-
-        &--main {
-            @include myFlexRow(flex-end, flex-start, flex-start, row, $menuTopHeight, 5);
-            //position: fixed;
-        }
-
-        &--level2 {
-            @include myFlexRow(space-between, flex-start, flex-start, row, $menuTopHeightLevel2, 5);
-            padding: 0 10px;
-        }
-    } 
-    
-    &__column {
-         @include myFlexRow(flex-start, flex-start, flex-start, column, 0, 10);
-    }
-
-    &__switch-{
-        &notification { 
-            &:checked + .menu-top .menu-top__checked,
-            &:not(:checked) + .menu-top .menu-top__unchecked {
-                display: none;
-            }
-        
-            &:checked + .menu-top .menu-top--color {
-                color: $pageHeaderDescValueColor;
-            } 
-            &:not(:checked) + .menu-top .menu-top--color {
-                color: $pageHeaderDescColor;
-            }
-
-            &:not(:checked) + .menu-top .menu-top--border {
-                background: $menuTopBackground;
-                border-left: 1px solid gray;
-                z-index: 10;
-            }
-        
-            &:checked + .menu-top .menu-top--border {
-                background: $menuTopBtnBackgroundHover;
-                box-shadow: 2px 2px 2px gray;
-                z-index: 30;
-                border-left: 1px solid gray; 
-            }
-        } 
-
-        &wallet { 
-            &:checked + .menu-top .menu-top__checked,
-            &:not(:checked) + .menu-top .menu-top__unchecked {
-                display: none;
-            }
-        
-
-            &:checked + .menu-top .menu-top--color {
-                color: $pageHeaderDescValueColor;
-            } 
-            &:not(:checked) + .menu-top .menu-top--color {
-                color: $pageHeaderDescColor;
-            }
-
-            &:not(:checked) + .menu-top .menu-top--border {
-                background: $menuTopBackground;
-                border-left: 1px solid gray;
-                z-index: 10;
-            }
-        
-            &:checked + .menu-top .menu-top--border {
-                background: $menuTopBtnBackgroundHover;
-                box-shadow: 2px 2px 2px gray;
-                z-index: 30;
-                border-left: 1px solid gray; 
-            }
-        }
-    
-        &link-saved:checked + .menu-top__visible {
+    &__saved {      //green saved link
+        flex: 0 0 auto;
+        width: 100%;
+        color: $menuTopColorSavedLink;
+        background: $menuTopBackgroaundSavedLink;
+        @include myFlexRow(space-around, center, center, row, $menuTopHeight, 5);
+        @include text;
+        &--switch-link:checked + & {
             visibility: hidden;
         }
-    } 
+        &--center-row {
+            @include myFlexRow(center, center, center, row, $menuTopHeight, 5);
+            width: 90%;
+        }
 
+        &--padding {
+            padding-left: 10px;
+        }
+    }
+   
+    &__wallet {  //only wallet
+        @include myFlexRow(space-around, center, flex-end, row, $menuTopHeight, 5);
+        @include page-header;
+        color: $pageHeaderDescColor;
+        background: $menuTopBackground;
+        width: 250px;   //const for field
+        position: relative;
+        border-left: 1px solid gray;
+        @media (max-width: $maxSmall) {
+            width: 100%;
+        }
+   
+        &-block { //drill wallet-menu
+            background: $menuTopBtnBackgroundHover;
+            border-left: 1px solid gray;
+            @include myFlexRow(space-between, center, flex-end, column, $menuTopHeight, 5);
+            @media (min-width: $minMedium) {
+                position: absolute; 
+                top: $menuTopHeight;
+                left: -1px;     //weight of border!!
+            }
+            width: inherit;
+            box-shadow: 2px 2px 2px gray;
+        
+        }
+
+        &-level-2 {
+            @include myFlexRow(space-between, center, center, row, $subMenuHeight, 100);
+            @include section-header;
+            padding: 0 10px;
+            width: inherit;
+            flex: 0 0 auto;
+            &--desc {
+                flex: 0 1 auto;
+                color: $pageHeaderDescColor;
+            }
+
+            &--value {
+                flex: 0 1 auto;
+                color: $pageHeaderDescValueColor;
+          
+            }
+        }
+
+        &-switch { 
+            &:checked + .menu-top__wallet {
+                color: $pageHeaderDescValueColor;
+                background: $menuTopBtnBackgroundHover;
+            
+                & .menu-top__wallet--checked {
+                    display: none;
+                }
+            }
+            &:not(:checked) + .menu-top__wallet { 
+                & .menu-top__wallet--unchecked {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__notification {  //only notification
+        @include myFlexRow(space-around, center, center, row, $menuTopHeight, 5);
+        @include text;
+        color: $pageHeaderDescColor;
+        background: $menuTopBackground;
+        width: 300px;   //const for field
+        position: relative;
+        border-left: 1px solid gray;
+        @media (max-width: $maxSmall) {
+            width: 100%;
+        }
+
+        & .icon-notification {
+            @include page-header;
+        }
+        
+        &--name {
+            @include myFlexRow(center, center, flex-end, row, $menuTopHeight, 5);
+            flex: 0 0 auto;
+            color: $textBlue;
+            &-padding {
+                padding-left: 10px;
+            }
+        }
+
+        &-block { //drill notification-menu
+            background: $menuTopBtnBackgroundHover;
+            border-left: 1px solid gray;
+            @include myFlexRow(space-between, center, flex-end, column, $menuTopHeight, 5);
+            @media (min-width: $minMedium) {
+                position: absolute; 
+                top: $menuTopHeight;
+                left: -1px;     //weight of border!!
+            }
+            width: inherit;
+            box-shadow: 2px 2px 2px gray;
+        
+        }
+
+        &-level-2 {
+            @include myFlexRow(space-between, center, center, row, $subMenuHeight, 100);
+            @include text;
+            color: $textBlue;
+            padding: 0 10px;
+            width: inherit;
+            flex: 0 0 auto;
+            &--desc {
+                flex: 0 1 auto;
+            }
+
+            &--value {
+                flex: 0 1 auto;
+            }
+        }
+
+        &-switch { 
+            &:checked + .menu-top__notification {
+                color: $pageHeaderDescValueColor;
+                background: $menuTopBtnBackgroundHover;
+            
+                & .menu-top__notification--name {
+                    color: $pageHeaderDescValueColor;
+                }
+
+                & .menu-top__notification--checked {
+                    display: none;
+                }
+            }
+            
+            &:not(:checked) + .menu-top__notification { 
+                & .menu-top__notification--unchecked {
+                    display: none;
+                }
+            }
+
+            &:not(:checked) + .menu-top__notification { 
+                & .menu-top__notification--hidden {
+                    visibility: hidden;
+                }
+            }
+        }
+        &-ball::after {
+            content: '';
+            display: inline-block;
+            background: orange;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+        }
+
+        & > &--checked .icon-notification {
+            &::after {
+                content: '';
+                display: inline-block;
+                position: relative;
+                background: orange;
+                height: 10px;
+                width: 10px;
+                left: -10px;
+                top: -10px;
+                border-radius: 50%;
+            }
+        }
+    }
+    
     &__exit {
         border-left: 1px solid gray;
         height: $menuTopHeight;
         text-align: center;
         line-height: $menuTopHeight;
         z-index: 10;
+        flex: 0 0 auto;
+        width: 100px;
+        @media (max-width: $maxSmall) {
+            width: 100%;
+        }
     }
 }

@@ -1,0 +1,82 @@
+.table {
+    $column: 4;
+    $height: 40px;
+
+
+    @include myFlexRow(center, center, center, row, $height, 5);
+    width: inherit;
+    flex: 0 0 auto;
+   
+    &__row {
+        @include myFlexRow(space-around, flex-start, flex-start, row, $height, 5);
+        flex: 0 0 auto;
+        width: 100%;
+        
+//        &--single {
+//            @include myFlexRow(space-around, center, center, row, $height, 5);
+//            flex: 0 0 auto;
+//            width: 100%;
+//            border-top: 1px solid gray;
+//            &:hover {
+//                cursor: $cursorHover; 
+ //               background: $linkBackgroundHover;
+ //           }
+        }
+        &--body {
+            height: 50vh;
+            overflow: hidden;
+        }
+    }
+
+    &__main {
+        @include myFlexRow(flex-start, center, center, column, $height, 5);
+        flex: 0 0 auto;
+        max-width: 1000px;
+        width: 100%;
+    }
+
+    &__ceil {
+        width: 100% / $column;
+        text-align: left;
+        padding: 5px 10px;
+        &--header {
+            @include section-header;
+            width: 100% / $column;
+            text-align: left;
+            padding: 5px 10px;
+            &:hover {
+                cursor: $cursorHover; 
+                background: $linkBackgroundHover;
+            }
+
+        }
+    }
+
+}
+
+@media (max-width: 650px) {
+    .table__ceil {
+        display: block;
+        width: 60%;
+        text-align: left;
+
+        &::before {
+        position:absolute;
+            @include section-header;     
+            width:40%;
+            left:10px;
+            top:0
+        }
+   
+        &:nth-child(1):before { content:"Date";}
+        &:nth-child(2):before { content:"Amount ($)";}
+        &:nth-child(3):before { content:"Deal";}
+        &:nth-child(4):before { content:"Account";}
+   
+    }
+
+    .table .table__row:nth-child(1) {
+        display: none;
+    }   
+}
+

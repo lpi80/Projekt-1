@@ -1,48 +1,61 @@
 .calendar {
-    border: none;
-    &__container {
-        border: 1px solid $pageHeaderDescColor;
-        border-radius: 5px;
-        padding:10px;
-        &:hover {
-            border: 1px solid $pageHeaderDescValueColor;
-            & > .hover {
-              color: $pageHeaderDescValueColor;
-            }
-        }
+    $height: 30px;
+    $padding: 10px;
+
+    max-width: 1200px;
+
+    @include myFlexRow(center, center, center, column, $height, 5);
+    @include page-header;
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 30px;
+    @media (min-width: $minMedium) {
+        @include myFlexRow(center, center, center, row, $height, 5);
+    } 
+
+    &__icon {
+        padding: $padding;
     }
 
     &__input {
-        border: none;
-        text-align: center;
-        font-family: $sectionHeaderFontFamily;
-        font-size: $sectionHeaderFontSize;
-        font-weight: $sectionHeaderFontWeight;
-        background: transparent;
-    }
-    &--color {
-        &-light {
-        color: $pageHeaderDescColor;
-        }
-
-        &-dark {
-            color: $pageHeaderDescValueColor;
-        }
-    }
-
-    &__row {
-        @include myFlexRow(center, center, center, row, 30, 0);
-    }
-
-    &__border-inside {
-        height: 30px;
-        border-left: 1px solid gray;
+        @include myFlexRow(center, center, center, row, $height, 5);
+        flex: 0 0 auto;
+        border: 1px solid gray;
+        border-radius: 5px;
+       
         @media (max-width: $maxSmall) {
-            height: 0px;
-            margin: 10px 0;
-            border-left: none;
-            border-bottom: 1px solid gray;
+            @include myFlexRow(center, center, center, column, $height, 5);
+        } 
+
+        &-field {
+            padding: 10px $padding;
+            outline: none;
+            border: none;
+            text-align: center;
+            color: $pageHeaderDescColor;
+            @include section-header;
+            background: transparent;
+            @media (max-width: $maxSmall) {
+                height: 1;
+                width: 100%;
+                border-bottom: 1px solid gray;
+            
+            }    
         }
     }
 
+    &__separator {
+        height: 0;
+        width: 0;
+        @media (min-width: $minMedium) {
+            height: $height;
+            width: 1px;
+            border-left: 1px solid gray;
+        
+        }
+    }
+
+    &--height {
+        height: $height + $padding * 2 - 2px;
+    }
 }
