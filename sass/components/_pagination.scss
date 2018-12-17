@@ -1,7 +1,7 @@
 .pagination {
     background: $color_FFF;
     margin-bottom: 10px;
-    @include page-header;
+    @include text;
     &__row {
         @include myFlexRow(center, center, center, row, 30px);
 
@@ -21,7 +21,6 @@
                 color: $linkHoverColor;  
             }
         }            
-    
 
         &--active {
             color: $linkColor;

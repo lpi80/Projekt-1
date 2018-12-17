@@ -1,19 +1,21 @@
 .table {
-    $heightHead: 100px;
-    $heightBody: 80px;
+    $heightHead: 60px;
+    $heightBody: 50px;
     $column: 4;
 
-    overflow:hidden;
+    overflow:auto;
     max-width:1000px; 
     width:100%;
     margin:0 auto;
     position:relative;
     text-align: left;
-    
+   
+
     &__main {
         display: block;
         flex: 0 0 auto;
         width: 80%;
+        
     }
 
     &__head {
@@ -26,19 +28,58 @@
         color: $pageHeaderDescValueColor;
     }
 
+    &__input {
+        display: none;
+    }
+    
     &__ceil {
         height: $heightBody;
         width: 100% / $column;
         vertical-align: middle;
         border-top: 1px solid gray;
-        &--head {
+
+        &--header {
             height: $heightHead;
             vertical-align: middle;
+
+            &:hover {
+                background: $rowTableBackground;
+                cursor: $cursorHover; 
+
+                & .table__input:checked + .table__ceil--name .table__checked {
+                    display: inline-block
+                }
+                
+                & .table__input:not(:checked) + .table__ceil--name .table__unchecked {
+                    display: inline-block
+                }
+            } 
         }
     }
 
-    &__row--hidden {
+    &__checked,
+    &__unchecked {
+        padding-left: 10px;
         display: none;
+        &:hover {
+            cursor: $cursorHover; 
+            color: $linkHoverColor;  
+        }
+    }
+
+    
+
+    &__row {
+        &--hidden {
+            display: none;
+        }
+
+        &--single {
+            &:hover {
+                background: $rowTableBackground;
+                cursor: $cursorHover; 
+            } 
+        }
     }
 } 
 
@@ -63,15 +104,20 @@
                 left:10px;
                 //top:0;
                 text-align: left; 
+                content: attr(data-th); 
             }
     
-            &:nth-child(1):before { content:"Date";}
-            &:nth-child(2):before { content:"Amount ($)";}
-            &:nth-child(3):before { content:"Deal";}
-            &:nth-child(4):before { content:"Account";}
+            //&:nth-child(1):before { content:"Date";}
+            //&:nth-child(2):before { content:"Amount ($)";}
+            //&:nth-child(3):before { content:"Deal";}
+            //&:nth-child(4):before { content:"Account";}
             
+            &:nth-child(1) {
+                margin-top: 20px;
+            }
+
             &:nth-last-child(1) {
-            border-bottom: 2px solid gray;
+                border-bottom: 2px solid gray;
             }
         }
 

@@ -937,9 +937,9 @@ table {
   background: #FFF;
   margin-bottom: 10px;
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: none;
 }
 
 .pagination__row {
@@ -1809,7 +1809,7 @@ table {
 }
 
 .table {
-  overflow: hidden;
+  overflow: auto;
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
@@ -1840,20 +1840,52 @@ table {
   color: #333;
 }
 
+.table__input {
+  display: none;
+}
+
 .table__ceil {
-  height: 80px;
+  height: 50px;
   width: 25%;
   vertical-align: middle;
   border-top: 1px solid gray;
 }
 
-.table__ceil--head {
-  height: 100px;
+.table__ceil--header {
+  height: 60px;
   vertical-align: middle;
+}
+
+.table__ceil--header:hover {
+  background: #E3E3E3;
+  cursor: url("../images/hand_cursor.png"), pointer;
+}
+
+.table__ceil--header:hover .table__input:checked + .table__ceil--name .table__checked {
+  display: inline-block;
+}
+
+.table__ceil--header:hover .table__input:not(:checked) + .table__ceil--name .table__unchecked {
+  display: inline-block;
+}
+
+.table__checked, .table__unchecked {
+  padding-left: 10px;
+  display: none;
+}
+
+.table__checked:hover, .table__unchecked:hover {
+  cursor: url("../images/hand_cursor.png"), pointer;
+  color: #FFA200;
 }
 
 .table__row--hidden {
   display: none;
+}
+
+.table__row--single:hover {
+  background: #E3E3E3;
+  cursor: url("../images/hand_cursor.png"), pointer;
 }
 
 @media (max-width: 1000px) {
@@ -1876,18 +1908,10 @@ table {
     width: 40%;
     left: 10px;
     text-align: left;
+    content: attr(data-th);
   }
-  .table__ceil:nth-child(1):before {
-    content: "Date";
-  }
-  .table__ceil:nth-child(2):before {
-    content: "Amount ($)";
-  }
-  .table__ceil:nth-child(3):before {
-    content: "Deal";
-  }
-  .table__ceil:nth-child(4):before {
-    content: "Account";
+  .table__ceil:nth-child(1) {
+    margin-top: 20px;
   }
   .table__ceil:nth-last-child(1) {
     border-bottom: 2px solid gray;
