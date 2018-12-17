@@ -3,22 +3,26 @@
    
     &__row {
         @include myFlexRow(center, center, flex-start, row, 50px, 5);
+        width: 100%;
     }
 
     &__column {
          @include myFlexRow(flex-start, flex-start, flex-start, column, 50px, 10);
-    }
+         width: 100%;
+         @include section-header;
+         color: $pageHeaderDescColor;
+         border-bottom: 1px solid gray;
+         padding: 20px 0;
+     }
 
-    &__border {
-        border-bottom: 1px solid gray;
-        padding: 20px 0;
-    }
-
+    
     &__input {
         outline: none;
         padding: 5px;
         border: 1 solid $color_9C9C9C;
         border-radius: 5px;
+        @include text;
+         color: $pageHeaderDescValueColor;
         
         &:focus,
         &:active,

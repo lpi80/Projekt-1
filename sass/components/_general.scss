@@ -1,8 +1,46 @@
 .general-stat {
+    width: 80%;
+    @include myFlexRow(space-around, center, center, row, 50px);
+    
     &__img {
+        padding-top: 20px;
+        width: 100%;
         @media (max-width: $maxSmall) {
             transform: rotate(90deg);
             margin-top: 100px;
         }
+    }
+    &__section {
+        @include myFlexRow(space-between, center, center, row, 50px);
+        @include section-header;
+        flex: 0 0 auto; 
+        color: $pageHeaderDescColor;
+        border-bottom: 1px solid gray;
+        
+        &--value {
+            @include text;
+            color: $pageHeaderDescValueColor;
+            text-align: right;
+        }
+        
+        &--earning {
+            border: none;
+        }
+ 
+    }
+
+    &__tab {
+        @include myFlexRow(space-between, center, center, row, 50px);
+        @include text;
+        padding: 20px 0;
+        max-width: 500px;
+        width: 80%;
+        
+        
+    }
+    
+    &__row {
+        @include myFlexRow(center, center, center, row, 50px);
+        min-width: 100px;
     }
 }
