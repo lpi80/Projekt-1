@@ -86,7 +86,7 @@
                 <input class="menu-top__wallet-switch" type="checkbox" name="walletSwitch" id="walletSwitch" value="true"
                     hidden>
                 <div class="menu-top__wallet">
-                    <span class="icon-trash"></span>
+                    <span class="icon-wallet"></span>
                     <span>$1,500.00</span>
                     <label for="walletSwitch">
                         <span class="icon-arrow-up-small menu-top__wallet--unchecked"></span>
@@ -199,35 +199,15 @@
                             <p>Earning Chart</p>
                         </div>
         
-                        <div class="general-stat__tab">
-                            <input class="check-box-tabs__input" type="checkbox" name="checkBoxTabsBlue" id="checkBoxTabsBlue"
-                                value="true" hidden>
-                            <div class="general-stat__row col-s-8 check-box-tabs">
-                                <div class="col-lg-3 col-md-3 col-s-2 check-box-tabs__ball--color-blue check-box-tabs"></div>
-                                <label class="check-box-tabs__label col-lg-5 col-md-5 col-s-3 check-box-tabs" for="checkBoxTabsBlue">Tabs</label>
-                            </div>
-        
-                            <input class="check-box-tabs__input" type="checkbox" name="checkBoxTabsOrange" id="checkBoxTabsOrange"
-                                value="true" hidden>
-                            <div class="general-stat__row col-s-8 check-box-tabs">
-                                <div class="col-lg-3 col-md-3 col-s-2 check-box-tabs__ball--color-orange check-box-tabs"></div>
-                                <label class="check-box-tabs__label col-lg-5 col-md-5 col-s-3 check-box-tabs" for="checkBoxTabsOrange">Tabs</label>
-                            </div>
-        
-                            <input class="check-box-tabs__input" type="checkbox" name="checkBoxTabsGreen" id="checkBoxTabsGreen"
-                                value="true" hidden>
-                            <div class="general-stat__row col-s-8 check-box-tabs">
-                                <div class="col-lg-3 col-md-3 col-s-2 check-box-tabs__ball--color-green check-box-tabs"></div>
-                                <label class="check-box-tabs__label col-lg-5 col-md-5 col-s-3 check-box-tabs" for="checkBoxTabsGreen">Tabs</label>
-                            </div>
-                         </div>
-
-                        <img class="general-stat__img" src="images/graph.png" alt="">
+                        <div class="general-stat__chart">
+                            <canvas id="myChart"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 

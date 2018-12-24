@@ -10,6 +10,19 @@
             margin-top: 100px;
         }
     }
+
+    &__chart {
+        padding: 15px;
+        //width: inherit;
+        overflow: auto;
+        overflow-x: auto;
+       
+        //height: 40vh;
+        width: 80vw;
+        position: relative;
+
+    }
+
     &__section {
         @include myFlexRow(space-between, center, center, row, 50px);
         @include section-header;

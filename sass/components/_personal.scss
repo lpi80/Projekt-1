@@ -1,14 +1,26 @@
 
+.text__error {
+    border-color: red;
+    background: pink;
+}
+
+.text__valid {
+    background: lightgreen;
+    border-color: darkgreen;
+}
+
 .personal {
    
     &__row {
-        @include myFlexRow(center, center, flex-start, row, 50px, 5);
+        @include myFlexRow(space-between, center, center, row, 50px, 5);
+        flex: 0 0 auto;
         width: 100%;
+        padding: 10px 0;
+        position: relative;
     }
 
     &__column {
-         @include myFlexRow(flex-start, flex-start, flex-start, column, 50px, 10);
-         width: 100%;
+         margin: 0 auto;
          @include section-header;
          color: $pageHeaderDescColor;
          border-bottom: 1px solid gray;
@@ -18,19 +30,46 @@
     
     &__input {
         outline: none;
-        padding: 5px;
+        padding: 5px 0;
         border: 1 solid $color_9C9C9C;
         border-radius: 5px;
         @include text;
-         color: $pageHeaderDescValueColor;
+        color: $pageHeaderDescValueColor;
+        width: 100%;
+    
+        
         
         &:focus,
         &:active,
         &:hover {
              border: 2px solid $color_333;
         }
-
     }
 
-  
+    &__button {
+        @include myFlexRow(center, center, flex-start, row, 50px, 5);
+        padding: 20px 0;
+        width: 100%;
+    }
+    
+    &__error {
+        padding-top: 5px;
+        color: red;
+        @include text;
+        width: 100%;
+    }
+
+    & .required {
+        position: relative;
+        &::before {
+            content:'*';
+            color: red;
+            background: transparent;
+            @include page-header;
+            position: absolute;
+            left: -10px;
+        }
+    }
+    
 }
+
