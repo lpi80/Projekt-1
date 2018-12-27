@@ -122,7 +122,7 @@
                         </label>
                     </div>
                     <span class="icon-notification menu-top__notification--unchecked"></span>
-                    <div class="menu-top__notification--name">
+                    <div class="menu-top__notification--name" id='notifacationName'>
                         <span class="icon-profile"></span>
                         <span class="menu-top__notification--name-padding">Leonardo Dicaprio</span>
                     </div>
@@ -143,7 +143,7 @@
                     </div>
                 </div>
 
-                <div class="menu-top__exit icon-quit"></div>
+                <div class="menu-top__exit icon-quit" id="btnExit"></div>
             </div>
             
             <!--Infoarmation link-->
@@ -208,15 +208,42 @@
         </div>
     </div>
     <div class="overlay" id="overlay">
-        <div class="modal" id="myModal">
-            <div class="btn-close js--close-modal">x</div>
-        
-            <h4>Witaj w modalu!</h4>
-            <p>Lorem ipsum dolor sit amet...</p>
-        
-            <button class="js--close-modal">Okay</button>
-        </div>    
+    
+        <div class="modal" id="modalLogin">
+            <div class='modal__header'>
+                <p>LOGIN</p>
+            </div>
+            <form novalidate class="modal__login required" action="#" method="post" id="loginForm"> 
+                <label class=" personal__input--login" for="loginName">
+                    <input class="personal__input" type="text" name="loginName" id="loginName" required pattern="[A-Za-z0-9' -_]+" placeholder="">
+                    <span class="personal__input--icon icon-profile"></span>
+                    <span class="personal__error"></span>
+                    <span class="personal__info"></span>
+                </label>
+                <label class=" personal__input--login required" for="loginPassword">
+                    <input class="personal__input" type="password" name="loginPassword" id="loginPassword" required pattern="[A-Za-z0-9' -_]+" placeholder="Password">
+                    <span class="personal__input--icon icon-password"></span>
+                    <span class="personal__error"></span>
+                    <span class="personal__info"></span>
+                </label>
+                <div class="personal__input--login">
+                    <button class="btn btn--orange" type="submit">ENTER</button>
+                </div>
+            </form>
+        </div>
+    
+        <div class="modal" id="modalQuit">
+            <div class='modal__header'>
+                <p>Do you really want to Quit?</p>
+            </div>
+            <div class='modal__buttons'>
+                <button class="js--close-modal btn btn--gray">Cancel</button>
+                <button class="btn btn--orange">Quit</button>
+            </div>
+        </div>
     </div>
+      
+
     <script type="text/javascript" src="js/modal.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>

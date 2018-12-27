@@ -35,7 +35,7 @@ function validationPassword(error__desc, inputData, inputDataRepeat) {
     return stan;    
 }
 
-document.querySelector('form').addEventListener('submit', function(event) {
+document.getElementById('personalForm').addEventListener('submit', function(event) {
     let isFormValidate = true;
 
     const nameReg = new RegExp('^[A-Z][a-z]{2,}$', '');
@@ -76,3 +76,5 @@ document.querySelector('form').addEventListener('submit', function(event) {
 
     return !isFormValidate ? event.preventDefault() : true;
   })
+
+  
