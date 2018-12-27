@@ -13,62 +13,62 @@
 
 <body>
     <div class="row--main">
-        <input class="menu-left__switch" type="checkbox" name="leftMenu" id="leftMenu" value="true" >
+        <input class="menu-left__switch" type="checkbox" name="leftMenu" id="leftMenu" value="true">
         <div class="menu-left">
-            <ul class="menu-left__column"> 
+            <ul class="menu-left__column">
                 <li class="menu-left__header">
                     <p class="menu-left__header-logo full">Just do it</p>
                     <label for="leftMenu">
                         <span class="menu-left__header-icon"><i class="fas fa-bars"></i></span>
                     </label>
                 </li>
-                <li class="menu-left__one-row "> 
+                <li class="menu-left__one-row ">
                     <div class="menu-left__one-row--bar">
                         <a class="icon-general menu-left__one-row--icon" href="general_statistic.html"></a>
                     </div>
                     <a class="menu-left__one-row--link full" href="general_statistic.html">General</a>
                 </li>
-                <li class="menu-left__one-row "> 
+                <li class="menu-left__one-row ">
                     <div class="menu-left__one-row--bar">
                         <a class="icon-details menu-left__one-row--icon" href="details.html"></a>
                     </div>
                     <a class="menu-left__one-row--link full" href="details.html">Details</a>
                 </li>
-                <li class="menu-left__one-row "> 
+                <li class="menu-left__one-row ">
                     <div class="menu-left__one-row--bar">
                         <a class="icon-links menu-left__one-row--icon" href="links.html"></a>
                     </div>
                     <a class="menu-left__one-row--link full" href="links.html">Links</a>
                 </li>
-                <li class="menu-left__one-row "> 
+                <li class="menu-left__one-row ">
                     <div class="menu-left__one-row--bar">
                         <a class="icon-banners menu-left__one-row--icon" href="banners.html"></a>
                     </div>
                     <a class="menu-left__one-row--link full" href="banners.html">Banners</a>
                 </li>
-                <li class="menu-left__one-row "> 
+                <li class="menu-left__one-row ">
                     <div class="menu-left__one-row--bar">
                         <a class="icon-personaldata menu-left__one-row--icon" href="personal_data.html"></a>
                     </div>
                     <a class="menu-left__one-row--link full" href="personal_data.html">Personal data</a>
                 </li>
-                <li class="menu-left__one-row "> 
+                <li class="menu-left__one-row ">
                     <div class="menu-left__one-row--bar">
                         <a class="icon-payout menu-left__one-row--icon" href="payout.html"></a>
                     </div>
                     <a class="menu-left__one-row--link full" href="payout.html">Payout</a>
                 </li>
-                <li class="menu-left__one-row menu-left__row--border-bottom"> 
+                <li class="menu-left__one-row menu-left__row--border-bottom">
                     <div class="menu-left__one-row--bar">
                         <a class="icon-postback menu-left__one-row--icon" href="postback.html"></a>
                     </div>
                     <a class="menu-left__one-row--link full" href="postback.html">Postback</a>
                 </li>
 
-                <li class="menu-left__row  menu-left__row--border-top full"> 
+                <li class="menu-left__row  menu-left__row--border-top full">
                     <p class="menu-left__manager--header">Your manager</p>
                 </li>
-                <li class="menu-left__row"> 
+                <li class="menu-left__row">
                     <div class="menu-left__connection--online">
                         <img class=" menu-left__img" src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ad57f7ca5832f3f72ee2c1c243c72f5c&auto=format&fit=crop&w=1350&q=80"
                             alt="">
@@ -85,7 +85,7 @@
                 <input class="menu-top__wallet-switch" type="checkbox" name="walletSwitch" id="walletSwitch" value="true"
                     hidden>
                 <div class="menu-top__wallet">
-                    <span class="icon-trash"></span>
+                    <span class="icon-wallet"></span>
                     <span>$1,500.00</span>
                     <label for="walletSwitch">
                         <span class="icon-arrow-up-small menu-top__wallet--unchecked"></span>
@@ -112,7 +112,8 @@
                     </div>
                 </div>
 
-                <input class="menu-top__notification-switch" type="checkbox" name="notificationSwitch" id="notificationSwitch" value="true" hidden>
+                <input class="menu-top__notification-switch" type="checkbox" name="notificationSwitch" id="notificationSwitch"
+                    value="true" hidden>
                 <div class="menu-top__notification">
                     <div class="menu-top__notification--checked">
                         <label for="notificationSwitch">
@@ -120,8 +121,8 @@
                         </label>
                     </div>
                     <span class="icon-notification menu-top__notification--unchecked"></span>
-                    <div class="menu-top__notification--name">
-                        <span class="icon-profile"></span>   
+                    <div class="menu-top__notification--name" id='notifacationName'>
+                        <span class="icon-profile"></span>
                         <span class="menu-top__notification--name-padding">Leonardo Dicaprio</span>
                     </div>
                     <label for="notificationSwitch" class="menu-top__notification--hidden">
@@ -141,7 +142,7 @@
                     </div>
                 </div>
 
-                <div class="menu-top__exit icon-quit"></div>
+                <div class="menu-top__exit icon-quit"  id="btnExit"></div>
             </div>
 
             <input class="menu-top__saved--switch-link" type="checkbox" name="topMenuSavedClose" id="topMenuSavedClose"
@@ -160,56 +161,94 @@
             <!--section-->
             <div class="page__container-fluid ">
                 <!--section workshop-->
-                
-                <div class="section__header">Links</div>
-                    <div class="section__workshop">
-    
-                            <button class="btn btn--orange">+ add new</button>
-                   
-                            <div class="link__column">
-                                <div class="link__row col-lg-10 col-md-10 col-s-10">
-                                    <div class="link__name col-lg-5">dfsgsfewfergergergdgsdfgfdsgf page</div>
-                                    <a class="link col-lg-4" href="#">www.homepage.com</a>
-                                    <div class="link__row--icon">
-                                        <div class="link__icon icon-links"></div>
-                                        <div class="link__icon icon-trash"></div>
-                                    </div>
-                                </div>
-                            
-                                <div class="link__row col-lg-10 col-md-10 col-s-10">
-                                    <div class="link__name col-lg-5">Home page</div>
-                                    <a class="link col-lg-4" href="#">www.homepage.com</a>
-                                    <div class="link__row--icon">
-                                       <div class="link__icon icon-links"></div>
-                                        <div class="link__icon icon-trash"></div>
-                                    </div>
-                                </div>
-                          
-                                <div class="link__row col-lg-10 col-md-10 col-s-10">
-                                    <div class="link__name col-lg-5">dfsgsfewfergergergdgsdfgfdsgf page</div>
-                                    <a class="link col-lg-4" href="#">www.homepage.com</a>
-                                    <div class="link__row--icon">
-                                        <div class="link__icon icon-links"></div>
-                                        <div class="link__icon icon-trash"></div>
-                                    </div>
-                                </div>
-                                
-                                <div class="link__row col-lg-10 col-md-10 col-s-10">
-                                    <div class="link__name col-lg-5">Home page</div>
-                                    <a class="link col-lg-4" href="#">www.homepage.com</a>
-                                    <div class="link__row--icon">
-                                        <div class="link__icon icon-links"></div>
-                                        <div class="link__icon icon-trash"></div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <button class="btn btn--orange">+ add new</button>
+                <div class="section__header">Links</div>
+                <div class="section__workshop">
+
+                    <button class="btn btn--orange">+ add new</button>
+
+                    <div class="link__column">
+                        <div class="link__row col-lg-10 col-md-10 col-s-10">
+                            <div class="link__name col-lg-5">dfsgsfewfergergergdgsdfgfdsgf page</div>
+                            <a class="link col-lg-4" href="#">www.homepage.com</a>
+                            <div class="link__row--icon">
+                                <div class="link__icon icon-links"></div>
+                                <div class="link__icon icon-trash"></div>
+                            </div>
+                        </div>
+
+                        <div class="link__row col-lg-10 col-md-10 col-s-10">
+                            <div class="link__name col-lg-5">Home page</div>
+                            <a class="link col-lg-4" href="#">www.homepage.com</a>
+                            <div class="link__row--icon">
+                                <div class="link__icon icon-links"></div>
+                                <div class="link__icon icon-trash"></div>
+                            </div>
+                        </div>
+
+                        <div class="link__row col-lg-10 col-md-10 col-s-10">
+                            <div class="link__name col-lg-5">dfsgsfewfergergergdgsdfgfdsgf page</div>
+                            <a class="link col-lg-4" href="#">www.homepage.com</a>
+                            <div class="link__row--icon">
+                                <div class="link__icon icon-links"></div>
+                                <div class="link__icon icon-trash"></div>
+                            </div>
+                        </div>
+
+                        <div class="link__row col-lg-10 col-md-10 col-s-10">
+                            <div class="link__name col-lg-5">Home page</div>
+                            <a class="link col-lg-4" href="#">www.homepage.com</a>
+                            <div class="link__row--icon">
+                                <div class="link__icon icon-links"></div>
+                                <div class="link__icon icon-trash"></div>
+                            </div>
                         </div>
                     </div>
+
+                    <button class="btn btn--orange">+ add new</button>
                 </div>
             </div>
-            <script type="text/javascript" src="js/script.js"></script>
-        </body>
-        </html>
-        
+        </div>
+    </div>
+    <div class="overlay" id="overlay">
+
+        <div class="modal" id="modalLogin">
+            <div class='modal__header'>
+                <p>LOGIN</p>
+            </div>
+            <form novalidate class="modal__login required" action="#" method="post" id="loginForm">
+                <label class=" personal__input--login" for="loginName">
+                    <input class="personal__input" type="text" name="loginName" id="loginName" required pattern="[A-Za-z0-9' -_]+"
+                        placeholder="">
+                    <span class="personal__input--icon icon-profile"></span>
+                    <span class="personal__error"></span>
+                    <span class="personal__info"></span>
+                </label>
+                <label class=" personal__input--login required" for="loginPassword">
+                    <input class="personal__input" type="password" name="loginPassword" id="loginPassword" required
+                        pattern="[A-Za-z0-9' -_]+" placeholder="Password">
+                    <span class="personal__input--icon icon-password"></span>
+                    <span class="personal__error"></span>
+                    <span class="personal__info"></span>
+                </label>
+                <div class="personal__input--login">
+                    <button class="btn btn--orange" type="submit">ENTER</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal" id="modalQuit">
+            <div class='modal__header'>
+                <p>Do you really want to Quit?</p>
+            </div>
+            <div class='modal__buttons'>
+                <button class="js--close-modal btn btn--gray">Cancel</button>
+                <button class="btn btn--orange">Quit</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

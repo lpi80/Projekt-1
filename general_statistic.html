@@ -86,7 +86,7 @@
                 <input class="menu-top__wallet-switch" type="checkbox" name="walletSwitch" id="walletSwitch" value="true"
                     hidden>
                 <div class="menu-top__wallet">
-                    <span class="icon-trash"></span>
+                    <span class="icon-wallet"></span>
                     <span>$1,500.00</span>
                     <label for="walletSwitch">
                         <span class="icon-arrow-up-small menu-top__wallet--unchecked"></span>
@@ -122,14 +122,14 @@
                         </label>
                     </div>
                     <span class="icon-notification menu-top__notification--unchecked"></span>
-                    <div class="menu-top__notification--name">
+                    <div class="menu-top__notification--name" id='notifacationName'>
                         <span class="icon-profile"></span>
                         <span class="menu-top__notification--name-padding">Leonardo Dicaprio</span>
                     </div>
                     <label for="notificationSwitch" class="menu-top__notification--hidden">
                         <span class="icon-close"></span>
                     </label>
-                    
+
                     <div class="menu-top__notification-block menu-top__notification--unchecked">
                         <div class="menu-top__notification-level-2">
                             <div class="menu-top__notification-level-2--desc">you,ve got 100 signups</div>
@@ -143,9 +143,9 @@
                     </div>
                 </div>
 
-                <div class="menu-top__exit icon-quit"></div>
+                <div class="menu-top__exit icon-quit"  id="btnExit"></div>
             </div>
-            
+
             <!--Infoarmation link-->
             <input class="menu-top__saved--switch-link" type="checkbox" name="topMenuSavedClose" id="topMenuSavedClose"
                 value="true" hidden>
@@ -176,7 +176,7 @@
                         <button class="btn btn--orange icon-refresh calendar--height"></button>
                     </div>
 
-            
+
                     <div class="general-stat">
                         <div class="col-lg-5 col-md-7 col-s-12 general-stat__section">
                             <p class="col-lg-8 col-md-6 col-s-12 ">Visit signupst</p>
@@ -194,40 +194,58 @@
                             <p class="col-lg-8 col-md-6 col-s-12 ">Turn over</p>
                             <p class="col-lg-4 col-md-6 col-s-12 general-stat__section--value">134</p>
                         </div>
-                    
+
                         <div class="col-lg-11 col-md-7 col-s-12 general-stat__section--earning general-stat__section">
                             <p>Earning Chart</p>
                         </div>
-        
-                        <div class="general-stat__tab">
-                            <input class="check-box-tabs__input" type="checkbox" name="checkBoxTabsBlue" id="checkBoxTabsBlue"
-                                value="true" hidden>
-                            <div class="general-stat__row col-s-8 check-box-tabs">
-                                <div class="col-lg-3 col-md-3 col-s-2 check-box-tabs__ball--color-blue check-box-tabs"></div>
-                                <label class="check-box-tabs__label col-lg-5 col-md-5 col-s-3 check-box-tabs" for="checkBoxTabsBlue">Tabs</label>
-                            </div>
-        
-                            <input class="check-box-tabs__input" type="checkbox" name="checkBoxTabsOrange" id="checkBoxTabsOrange"
-                                value="true" hidden>
-                            <div class="general-stat__row col-s-8 check-box-tabs">
-                                <div class="col-lg-3 col-md-3 col-s-2 check-box-tabs__ball--color-orange check-box-tabs"></div>
-                                <label class="check-box-tabs__label col-lg-5 col-md-5 col-s-3 check-box-tabs" for="checkBoxTabsOrange">Tabs</label>
-                            </div>
-        
-                            <input class="check-box-tabs__input" type="checkbox" name="checkBoxTabsGreen" id="checkBoxTabsGreen"
-                                value="true" hidden>
-                            <div class="general-stat__row col-s-8 check-box-tabs">
-                                <div class="col-lg-3 col-md-3 col-s-2 check-box-tabs__ball--color-green check-box-tabs"></div>
-                                <label class="check-box-tabs__label col-lg-5 col-md-5 col-s-3 check-box-tabs" for="checkBoxTabsGreen">Tabs</label>
-                            </div>
-                         </div>
 
-                        <img class="general-stat__img" src="images/graph.png" alt="">
+                        <div class="general-stat__chart">
+                            <canvas id="myChart"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="overlay" id="overlay">
+
+        <div class="modal" id="modalLogin">
+            <div class='modal__header'>
+                <p>LOGIN</p>
+            </div>
+            <form novalidate class="modal__login required" action="#" method="post" id="loginForm">
+                <label class=" personal__input--login" for="loginName">
+                    <input class="personal__input" type="text" name="loginName" id="loginName" required pattern="[A-Za-z0-9' -_]+"
+                        placeholder="">
+                    <span class="personal__input--icon icon-profile"></span>
+                    <span class="personal__error"></span>
+                    <span class="personal__info"></span>
+                </label>
+                <label class=" personal__input--login required" for="loginPassword">
+                    <input class="personal__input" type="password" name="loginPassword" id="loginPassword" required
+                        pattern="[A-Za-z0-9' -_]+" placeholder="Password">
+                    <span class="personal__input--icon icon-password"></span>
+                    <span class="personal__error"></span>
+                    <span class="personal__info"></span>
+                </label>
+                <div class="personal__input--login">
+                    <button class="btn btn--orange" type="submit">ENTER</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal" id="modalQuit">
+            <div class='modal__header'>
+                <p>Do you really want to Quit?</p>
+            </div>
+            <div class='modal__buttons'>
+                <button class="js--close-modal btn btn--gray">Cancel</button>
+                <button class="btn btn--orange">Quit</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 

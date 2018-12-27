@@ -23,7 +23,7 @@
     }
    
     &__wallet {  //only wallet
-        @include myFlexRow(space-around, center, flex-end, row, $menuTopHeight, 5);
+        @include myFlexRow(space-around, center, center, row, $menuTopHeight, 5);
         @include page-header;
         color: $pageHeaderDescColor;
         background: $menuTopBackground;
@@ -100,7 +100,7 @@
         }
         
         &--name {
-            @include myFlexRow(center, center, flex-end, row, $menuTopHeight, 5);
+            @include myFlexRow(center, center, center, row, $menuTopHeight, 5);
             flex: 0 0 auto;
             color: $textBlue;
             &-padding {

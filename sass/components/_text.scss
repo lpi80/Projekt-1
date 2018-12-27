@@ -9,7 +9,6 @@
     font-family: $pageHeaderFontFamily;
     font-size: $pageHeaderFontSize;
     font-weight: $pageHeaderFontWeight; 
-    text-transform: uppercase;
 }
 
 
@@ -17,34 +16,10 @@
     font-family: $sectionHeaderFontFamily;
     font-size: $sectionHeaderFontSize;
     font-weight: $sectionHeaderFontWeight; 
-    text-transform: none;
 }
 
 @mixin menu-left-header() {
     font-family: $leftMenuHeaderFontFamily;
     font-size: $leftMenuHeaderFontSize;
     font-weight: $leftMenuHeaderFontWeight;
-    text-transform: none;
-}
-
-
-.text {
-    &__page-header {
-        font-family: $pageHeaderFontFamily;
-        font-size: $pageHeaderFontSize;
-        font-weight: $pageHeaderFontWeight; 
-        text-transform: uppercase;
-    }
-    &__section-header {
-        font-family: $sectionHeaderFontFamily;
-        font-size: $sectionHeaderFontSize;
-        font-weight: $sectionHeaderFontWeight; 
-    }
-
-    & {
-        font-family: $textFontFamily;
-        font-size: $textFontSize;
-        font-weight: $textFontWeight; 
-    }
-
 }
