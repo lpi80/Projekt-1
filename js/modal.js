@@ -75,3 +75,11 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
   return !isFormValidate ? event.preventDefault() : true;
 })
+
+
+
+
+
+document.getElementById('btnAddBanner').addEventListener('click', function(e) {
+  openModal('#modalBanner',e);
+},false)

@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "flags.css",
+	"sources": [
+		"../../sass/components/flags.scss"
+	],
+	"names": [],
+	"mappings": ""
+}

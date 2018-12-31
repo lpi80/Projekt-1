@@ -1,0 +1,72 @@
+.flags {
+    @include text;
+    color: $pageHeaderDescColor;
+    width: 100px;
+    position: relative;
+    z-index: 9999;
+       
+    &__header {
+        @include section-header;
+        //padding: 10px 0;
+    }  
+
+    &__icon {
+        width: 40%;
+    }
+    
+    
+    &__main {
+        @include myFlexRow(space-between, center, center, row, 40px);
+        border: 1px solid $pageHeaderDescColor;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+            
+    }
+
+    &__desc{
+        &--arrow{
+            &:hover {
+                color: $pageHeaderDescValueColor;
+                @include section-header;
+                cursor: $cursorHover; 
+
+            }
+        }
+    }
+
+    &__select {
+        background: white;
+        position: absolute;
+        margin: 5px;
+        border: 1px solid $pageHeaderDescColor;
+        border-radius: 5px;
+        display: none;
+
+        &--show {
+            display: block;
+        }
+
+        &--field {
+            @include myFlexRow(space-around, center, center, row, 30px);
+            padding-top: 5px;
+            &:nth-last-child(1) {
+                padding-bottom: 5px;
+            }
+
+            &:hover {
+                z-index: 9999;
+                background: $menuTopBtnBackgroundHover;
+                color: $pageHeaderDescValueColor;
+                @include section-header;
+                cursor: $cursorHover; 
+    
+            }
+
+        }
+    }
+}
+
+.display-none {
+    visibility: hidden;
+}
