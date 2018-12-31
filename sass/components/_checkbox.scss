@@ -1,10 +1,11 @@
 .check-box {
     padding: 5px 5px; 
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
-    align-content: space-between;
-    
+    align-content: flex-start;
+    width: 100%;
+
     &__check {
         flex: 0 1 auto;    
         display: inline-block;

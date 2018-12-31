@@ -15,6 +15,7 @@
     "build:sass": "node-sass --output-style compact -o css sass",
     "build:autoprefixer": "autoprefixer-cli css/style.css",
     "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
+    "build:css": "csso css/style.css",
     "watch": "npm-run-all build -p watch:*",
     "watch:sassprefixer": "onchange -d 100 sass/style.scss sass/*.scss sass/components/*.scss -- npm-run-all watch-* ",
     "watch-sass": "node-sass --output-style expanded --source-map true -o css sass",
@@ -35,12 +36,18 @@
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.26.3",
+    "csso-cli": "^2.0.2",
+    "flag-icon-css": "^3.2.1",
     "globstar": "^1.0.0",
+    "imageoptim-cli": "^2.3.4",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.10.0",
     "npm-run-all": "^4.1.3",
     "nu-html-checker": "^0.1.0",
     "onchange": "^5.1.1",
     "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "csso": "^3.5.1"
   }
 }

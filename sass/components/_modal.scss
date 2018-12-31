@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     overflow: auto;
+    overflow-x: auto;
     padding: 30px;
     display: none;
 
@@ -23,14 +24,15 @@
 
 
 .modal {
-    max-width: 800px;
+    max-width: 1050px;
     min-width: 400px;
     margin: auto;
     background-color: #ffffff;
     position: relative;
     padding: 30px;
     display: none;
-  
+    overflow: auto;
+
     &.show {
         display: flex;
         @include myFlexRow(flex-start, flex-start, flex-start, column, 100px);
@@ -38,11 +40,11 @@
 
     &__header {
         @include page-header;
+        @include myFlexRow(space-between, flex-start, flex-start, row, 40px);
         color: $pageHeaderDescColor;
         flex: 0 0 100%;
         width: 100%;
         border-bottom: 1px solid gray;
-        padding-bottom: 30px;
     }    
 
     &__login {
@@ -57,4 +59,77 @@
             Width: 100%;
             @include myFlexRow(flex-end, center, center, row, $inputHeight);
     }
+
+    &__banner {
+        min-width:990px;
+        max-width:990px;
+        height: 710px;
+        overflow: auto;
+        overflow-x: auto;
+
+        &-bottom-menu {
+            @include myFlexRow(space-around, center, center, row, $inputHeight);
+            width: 100%;
+            padding-top: 20px;
+            
+            &--input {
+                width: 60%;
+                height: 40px;
+            
+            }
+            
+            &--buttons {
+                @include myFlexRow(flex-end, center, center, row, $inputHeight);
+                width: 30%;
+            }
+            
+        }
+    }
+    &__selects {
+        @include myFlexRow(space-between, flex-start, flex-start, row, $inputHeight);
+        @include section-header;
+        color: $pageHeaderDescColor;
+        width: 100%;
+        &--column-1 {
+            padding: 20px;
+            @include myFlexRow(flex-start, flex-start, flex-start, column, $inputHeight);
+            width: 40%;
+            position: relative;
+        }
+        &--column-2 {
+            z-index: 99;
+            padding: 20px;
+            @include myFlexRow(flex-start, flex-start, flex-start, column, $inputHeight);
+            width: 33%;
+            position: relative;
+        }
+        &--column-lang {
+            z-index: 9999;
+            padding: 20px;
+            @include myFlexRow(flex-start, flex-start, flex-start, column, $inputHeight);
+            width: 20%;
+        }
+    }
+
+    &__choice {
+        @include myFlexRow(flex-start, flex-start, flex-start, row, $inputHeight);
+        @include section-header;
+        color: $pageHeaderDescColor;
+        width: inherit;
+        overflow: auto;
+        border-top: 1px solid $pageHeaderDescColor;
+        border-bottom: 1px solid $pageHeaderDescColor;
+
+        &--column {
+            padding: 20px;
+            @include myFlexRow(flex-start, flex-start, flex-start, row, $inputHeight);
+            overflow: auto;
+            width: 50%;
+            max-height: 400px;
+            &:nth-child(1){
+                border-right: 1px solid gray;
+            }
+        }
+    }
+
 }
