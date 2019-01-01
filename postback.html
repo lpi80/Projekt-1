@@ -164,7 +164,182 @@
                 <div class="col-lg-12 col-md-12 col-s-12 section--background-workshop row-table">
 
                     <div class="section__header">new postback</div>
+                    <div class="section__workshop section__workshop--postback">
+                        <div class="postback--desc">
+                            <p>You can insert some parameters in this postback:</p>
+                        </div>
+                        <div class="postback__row col-lg-12 col-md-12 col-s-12">
+                            <div class="postback__row col-lg-6 col-md-6 col-s-12">
+                                <div class="postback__column col-lg-12 col-md-12 col-s-12">
+                                    <label class="postback--section">Signup</label>
+                                    <textarea placeholder="" class="postback__textarea" rows="15" wrap="soft" name="postbackSignup" id="postbackSignup">crn_userID=%user_id% subid=%p% </textarea>
+                                </div>
+                            </div>
+                            <div class="postback__row col-lg-6 col-md-6 col-s-12">
+                                <div class="postback__column col-lg-12 col-md-12 col-s-12">
+                                    <label class="postback--section">Deposit</label>
+                                    <textarea placeholder="" class="postback__textarea" rows="15" wrap="soft" name="postbackSignup" id="postbackSignup">crn_userID=%user_id% subid=%p% </textarea>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="modal__selects">
+                            <div class="modal__selects--column-2">
+                                <label for="postbackType">Postback type</label>
+                                <select class="personal__input personal__input--selects"  name="postbackType" id="postbackType">
+                                    <option value="1">S2S(http://..)</option>
+                                    <option value="2">S2S(http://..)</option>
+                                    <option value="3">S2S(http://..)</option>
+                                    <option value="4">S2S(http://..)</option>
+                                    <option value="5">S2S(http://..)</option>
+                                    <option value="6">S2S(http://..)</option>
+                                    <option value="7">S2S(http://..)</option>
+                                </select>
+                                <span class="icon-arrow-down personal__input--selects-icon"></span>
+                            </div>
+    
+                            <div class="modal__selects--column-2">
+                                <label for="postbackCountry">To countries</label>
+                                <select class="personal__input personal__input--selects" name="postbackCountry" id="postbackCountry">
+                                    <option value="">Select countries</option>
+                                    <option value="1">PL</option>
+                                    <option value="2">GB</option>
+                                    <option value="3">DE</option>
+                                    <option value="4">RU</option>
+                                </select>
+                                <span class="icon-arrow-down personal__input--selects-icon"></span>
+                            </div>
+                            <div class="modal__selects--column-2">
+                                <label for="postbackOptions">Sending options:</label>
+                                <select class="personal__input personal__input--selects" name="postbackOptions" id="postbackOptions">
+                                    <option value="">Select</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                </select>
+                                <span class="icon-arrow-down personal__input--selects-icon"></span>
+                            </div>
+                        </div>
+
+                        <div class="postback__section--status col-lg-12 col-md-12 col-s-12">
+                            <div class="postback__row  col-lg-6 col-md-6 col-s-12">
+                                <p><span class="postback--important">NOT </span>send statuses</p>
+                                <div class="postback__status">
+                                    <div class="check-box">
+                                        <input class="check-box__input" type="checkbox" name="checkBanner1" id="checkBanner1" value="true"
+                                            hidden>
+                                        <label class="check-box__label" for="checkBanner1">
+                                            <span class="check-box__check"></span>
+                                        </label>
+                                        <p class="check-box__desc">Banner name</p>
+                                    </div>
+                                    <div class="check-box">
+                                        <input class="check-box__input" type="checkbox" name="checkBanner2" id="checkBanner2" value="true"
+                                            hidden>
+                                        <label class="check-box__label" for="checkBanner2">
+                                            <span class="check-box__check"></span>
+                                        </label>
+                                        <p class="check-box__desc">Sign up banner</p>
+                                    </div>
+                                    <div class="check-box">
+                                        <input class="check-box__input" type="checkbox" name="checkBanner3" id="checkBanner3" value="true"
+                                            hidden>
+                                        <label class="check-box__label" for="checkBanner3">
+                                            <span class="check-box__check"></span>
+                                        </label>
+                                        <p class="check-box__desc">Left banner</p>
+                                    </div>
+                                    <div class="check-box">
+                                        <input class="check-box__input" type="checkbox" name="checkBanner4" id="checkBanner4" value="true"
+                                            hidden>
+                                        <label class="check-box__label" for="checkBanner4">
+                                            <span class="check-box__check"></span>
+                                        </label>
+                                        <p class="check-box__desc">Right banner</p>
+                                    </div>
+                                    <div class="check-box">
+                                        <input class="check-box__input" type="checkbox" name="checkBanner5" id="checkBanner5" value="true"
+                                            hidden>
+                                        <label class="check-box__label" for="checkBanner5">
+                                            <span class="check-box__check"></span>
+                                        </label>
+                                        <p class="check-box__desc">Bottom banner</p>
+                                    </div>
+                                    <div class="check-box">
+                                        <input class="check-box__input" type="checkbox" name="checkBanner6" id="checkBanner6" value="true"
+                                            hidden>
+                                        <label class="check-box__label" for="checkBanner6">
+                                            <span class="check-box__check"></span>
+                                        </label>
+                                        <p class="check-box__desc">Long banner</p>
+                                    </div>
+                                    <div class="check-box">
+                                        <input class="check-box__input" type="checkbox" name="checkBanner7" id="checkBanner7" value="true"
+                                            hidden>
+                                        <label class="check-box__label" for="checkBanner7">
+                                            <span class="check-box__check"></span>
+                                        </label>
+                                        <p class="check-box__desc">Personal cabinet banner</p>
+                                    </div>
+                                    <div class="check-box">
+                                        <input class="check-box__input" type="checkbox" name="checkBanner8" id="checkBanner8" value="true"
+                                            hidden>
+                                        <label class="check-box__label" for="checkBanner8">
+                                            <span class="check-box__check"></span>
+                                        </label>
+                                        <p class="check-box__desc">Popup banner</p>
+                                    </div>
+                                    <div class="check-box">
+                                        <input class="check-box__input" type="checkbox" name="checkBanner9" id="checkBanner9" value="true"
+                                            hidden>
+                                        <label class="check-box__label" for="checkBanner9">
+                                            <span class="check-box__check"></span>
+                                        </label>
+                                        <p class="check-box__desc">Banner 1</p>
+                                    </div>
+                                    <div class="check-box">
+                                        <input class="check-box__input" type="checkbox" name="checkBanner10" id="checkBanner10" value="true"
+                                            hidden>
+                                        <label class="check-box__label" for="checkBanner10">
+                                            <span class="check-box__check"></span>
+                                        </label>
+                                        <p class="check-box__desc">Benner 2</p>
+                                    </div>
+                                    <div class="check-box">
+                                        <input class="check-box__input" type="checkbox" name="checkBanner11" id="checkBanner11" value="true"
+                                            hidden>
+                                        <label class="check-box__label" for="checkBanner11">
+                                            <span class="check-box__check"></span>
+                                        </label>
+                                        <p class="check-box__desc">Banner 3</p>
+                                    </div>
+                                    <div class="check-box">
+                                        <input class="check-box__input" type="checkbox" name="checkBanner12" id="checkBanner12" value="true"
+                                            hidden>
+                                        <label class="check-box__label" for="checkBanner12">
+                                            <span class="check-box__check"></span>
+                                        </label>
+                                        <p class="check-box__desc">Banner 4</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="postback__row col-lg-6 col-md-6 col-s-12">
+                                <div class="postback__column col-lg-12 col-md-12 col-s-12">
+                                    <p>Send after:</p>
+                                    <div class="postback__status postback__status--range">
+                                        <div class="postback__range--label">
+                                            <span>0</span>
+                                            <span>160</span>
+                                        </div>	
+                                        <input class="e-range" type="range" min="0" max="160" step="1"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
                 </div>
             </div>
         </div>

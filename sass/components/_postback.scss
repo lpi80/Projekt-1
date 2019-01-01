@@ -1,0 +1,196 @@
+.postback {
+    @include myFlexRow(flex-start, flex-start, flex-start, column, 0);
+  
+    &__row {
+        @include myFlexRow(flex-start, flex-start, flex-start, row, 0);
+    }
+
+    &__column {
+        @include myFlexRow(flex-start, flex-start, flex-start, column, 0);
+    }
+
+    &--desc {
+        @include text;
+        @include myFlexRow(flex-start, flex-start, flex-start, row, 0);
+        color: black;
+    }
+
+    
+
+    &--section {
+        @include section-header;
+        color: $pageHeaderDescColor;
+        padding: 10px 0;
+        width: 97%;
+        margin: 0 auto;
+    }
+
+    &__section {
+        &--status {
+            @include section-header;
+            color: $pageHeaderDescColor;
+            padding: 10px 0;
+            width: 97%;
+            margin: 0 auto;
+            @include myFlexRow(flex-start, flex-start, flex-start, row, 0);
+            border-top: 1px solid $pageHeaderDescColor;
+            border-bottom: 1px solid $pageHeaderDescColor;
+            
+        }
+    }
+    
+    &__textarea {
+        resize: none;
+        border-radius: 5px;
+        border-color: $pageHeaderDescColor;
+        color: $pageHeaderDescColor;
+        width: 97%;
+        margin: 0 auto;
+    }
+
+    &__status {
+        width: 95%;
+        padding: 10px;
+        overflow-y: auto;
+        height: 250px;
+        position: relative;
+    }
+
+    &__status--range {
+        @include myFlexRow(center, center, center, column, 90px);
+        position: relative;
+        width: 90%;
+    }
+
+    &--important {
+        color: red;
+    }
+
+    &__range--label {
+        @include myFlexRow(space-between, center, center, row, 0);
+        width: 100%;
+        
+    }
+}
+
+// excess height to improve interactive area / accessibility
+$height: 50px;
+$thumb-height: 32px;
+$track-height: 3px;
+
+// colours
+$upper-color: gray;
+$lower-color: orange;
+$thumb-color: gray;
+$thumb-hover-color: transparent;
+
+$upper-background: linear-gradient(to bottom, $upper-color, $upper-color) 100% 50% / 100% $track-height no-repeat transparent;
+$lower-background: linear-gradient(to bottom, $lower-color, $lower-color) 100% 50% / 100% $track-height no-repeat transparent;
+
+// Webkit cannot style progress so we fake it with a long shadow
+// on the thumb element
+@function webkit-slider-thumb-shadow($i: 1) {
+  $val: #{$i }px -20px 0 -#{($thumb-height - $track-height) / 2 } #{$upper-color};
+  @if $i == 1 {
+    @for $k from 2 through 1000 {
+      $val: #{$val}, webkit-slider-thumb-shadow($k);
+    }
+  }
+  @return $val;
+}
+
+.e-range {
+    display: block;
+    appearance: none;
+    width: 100%;
+    margin: 0;
+    height: $height;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+// Webkit
+    &::-webkit-slider-runnable-track {
+        width: 100%;
+        height: $height;
+        background: $lower-background;
+    }
+
+    &::-webkit-slider-thumb {
+        position: relative;
+        appearance: none;
+        height: $thumb-height;
+        width: $thumb-height;
+        background: $thumb-color;
+        border: 0;
+        top: 29px;
+        margin-top: 0;
+        box-shadow: webkit-slider-thumb-shadow();
+        //transition: background-color 150ms;
+        background: url('/images/range.png') no-repeat;
+    }
+
+// Firefox
+    &::-moz-range-track,
+    &::-moz-range-progress {
+        width: 100%;
+        height: $height;
+        background: $upper-background;
+    }
+
+    &::-moz-range-progress {
+        background: $lower-background;
+    }
+
+    &::-moz-range-thumb {
+        appearance: none;
+        margin: 0;
+        height: $thumb-height;
+        width: $thumb-height;
+        background: $thumb-color;
+        background: url('/images/range.png') no-repeat;
+        border-radius: 100%;
+        border: 0;
+        transition: background-color 150ms;
+    }
+
+// Internet Exploder
+    &::-ms-track {
+        width: 100%;
+        height: $height;
+        border: 0;
+        // color needed to hide track marks
+        color: transparent;
+        background: transparent;
+    }
+
+    &::-ms-fill-lower {
+        background: $lower-background;
+    }
+
+    &::-ms-fill-upper {
+        background: $upper-background;
+    }
+
+    &::-ms-thumb {
+        position: relative;
+        appearance: none;
+        height: $thumb-height;
+        width: $thumb-height;
+        background: $thumb-color;
+        border-radius: 100%;
+        border: 0;
+        transition: background-color 150ms;
+        // IE Edge thinks it can support -webkit prefixes
+        top: 29px;
+        margin: 0;
+        box-shadow: none;
+        background: url('/images/range.png') no-repeat;
+    }
+
+}
+
+

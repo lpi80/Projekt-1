@@ -38,6 +38,11 @@
         @include myFlexRow(flex-start, flex-start, flex-start, column, 100px);
     }
 
+    &__section {
+        @include section-header;
+        padding: 20px 0 0 0;
+    }
+    
     &__header {
         @include page-header;
         @include myFlexRow(space-between, flex-start, flex-start, row, 40px);
@@ -125,6 +130,17 @@
             @include myFlexRow(flex-start, flex-start, flex-start, row, $inputHeight);
             overflow: auto;
             width: 50%;
+            max-height: 400px;
+            &:nth-child(1){
+                border-right: 1px solid gray;
+            }
+        }
+
+        &--column-3 {
+            padding: 20px;
+            @include myFlexRow(flex-start, flex-start, flex-start, row, $inputHeight);
+            overflow: auto;
+            width: 100%;
             max-height: 400px;
             &:nth-child(1){
                 border-right: 1px solid gray;

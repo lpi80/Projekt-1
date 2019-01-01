@@ -78,8 +78,3 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
 
 
-
-
-document.getElementById('btnAddBanner').addEventListener('click', function(e) {
-  openModal('#modalBanner',e);
-},false)

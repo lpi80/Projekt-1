@@ -165,7 +165,7 @@
                 <div class="section__header">Links</div>
                 <div class="section__workshop">
 
-                    <button class="btn btn--orange">+ add new</button>
+                    <button class="btn btn--orange" id="btnAddLink1">+ add new</button>
 
                     <div class="link__column">
                         <div class="link__row col-lg-10 col-md-10 col-s-10">
@@ -205,7 +205,7 @@
                         </div>
                     </div>
 
-                    <button class="btn btn--orange">+ add new</button>
+                    <button class="btn btn--orange" id="btnAddLink2">+ add new</button>
                 </div>
             </div>
         </div>
@@ -246,9 +246,406 @@
                 <button class="btn btn--orange">Quit</button>
             </div>
         </div>
+
+        <div class="modal" id="modalLink">
+        <div class="modal__banner">
+            <div class='modal__header '>
+                <p>ADD URL</p>
+                <p class="js--close-modal">X</p>
+            </div>
+            <div class="modal__selects">
+                <div class="modal__selects--column-1">
+                    <label for="bannerName">Scheme name</label>
+                    <input class="personal__input personal__input--selects" type="text" name="bannerName" id="bannerName" required pattern="[A-Za-z0-9' -_]+" placeholder="Name">
+                </div>
+                <div class="modal__selects--column-1">
+                    <label for="bannerCompain">Compain</label>
+                    <select class="personal__input personal__input--selects" name="bannerCompain"  id="bannerCompain">
+                        <option value="">Select</option>
+                        <option value="Compain_1">Compain 1</option>
+                        <option value="Compain_2">Compain 2</option>
+                        <option value="Compain_3">Compain 3</option>
+                        <option value="Compain_4">Compain 4</option>
+                        <option value="Compain_5">Compain 5</option>
+                        <option value="Compain_6">Compain 6</option>
+                        </select>
+                        <span class="icon-arrow-down personal__input--selects-icon"></span>
+                </div>
+                <div class="modal__selects--column-lang">
+                    <div class="flags" name="inputFlags" id="inputFlags">
+                        <div class="flags__header">
+                            <p>Language</p>
+                        </div>
+                        <div class="flags__main">
+                            <img class="flags__icon" src="vendor/flag/flags/4x3/pl.svg">
+                            <span class="flags__desc">PL</span>
+                            <span class="flags__desc--arrow icon-arrow-down"></span>
+                        </div>
+                        <ul class="flags__select">
+                            <li class=flags__select--field>
+                                <img class="flags__icon" src="vendor/flag/flags/4x3/gb.svg">
+                                <span class="flags__desc">EN</span>
+                            </li>
+                            <li class=flags__select--field>
+                                <img class="flags__icon" src="vendor/flag/flags/4x3/pl.svg">
+                                <span class="flags__desc">PL</span>
+                            </li>
+                            <li class=flags__select--field>
+                                <img class="flags__icon" src="vendor/flag/flags/4x3/de.svg">
+                                <span class="flags__desc">DE</span>
+                            </li>
+                            <li class=flags__select--field>
+                                <img class="flags__icon" src="vendor/flag/flags/4x3/ru.svg">
+                                <span class="flags__desc">RU</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal__choice">
+                <p class="modal__section">Select websites</p>
+                <div class="modal__choice--column-3">
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkBanner1" id="checkBanner1" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkBanner1">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Banner name</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkBanner2" id="checkBanner2" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkBanner2">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Sign up banner</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkBanner3" id="checkBanner3" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkBanner3">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Left banner</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkBanner4" id="checkBanner4" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkBanner4">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Right banner</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkBanner5" id="checkBanner5" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkBanner5">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Bottom banner</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkBanner6" id="checkBanner6" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkBanner6">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Long banner</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkBanner7" id="checkBanner7" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkBanner7">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Personal cabinet banner</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkBanner8" id="checkBanner8" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkBanner8">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Popup banner</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkBanner9" id="checkBanner9" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkBanner9">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Banner 1</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkBanner10" id="checkBanner10" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkBanner10">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Benner 2</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkBanner11" id="checkBanner11" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkBanner11">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Banner 3</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkBanner12" id="checkBanner12" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkBanner12">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Banner 4</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkBanner13" id="checkBanner13" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkBanner13">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Banner 5</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkBanner14" id="checkBanner14" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkBanner14">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Banner 6</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkBanner15" id="checkBanner15" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkBanner15">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Banner 7</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkBanner16" id="checkBanner16" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkBanner16">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Banner 8</p>
+                    </div>
+                    
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite1" id="checkSite1" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite1">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Landing page Money</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite2" id="checkSite2" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite2">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">LP your choise</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite3" id="checkSite3" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite3">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">LP Wallet</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite4" id="checkSite4" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite4">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">E-Shop 01</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite5" id="checkSite5" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite5">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Toy Store</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite6" id="checkSite6" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite6">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Book Store</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite7" id="checkSite7" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite7">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Charity</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite8" id="checkSite8" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite8">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">LP Icons Store</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite9" id="checkSite9" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite9">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Store 1</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite10" id="checkSite10" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite10">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Store 2</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite11" id="checkSite11" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite11">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Store 3</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite12" id="checkSite12" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite12">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Store 4</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite13" id="checkSite13" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite13">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Store 5</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite14" id="checkSite14" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite14">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Store 6</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite15" id="checkSite15" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite15">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Store 7</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite16" id="checkSite16" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite16">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Store 8</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite17" id="checkSite17" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite17">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Store 9</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite18" id="checkSite18" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite18">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Store 10</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite19" id="checkSite19" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite19">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Store 11</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite20" id="checkSite20" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite20">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Store 12</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite21" id="checkSite21" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite21">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Store 13</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite22" id="checkSite22" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite22">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Store 14</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite23" id="checkSite23" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite23">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Store 15</p>
+                    </div>
+                    <div class="check-box check-box--3row">
+                        <input class="check-box__input" type="checkbox" name="checkSite24" id="checkSite24" value="true"
+                            hidden>
+                        <label class="check-box__label" for="checkSite24">
+                            <span class="check-box__check"></span>
+                        </label>
+                        <p class="check-box__desc">Store 16</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class='modal__banner-bottom-menu'>
+                <input class="personal__input modal__banner-bottom-menu--input  " type="text" name="bannerGenerated" id="bannerGenerated" required pattern="[A-Za-z0-9' -_]+" placeholder="Generated link">
+                <div class="modal__banner-bottom-menu--buttons">
+                    
+                    <button class="js--close-modal btn btn--gray"><span class="btn--icon icon-links"></span>Copy link</button>
+                    <button class="btn btn--orange">Save</button>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+    </div>
+    <script type="text/javascript" src="js/flags.js"></script>
     <script type="text/javascript" src="js/modal.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/links.js"></script>
 </body>
 
 </html>

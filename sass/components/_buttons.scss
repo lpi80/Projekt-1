@@ -11,6 +11,10 @@
     font-weight: $btnFontWeight;
     display: block;
 
+    &--icon {
+        padding-right: 10px;
+    }
+
     &:hover {
         cursor: $cursorHover; 
     }

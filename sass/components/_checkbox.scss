@@ -6,6 +6,10 @@
     align-content: flex-start;
     width: 100%;
 
+    &--3row {
+        width: 33%;
+    }
+
     &__check {
         flex: 0 1 auto;    
         display: inline-block;
