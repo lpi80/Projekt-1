@@ -2686,6 +2686,7 @@ table {
 }
 
 .postback__section {
+  width: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: start;
@@ -2707,7 +2708,7 @@ table {
   color: #9C9C9C;
 }
 
-@media (min-width: 0) and (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .postback__section {
     display: -ms-flexbox;
     display: flex;
@@ -2747,7 +2748,7 @@ table {
   position: relative;
 }
 
-@media (min-width: 0) and (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .postback__section--column-2 {
     width: 100%;
   }
