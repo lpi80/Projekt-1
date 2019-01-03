@@ -3,25 +3,27 @@
 
 function validation(inputReg, error__desc, inputData, type) {
     let stan;
-    if (type === 'text') {
-        if (!inputReg.test(inputData.value)) {
-            inputData.classList.add('text__error')
-            inputData.classList.remove('text__valid')
-            inputData.parentElement.querySelector('.personal__error').innerHTML = error__desc;
-            stan = false;
-        } else {
-            inputData.parentElement.querySelector('.personal__error').innerHTML = '';
-            inputData.classList.remove('text__error')
-            inputData.classList.add('text__valid')
-            stan = true;
-        } 
+    switch (type) {
+        case 'text':
+            if(!inputReg.test(inputData.value)) {
+                inputData.classList.add('text__error')
+                inputData.classList.remove('text__valid')
+                inputData.parentElement.querySelector('.personal__error').innerHTML = error__desc;
+                stan = false;
+            } else {
+                inputData.parentElement.querySelector('.personal__error').innerHTML = '';
+                inputData.classList.remove('text__error')
+                inputData.classList.add('text__valid')
+                stan = true;
+            }
+            break;
     }
     return stan;
 }
 
 function validationPassword(error__desc, inputData, inputDataRepeat) {
     let stan = true;
-    if (inputData.value === "" || inputData.value != inputDataRepeat.value) {
+    if (!inputData.value || inputData.value != inputDataRepeat.value) {
         inputDataRepeat.parentElement.querySelector('.personal__error').innerHTML = error__desc;
         inputDataRepeat.classList.add('text__error')
         inputDataRepeat.classList.remove('text__valid')

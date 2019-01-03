@@ -35,7 +35,6 @@ document.getElementById('notifacationName').addEventListener('click', function(e
   inputData.parentElement.querySelector('.personal__error').innerHTML = '';
   inputData.parentElement.querySelector('.personal__info').innerHTML = '';
   inputData.classList.remove('text__error');
-  inputData.classList.remove('text__info');
   openModal('#modalLogin',e);
 },false)
 
@@ -45,23 +44,21 @@ document.getElementById('btnExit').addEventListener('click', function(e) {
 
 
 function validationWithInfo(inputReg, error__desc, info__desc, inputData, type) {
-  let stan;
+  let state;
 if (type === 'text') {
       if (!inputReg.test(inputData.value)) {
           inputData.classList.add('text__error');
-          inputData.classList.add('text__info');
           inputData.parentElement.querySelector('.personal__error').innerHTML = error__desc;
           inputData.parentElement.querySelector('.personal__info').innerHTML = info__desc;
-          stan = false;
+          state = false;
       } else {
           inputData.parentElement.querySelector('.personal__error').innerHTML = '';
           inputData.parentElement.querySelector('.personal__info').innerHTML = '';
           inputData.classList.remove('text__error');
-          inputData.classList.remove('text__info');
-          stan = true;
+          state = true;
       } 
   }
-  return stan;
+  return state;
 }
 
 document.getElementById('loginForm').addEventListener('submit', function(event) {

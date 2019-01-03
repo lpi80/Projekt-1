@@ -68,7 +68,7 @@
     &__banner {
         min-width:990px;
         max-width:990px;
-        height: 710px;
+        height: 730px;
         overflow: auto;
         overflow-x: auto;
 
@@ -91,11 +91,13 @@
         }
     }
     &__selects {
-        @include myFlexRow(space-between, flex-start, flex-start, row, $inputHeight);
+        @include myFlexRow(flex-start, flex-start, flex-start, row, $inputHeight);
         @include section-header;
         color: $pageHeaderDescColor;
         width: 100%;
+    
         &--column-1 {
+            z-index: 99;
             padding: 20px;
             @include myFlexRow(flex-start, flex-start, flex-start, column, $inputHeight);
             width: 40%;
@@ -108,7 +110,9 @@
             width: 33%;
             position: relative;
         }
+
         &--column-lang {
+            position: relative;
             z-index: 9999;
             padding: 20px;
             @include myFlexRow(flex-start, flex-start, flex-start, column, $inputHeight);
@@ -149,3 +153,5 @@
     }
 
 }
+
+

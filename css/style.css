@@ -577,7 +577,7 @@ table {
   width: 100%;
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
-  padding: 30px 0;
+  padding: 30px 20px;
 }
 
 .section__workshop--postback {
@@ -1032,15 +1032,11 @@ table {
   }
 }
 
-.calendar__icon {
-  padding: 10px;
-}
-
 .calendar__input {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-line-pack: center;
@@ -1086,6 +1082,16 @@ table {
   font-size: 16px;
   font-weight: 700;
   background: transparent;
+  background: #fff url("/vendor/glyphter/calendar.svg") 97% 50% no-repeat;
+  background-size: 16px auto;
+}
+
+.calendar__input-field::-webkit-inner-spin-button {
+  display: none;
+}
+
+.calendar__input-field::-webkit-calendar-picker-indicator {
+  opacity: 0;
 }
 
 @media (max-width: 767px) {
@@ -1156,7 +1162,7 @@ table {
   font-weight: 300;
   text-transform: none;
   color: #333;
-  width: 100%;
+  width: 95%;
   height: 50px;
 }
 
@@ -1182,12 +1188,12 @@ table {
       flex-wrap: wrap;
   min-height: 90px;
   z-index: 5;
-  width: 30%;
 }
 
 .personal__input--selects {
   width: 100%;
   height: 40px;
+  margin-top: 10px;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -1200,7 +1206,7 @@ table {
   z-index: 999;
   position: absolute;
   left: calc(100% - 10% - 20px);
-  top: 50px;
+  top: 55px;
   pointer-events: none;
 }
 
@@ -1274,13 +1280,6 @@ table {
 
 .text__info {
   background: transparent;
-}
-
-.test {
-  height: 300px;
-  width: 400px;
-  background: yellow;
-  margin: 0 auto;
 }
 
 .check-box-tabs__ball--color-blue::after {
@@ -1789,6 +1788,7 @@ table {
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
   color: #56819F;
+  width: 67%;
 }
 
 .menu-top__notification--name-padding {
@@ -2049,7 +2049,7 @@ table {
   display: block;
   -ms-flex: 0 0 auto;
       flex: 0 0 auto;
-  width: 80%;
+  width: 90%;
 }
 
 .table__head {
@@ -2114,12 +2114,26 @@ table {
 }
 
 @media (max-width: 1000px) {
+  .table__head {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: none;
+    color: #9C9C9C;
+  }
+  .table__body {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: none;
+    color: #333;
+  }
   .table__ceil {
     height: 40px;
     border: none;
     display: block;
     width: 100%;
-    text-align: left;
+    text-align: right;
     padding-left: 45%;
     position: relative;
   }
@@ -2129,8 +2143,8 @@ table {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 700;
-    width: 40%;
-    left: 10px;
+    width: 45%;
+    left: 0px;
     text-align: left;
     content: attr(data-th);
   }
@@ -2274,7 +2288,7 @@ table {
 .modal__banner {
   min-width: 990px;
   max-width: 990px;
-  height: 710px;
+  height: 730px;
   overflow: auto;
   overflow-x: auto;
 }
@@ -2324,8 +2338,8 @@ table {
 .modal__selects {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
   -ms-flex-align: start;
       align-items: flex-start;
   -ms-flex-line-pack: start;
@@ -2344,6 +2358,7 @@ table {
 }
 
 .modal__selects--column-1 {
+  z-index: 99;
   padding: 20px;
   display: -ms-flexbox;
   display: flex;
@@ -2385,6 +2400,7 @@ table {
 }
 
 .modal__selects--column-lang {
+  position: relative;
   z-index: 9999;
   padding: 20px;
   display: -ms-flexbox;
@@ -2488,12 +2504,17 @@ table {
   width: 100px;
   position: relative;
   z-index: 9999;
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
 }
 
 .flags__header {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 700;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+  padding-bottom: 10px;
 }
 
 .flags__icon {
@@ -2515,6 +2536,8 @@ table {
       flex-wrap: wrap;
   min-height: 40px;
   z-index: 0;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
   border: 1px solid #9C9C9C;
   padding: 5px;
   cursor: pointer;
@@ -2536,6 +2559,7 @@ table {
   border: 1px solid #9C9C9C;
   border-radius: 5px;
   display: none;
+  z-index: 9999;
 }
 
 .flags__select--show {
@@ -2575,7 +2599,7 @@ table {
 }
 
 .display-none {
-  visibility: hidden;
+  z-index: -1;
 }
 
 .postback {
@@ -2659,6 +2683,74 @@ table {
   padding: 10px 0;
   width: 97%;
   margin: 0 auto;
+}
+
+.postback__section {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 50px;
+  z-index: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 20px 0 0 0;
+  color: #9C9C9C;
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+  .postback__section {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    min-height: 50px;
+    z-index: 0;
+  }
+}
+
+.postback__section--column-2 {
+  z-index: 99;
+  padding: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: start;
+      align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 50px;
+  z-index: 0;
+  width: 33%;
+  position: relative;
+}
+
+@media (min-width: 0) and (max-width: 767px) {
+  .postback__section--column-2 {
+    width: 100%;
+  }
 }
 
 .postback__section--status {
@@ -2805,6 +2897,7 @@ table {
 }
 
 .e-range::-ms-track {
+  margin-top: -10px !important;
   width: 100%;
   height: 50px;
   border: 0;

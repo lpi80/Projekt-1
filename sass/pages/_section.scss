@@ -19,14 +19,10 @@
         @include myFlexRow(center, center, center, column);
         width: 100%;
         flex: 0 0 auto;
-        padding: 30px 0;
+        padding: 30px 20px;
         &--postback {
             @include myFlexRow(flex-start, flex-start, flex-start, row);
             //padding-left: 20px;
         }
-    }
-
-    &__main {
-
     }
 }

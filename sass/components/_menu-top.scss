@@ -103,6 +103,7 @@
             @include myFlexRow(center, center, center, row, $menuTopHeight, 5);
             flex: 0 0 auto;
             color: $textBlue;
+            width: 67%;
             &-padding {
                 padding-left: 10px;
             }

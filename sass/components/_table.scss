@@ -13,7 +13,7 @@
     &__main {
         display: block;
         flex: 0 0 auto;
-        width: 80%;
+        width: 90%;
         
     }
 
@@ -85,12 +85,22 @@
 
 @media (max-width: 1000px) {
     .table {
+        &__head {
+            @include text;
+            color: $pageHeaderDescColor;
+        }
+    
+        &__body {
+            @include text;
+            color: $pageHeaderDescValueColor;
+        }
+
         &__ceil {
             height: 40px;
             border: none;
             display: block;
             width: 100%;
-            text-align: left;
+            text-align: right;
             padding-left: 45%;
             position: relative;
         
@@ -98,8 +108,8 @@
                 color: $pageHeaderDescColor;
                 position:absolute;
                 @include section-header;     
-                width:40%;
-                left:10px;
+                width:45%;
+                left:0px;
                 text-align: left; 
                 content: attr(data-th); 
             }

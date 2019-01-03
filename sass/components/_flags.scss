@@ -4,10 +4,13 @@
     width: 100px;
     position: relative;
     z-index: 9999;
-       
+    flex: 1 1 auto;
+         
     &__header {
         @include section-header;
+        flex: 0 0 auto;
         //padding: 10px 0;
+        padding-bottom: 10px;
     }  
 
     &__icon {
@@ -17,6 +20,7 @@
     
     &__main {
         @include myFlexRow(space-between, center, center, row, 40px);
+        flex: 0 0 auto;
         border: 1px solid $pageHeaderDescColor;
         padding: 5px;
         cursor: pointer;
@@ -42,7 +46,8 @@
         border: 1px solid $pageHeaderDescColor;
         border-radius: 5px;
         display: none;
-
+        z-index: 9999;
+    
         &--show {
             display: block;
         }
@@ -68,5 +73,5 @@
 }
 
 .display-none {
-    visibility: hidden;
+    z-index: -1;
 }

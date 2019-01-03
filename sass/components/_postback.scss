@@ -26,6 +26,25 @@
     }
 
     &__section {
+        @include myFlexRow(flex-start, flex-start, flex-start, row, $inputHeight);
+        @media (min-width: 0) and (max-width: 767px) {
+            @include myFlexRow(flex-start, flex-start, flex-start, column, $inputHeight);
+        }
+        @include section-header;
+        padding: 20px 0 0 0;
+        color: $pageHeaderDescColor;
+
+        &--column-2 {
+            z-index: 99;
+            padding: 20px;
+            @include myFlexRow(flex-start, flex-start, flex-start, column, $inputHeight);
+            width: 33%;
+            position: relative;
+            @media (min-width: 0) and (max-width: 767px) {
+                width: 100%;
+            }
+        }
+
         &--status {
             @include section-header;
             color: $pageHeaderDescColor;
@@ -159,6 +178,7 @@ $lower-background: linear-gradient(to bottom, $lower-color, $lower-color) 100% 5
 
 // Internet Exploder
     &::-ms-track {
+        margin-top: -10px !important; 
         width: 100%;
         height: $height;
         border: 0;

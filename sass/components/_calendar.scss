@@ -13,16 +13,15 @@
         @include myFlexRow(center, center, center, row, $height, 5);
     } 
 
-    &__icon {
-        padding: $padding;
-    }
-
     &__input {
-        @include myFlexRow(center, center, center, row, $height, 5);
+        @include myFlexRow(space-around, center, center, row, $height, 5);
         flex: 0 0 auto;
         border: 1px solid gray;
         border-radius: 5px;
-       
+        
+        
+        
+        
         @media (max-width: $maxSmall) {
             @include myFlexRow(center, center, center, column, $height, 5);
         } 
@@ -35,6 +34,18 @@
             color: $pageHeaderDescColor;
             @include section-header;
             background: transparent;
+       
+            background:#fff url('/vendor/glyphter/calendar.svg')  97% 50% no-repeat ;
+            background-size: 16px auto;
+        
+            &::-webkit-inner-spin-button {
+                display: none;
+            }
+            
+            &::-webkit-calendar-picker-indicator {
+                opacity: 0;
+            }
+           
             @media (max-width: $maxSmall) {
                 height: 1;
                 width: 100%;
@@ -59,3 +70,4 @@
         height: $height + $padding * 2 - 2px;
     }
 }
+
