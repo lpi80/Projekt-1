@@ -28,7 +28,7 @@
     &__section {
         width: 100%;
         @include myFlexRow(flex-start, flex-start, flex-start, row, $inputHeight);
-        @media (min-width: 768px) and (max-width: 1199px) {
+        @media (max-width: 1199px) {
             @include myFlexRow(flex-start, flex-start, flex-start, column, $inputHeight);
         }
         @include section-header;
@@ -41,7 +41,7 @@
             @include myFlexRow(flex-start, flex-start, flex-start, column, $inputHeight);
             width: 33%;
             position: relative;
-            @media (min-width: 768px) and (max-width: 1199px) {
+            @media (max-width: 1199px) {
                 width: 100%;
             }
         }

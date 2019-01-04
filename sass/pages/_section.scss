@@ -1,9 +1,9 @@
 
 .section {
-    background: $color_FFF;
+    background: $background;
     &__header {
         padding: 10px;
-        border-bottom: 1px solid $color_9C9C9C;
+        border-bottom: 1px solid $borderColor;
         width: 100%;
         display: block;
         text-transform: uppercase;
@@ -11,11 +11,11 @@
         font-size: $pageHeaderFontSize;
         font-weight: $pageHeaderFontWeight;
         color: $pageHeaderDescColor;
-        background: $color_FFF;
+        background: $background;
     }
 
     &__workshop {
-        background: $color_FFF;
+        background: $background;
         @include myFlexRow(center, center, center, column);
         width: 100%;
         flex: 0 0 auto;

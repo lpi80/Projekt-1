@@ -141,6 +141,7 @@
         }
 
         &--column-3 {
+            position: relative;
             padding: 20px;
             @include myFlexRow(flex-start, flex-start, flex-start, row, $inputHeight);
             overflow: auto;

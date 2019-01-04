@@ -73,5 +73,3 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   return !isFormValidate ? event.preventDefault() : true;
 })
 
-
-

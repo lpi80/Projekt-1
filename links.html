@@ -272,30 +272,30 @@
                         <span class="icon-arrow-down personal__input--selects-icon"></span>
                 </div>
                 <div class="modal__selects--column-lang">
-                    <div class="flags" name="inputFlags" id="inputFlags">
+                    <div class="flags" id="inputFlags">
                         <div class="flags__header">
                             <p>Language</p>
                         </div>
                         <div class="flags__main">
-                            <img class="flags__icon" src="vendor/flag/flags/4x3/pl.svg">
+                            <img class="flags__icon" src="vendor/flag/flags/4x3/pl.svg" alt="">
                             <span class="flags__desc">PL</span>
                             <span class="flags__desc--arrow icon-arrow-down"></span>
                         </div>
                         <ul class="flags__select">
                             <li class=flags__select--field>
-                                <img class="flags__icon" src="vendor/flag/flags/4x3/gb.svg">
+                                <img class="flags__icon" src="vendor/flag/flags/4x3/gb.svg"  alt="">
                                 <span class="flags__desc">EN</span>
                             </li>
                             <li class=flags__select--field>
-                                <img class="flags__icon" src="vendor/flag/flags/4x3/pl.svg">
+                                <img class="flags__icon" src="vendor/flag/flags/4x3/pl.svg"  alt="">
                                 <span class="flags__desc">PL</span>
                             </li>
                             <li class=flags__select--field>
-                                <img class="flags__icon" src="vendor/flag/flags/4x3/de.svg">
+                                <img class="flags__icon" src="vendor/flag/flags/4x3/de.svg" alt="">
                                 <span class="flags__desc">DE</span>
                             </li>
                             <li class=flags__select--field>
-                                <img class="flags__icon" src="vendor/flag/flags/4x3/ru.svg">
+                                <img class="flags__icon" src="vendor/flag/flags/4x3/ru.svg" alt="">
                                 <span class="flags__desc">RU</span>
                             </li>
                         </ul>
@@ -305,7 +305,7 @@
 
             <div class="modal__choice">
                 <p class="modal__section">Select websites</p>
-                <div class="modal__choice--column-3">
+                <div class="modal__choice--column-3" id="modalChoice">
                     <div class="check-box check-box--3row">
                         <input class="check-box__input" type="checkbox" name="checkBanner1" id="checkBanner1" value="true"
                             hidden>
@@ -643,6 +643,7 @@
 
 
     </div>
+    <script type="text/javascript" src="js/checkbox.js"></script>
     <script type="text/javascript" src="js/flags.js"></script>
     <script type="text/javascript" src="js/modal.js"></script>
     <script type="text/javascript" src="js/links.js"></script>
